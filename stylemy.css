@@ -22,7 +22,7 @@
 [class *= 'b-catalog_entry'] > a[href *= '81763-'] img,
 [class *= 'b-catalog_entry'] > a[href *= '149517-'] img,
 [class *= 'b-catalog_entry'] > a[href *= '157522-'] img,
-[class *= 'b-catalog_entry'] > a[href *= '157520-'] img,
+[class *= 'b-catalog_entry'] > a[href *= '157520-'] img
 { opacity: 0; }
 
 .b-catalog_entry a[href *= '12055-']  .image-cutter { background-image: url(https://i.imgur.com/tgkPHu6.jpg); }
