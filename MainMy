@@ -1,0 +1,210 @@
+img.b-poster { max-width: 186.3px; border-radius: 42px; } /*Ограничение максимального размера картинки в шипперстве"*/
+
+.p-profiles .profile-head .c-info .c-additionals { margin-bottom: 0px; } /*Уменьшение отступа после "Активности"*/ 
+
+.b-db_entry > .c-about .contest_winners .winners { margin-top: 17px; } /*Увеличение отступа победителей*/ 
+
+.p-user_rates-index .list-lines tr td .rate-text { color: #e9e2da; } /*Изменение цвета кастомного описания анимешек в просмотренном*/
+
+.b-rate .stars.score { color: #bb12a8; } /*Покраска звезд рейтинга в зеленый"*/
+
+.cm-s-solarized .cm-comment { color: #0dff4a; font-style: italic; } /*Цвет комментариев в редакторе - зеленый*/
+
+.history-interval { color: #c1c1c1; } /*Цвет - История: "просмотрено n эпизодов"*/
+
+::selection { color: #fff; background: #34c34dfc; } /*Изменение цвета выделения*/
+
+
+/*Невидимый фон у кнопки "Показать другие названия" у аниме*/
+.p-animes-show .other-names, 
+.p-mangas-show .other-names, 
+.p-ranobe-show .other-names 
+{ background: #bb585800; color: #00ff05; border: 1px solid #f2f2f200; font-size: 20pt; margin-left: 0px; }
+
+/*Темное оформление блока поиска*/
+.l-top_menu-v2 .global-search .search-results .nothing_found.active,
+.l-top_menu-v2 .global-search .search-results .nothing_found:focus,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus,
+.l-top_menu-v2 .global-search .search-results .search-mode.active,
+.l-top_menu-v2 .global-search .search-results .search-mode:focus 
+{ background: linear-gradient(270deg, rgb(19, 32, 41) 0%, rgb(0, 0, 0) 100%),rgb(29, 27, 27); }
+
+.l-top_menu-v2 .global-search .search-results .nothing_found.active:before, 
+.l-top_menu-v2 .global-search .search-results .nothing_found:focus:before, 
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active:before, 
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus:before, 
+.l-top_menu-v2 .global-search .search-results .search-mode.active:before, 
+.l-top_menu-v2 .global-search .search-results .search-mode:focus:before 
+{ background: #d06d10; }
+
+.l-top_menu-v2 .global-search .search-results .nothing_found, 
+.l-top_menu-v2 .global-search .search-results .search-mode 
+{ color: #fff; background: linear-gradient(270deg, #2a2826 0%, rgb(48, 24, 7) 100%),rgb(33, 33, 30); }
+
+.l-top_menu-v2 .global-search .search-results .search-mode:hover 
+{ background: linear-gradient(270deg, rgb(216, 82, 19) 0%, rgba(17, 173, 239, 0.81) 100%),rgb(43, 138, 204); }
+
+.l-top_menu-v2 .global-search .search-results .nothing_found, 
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item, 
+.l-top_menu-v2 .global-search .search-results .search-mode 
+{ border-top: 1px solid rgba(173, 85, 38, 0.66); }
+
+.l-top_menu-v2 .global-search .search-results .search-mode, 
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item 
+{ background-color: #161616; }
+
+.b-anime_status_tag.episode, 
+.b-anime_status_tag.studio 
+{ background-color: #00ffc8c4; border: 1px solid #00ffc800; color: #000; }
+
+.b-db_entry-variant-list_item>.info .line .key { color: #daddda; }
+
+/*Изменение цвета "Запланировано", "Брошено", "Просмотрено" и т.д. в истории просмотра*/
+.b-options-floated.mobile-desktop > a[data-id="planned"] { color: #27c8d5; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="watching"] { color: #34c34dfc; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="rewatching"] { color: #34c34dfc; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="completed"] { color: #12f316; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="on_hold"] { color: #dd5202; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="dropped"] { color: #f60000; font-size: 15px; }
+
+/*Изменение стиля "Запланировано", "Брошено", "Просмотрено" и т.д.*/
+.b-stats_bar .stat_names .stat_name[data-type="planned"] { font-size: 25px; color: #f18100;}
+.b-stats_bar .stat_names .stat_name[data-type="watching,rewatching"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="completed"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="on_hold"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="dropped"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="watching,rewatching"]:after { visibility: hidden; }
+.b-stats_bar .stat_names .stat_name[data-type="on_hold"]:after { visibility: hidden; }
+
+.b-stats_bar > .stat_names > .stat_name[data-type="planned"] > a { color: #27c8d5; }
+.b-stats_bar > .stat_names > .stat_name[data-type="completed"] > a { color: #12f316; }
+.b-stats_bar > .stat_names > .stat_name[data-type="on_hold"] > a { color: #dd5202; }
+.b-stats_bar > .stat_names > .stat_name[data-type="dropped"] > a { color: #f60000; }
+
+.b-stats_bar a.title { margin-bottom: 1px; font-size: 18px; }
+.b-stats_bar .stat_names { text-align: center; }
+.b-stats_bar.anime > a { color: #f18100; }
+.b-stats_bar.manga > a { color: #f18100; }
+.b-stats_bar .stat_names .stat_name>a:hover { color: #feff00; }
+.b-stats_bar > a.title:hover { color: #feff00; }
+
+/*В просмотренных и т.д. убираются лишние элементы и выделяется поле поиска*/
+.menu-slide-outer.x199 > .menu-slide-inner > .l-content > .subheadline-buttons, 
+.menu-slide-outer.x199 > .menu-slide-inner > .l-content > .subheadline
+{ visibility: hidden; }
+.b-collection_search .field input { border: solid 2px; color: #d1cbcb; }
+
+/*Изменение шрифта слова "История" в профиле*/
+.subheadline>a:before { content: ""; }
+.m13 {
+    content: 'История';
+    position: relative;
+    margin-left: 27.1%;
+    visibility: visible;
+    font: 24px Comfortaa, sans-serif;
+}
+
+/*Изменение шрифта слова "Друзья" в профиле*/
+.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column > .subheadline
+{
+    color: #34c34dfc;
+    position: relative;
+    margin-left: 30%;
+    visibility: visible;
+    font: 24px Comfortaa, sans-serif;
+}
+
+/*Изменение шрифта "К манге" и "К аниме" в просмотренном*/
+.p-profiles header.head .misc[title="к манге"] { font-size: 37px; color: #f36606; }
+.p-profiles header.head .misc[title="к аниме"] { font-size: 37px; color: #f36606; }
+
+
+/*Надпись "Достижения"*/
+.p-profiles-show .achievements > .subheadline > a:after 
+{
+    content: 'Достижения';
+    color: #88ff00;
+    position: relative;
+    margin-left: 28.1%;
+    visibility: visible;
+    font: 40px Comfortaa, sans-serif;
+    text-shadow: 0 0 12px #7adc00;
+}
+.p-profiles-show .achievements > .subheadline > a { visibility: hidden; }
+
+/*Сокрытие надписи "Обо мне"*/
+.p-profiles-show .about .subheadline { display: none; }
+
+/*Небольшой отступ второй строки в блоке "Избранное" и уменьшение его границ сверху и снизу (пустоты вокруг блока)*/
+.p-profiles-show .cc-favourites .c-column { margin-bottom: 1%; }
+.p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child { margin-bottom: -25px; }
+
+/*Замена элемента цвета скрытого блока в просмотренных аниме в профиле*/
+.collapsed { background: #23a52052; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
+.collapsed:hover { background: #ad6e1352; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
+
+/*Цвет надписи "онгоинг" в просмотренных аниме в профиле*/
+.p-user_rates-index .list-lines tr td .ongoing { color: #ff6700; }
+
+/*Убрать нижнюю полосу со ссылками и копирайтом*/
+.l-footer { visibility: hidden; }
+
+/*Надпись "Избранное"*/
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after 
+{
+  	content: 'Любимые сэйю';
+    color: #88ff00;
+    position: relative;
+    /* right: 96px; */
+    margin-left: 27.1%;
+    visibility: visible;
+    font: 40px Comfortaa, sans-serif;
+    text-shadow: 0 0 12px #7adc00;
+}
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { visibility: hidden; }
+
+/*Цвет и подсветка никнейма в профиле*/
+.p-profiles .profile-head .c-brief header h1 
+{ color: #c900ff; font-weight: bold; text-shadow: 0px 0px 9px #00a6ff; font: 43px Comfortaa, sans-serif; transition: 0.5s ease; }
+.p-profiles .profile-head .c-brief header h1:hover 
+{ color: #04dcbc; text-shadow: 0px -7px 14px #ff0000; transition: 0.5s ease-out; }
+
+/*Изменяется цвет иконки "Добавить в избранное" после добавления в избранное*/
+.b-subposter-action.fav-remove:before { color: red; }
+
+/*Подсветка лого студии*/
+.p-animes-show .studio-logo, .p-mangas-show .studio-logo, .p-ranobe-show .studio-logo 
+{ background-color: white; box-shadow: 0px 0px 15px 0px #07f2c6; }
+
+/*Невидимая аватарка и действия под аватаркой*/
+.profile-head .avatar img { visibility: hidden; width: 300px; height: 200px;}
+.p-profiles .profile-head .c-brief .avatar .profile-actions { visibility: hidden; }
+
+/*Рикардо слева вверху, где логотип шики*/
+.l-top_menu-v2 .logo-container .glyph { background-image: url(https://i.imgur.com/nF4faHm.gif); }
+
+/*Рикардо поздравляет с НГ при наведении на него*/
+.l-top_menu-v2 .logo-container .glyph:hover 
+{ 
+  	background-image:url(https://i.imgur.com/g4UBzhn.gif); 
+  	width: 500px;
+    height: 500px;
+    background-size: contain;
+    background-position: bottom;
+    margin-top: 380px;
+    margin-left: -14px;
+}
+
+/*Расплытие аватарки при наведении в просмотренных аниме*/
+.p-user_rates-index .l-menu .avatar img { filter: blur(3px);  transition: 0.5s ease; }
+.p-user_rates-index .l-menu .avatar img:hover { filter: none; transition: 0.5s ease-out; }
+
+/*Цвет общих эпизодов в онгоингах в профиле*/
+.p-user_rates-index .list-lines tr td .episodes_total { color: #e1e02a; font-size: 11px; }
+
+/*Аниме/Манга/Ранобэ рядом с пунктами истории*/
+.history-page a:before { display: inline-block; vertical-align: top; width: 30px; }
+.history-page a[href ^= "/a"]:before { content: '[А] '; color: #34a853; }
+.history-page a[href ^= "/m"]:before { content: '[М] '; color: #9c27b0; }
+.history-page a[href ^= "/r"]:before { content: '[Р] '; color: #039be5; }
