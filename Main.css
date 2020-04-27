@@ -3,6 +3,8 @@
 .bar.vertical .line .bar-container .bar:hover .value { color: #ffffff; font-size: 14px; margin-bottom: 4px; font-weight: bold; }
 
 /*Закругление большинства картинок и элементов*/
+.avatar img, .b-comment>.inner header img { border-radius: 50%; }
+
 .b-user.detailed .info .image-name .image, 
 .b-user.moderation .info .image-name .image 
 { border-radius: 35px; }
@@ -371,6 +373,50 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
   0%, 100% { transform: translateY(1px); }
   50% { transform: translateY(7px); }
 }
+
+/*Вкладки с персами в конце профиля*/
+.p-profiles-show .about > .headline
+{
+    text-align: center;
+    /* background-color: #c27609; */
+    background-size: 1px;
+    border-radius: 15px;
+    color: #88ff00;
+    font: 40px Comfortaa, sans-serif;
+    text-shadow: 0 0 12px #7adc00;
+}
+.u-tabs [data-tab-switch] 
+{
+  display: inline-block;
+  padding: .25em .75em;
+  border: 2px solid;
+  border-radius: 20px;
+  font-weight: bold;
+  opacity: .5;
+  cursor: pointer;
+  width: 12%;
+  font: 16px Comfortaa, sans-serif;
+}
+.block { margin-bottom: 0px; }
+.u-tabs > div:not([data-tab]) { white-space: nowrap; overflow-x: auto; text-align: center; margin-bottom: 30px; }
+.u-tabs .active[data-tab-switch] { color: #ffa200; opacity: 1; width: 12%; font: 16px Comfortaa, sans-serif;}
+.u-tabs [data-tab-switch]:not(:first-child) { margin-left: 10px; }
+.u-tabs [data-tab] { margin-top: 10px; }
+
+/*Блок "Достижения"*/
+.p-profiles-show .achievements .header
+{
+  box-shadow: 0 2px 6px 2px rgba(var(--block-color), 0.8);
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #e99b0780;
+}
+.p-profiles-show .achievements { margin-top: 60px; }
+.b-achievement.is-badge:before { text-align: center; background: rgba(0, 0, 0, 0.78); }
+.p-profiles-show .achievements .header .title { color: #fff; margin-left: 40%; }
+.p-profiles-show .achievements .header .size { margin-right: 7px; }
+
+
 
 /*Изменение цвета пропусков в нумерации строк кода и ползунка справа от редактора кода.*/
 .CodeMirror-gutter, 
