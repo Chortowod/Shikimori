@@ -97,16 +97,15 @@ img.b-poster { max-width: 186.3px; border-radius: 42px; }											/*Огран
 /*Изменение шрифта слова "История" в профиле*/
 .subheadline>a:before { content: ""; }
 .m13 {
-    content: 'История';
-    position: relative;
-    margin-left: 27.1%;
-    visibility: visible;
-    font: 24px Comfortaa, sans-serif;
+	content: 'История';
+	position: relative;
+	margin-left: 27.1%;
+	visibility: visible;
+	font: 24px Comfortaa, sans-serif;
 }
 
 /*Изменение шрифта слова "Друзья" в профиле*/
-.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column > .subheadline
-{
+.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column > .subheadline {
     color: #34c34dfc;
     position: relative;
     margin-left: 30%;
@@ -114,25 +113,35 @@ img.b-poster { max-width: 186.3px; border-radius: 42px; }											/*Огран
     font: 24px Comfortaa, sans-serif;
 }
 
-/*Изменение шрифта "К манге" и "К аниме" в просмотренном*/
-.p-profiles header.head .misc[title="к манге"] { font-size: 37px; color: #f36606; }
-.p-profiles header.head .misc[title="к аниме"] { font-size: 37px; color: #f36606; }
-
-
-/*Надпись "Достижения"*/
-.p-profiles-show .achievements > .subheadline > a:after 
+/*Изменение шрифта слова "Избранное" в профиле*/
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after 
 {
-    content: 'Достижения';
-    color: #88ff00;
-    position: relative;
-    margin-left: 28.1%;
-    visibility: visible;
-    font: 40px Comfortaa, sans-serif;
-    text-shadow: 0 0 12px #7adc00;
+	content: 'Любимые сэйю';
+	color: #88ff00;
+	position: relative;
+	/* right: 96px; */
+	margin-left: 27.1%;
+	visibility: visible;
+	font: 40px Comfortaa, sans-serif;
+	text-shadow: 0 0 12px #7adc00;
+}
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { visibility: hidden; }
+
+/*Изменение шрифта слова "Достижения" в профиле*/
+.p-profiles-show .achievements > .subheadline > a:after {
+	content: 'Достижения';
+	color: #88ff00;
+	position: relative;
+	margin-left: 28.1%;
+	visibility: visible;
+	font: 40px Comfortaa, sans-serif;
+	text-shadow: 0 0 12px #7adc00;
 }
 .p-profiles-show .achievements > .subheadline > a { visibility: hidden; }
 
-
+/*Изменение шрифта "К манге" и "К аниме" в просмотренном*/
+.p-profiles header.head .misc[title="к манге"] { font-size: 37px; color: #f36606; }
+.p-profiles header.head .misc[title="к аниме"] { font-size: 37px; color: #f36606; }
 
 /*Небольшой отступ второй строки в блоке "Избранное" и уменьшение его границ сверху и снизу (пустоты вокруг блока)*/
 .p-profiles-show .cc-favourites .c-column { margin-bottom: 1%; }
@@ -142,57 +151,31 @@ img.b-poster { max-width: 186.3px; border-radius: 42px; }											/*Огран
 .collapsed { background: #23a52052; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
 .collapsed:hover { background: #ad6e1352; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
 
-
-
-/*Надпись "Избранное"*/
-.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after 
-{
-  	content: 'Любимые сэйю';
-    color: #88ff00;
-    position: relative;
-    /* right: 96px; */
-    margin-left: 27.1%;
-    visibility: visible;
-    font: 40px Comfortaa, sans-serif;
-    text-shadow: 0 0 12px #7adc00;
-}
-.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { visibility: hidden; }
-
 /*Цвет и подсветка никнейма в профиле*/
-.p-profiles .profile-head .c-brief header h1 
-{ color: #c900ff; font-weight: bold; text-shadow: 0px 0px 9px #00a6ff; font: 43px Comfortaa, sans-serif; transition: 0.5s ease; }
-.p-profiles .profile-head .c-brief header h1:hover 
-{ color: #04dcbc; text-shadow: 0px -7px 14px #ff0000; transition: 0.5s ease-out; }
-
+.p-profiles .profile-head .c-brief header h1 { color: #c900ff; font-weight: bold; text-shadow: 0px 0px 9px #00a6ff; font: 43px Comfortaa, sans-serif; transition: 0.5s ease; }
+.p-profiles .profile-head .c-brief header h1:hover { color: #04dcbc; text-shadow: 0px -7px 14px #ff0000; transition: 0.5s ease-out; }
 
 /*Подсветка лого студии*/
-.p-animes-show .studio-logo, .p-mangas-show .studio-logo, .p-ranobe-show .studio-logo 
-{ background-color: white; box-shadow: 0px 0px 15px 0px #07f2c6; }
+.p-animes-show .studio-logo, .p-mangas-show .studio-logo, .p-ranobe-show .studio-logo { background-color: white; box-shadow: 0px 0px 15px 0px #07f2c6; }
 
 /*Невидимая аватарка и действия под аватаркой*/
 .profile-head .avatar img { visibility: hidden; width: 300px; height: 200px;}
 .p-profiles .profile-head .c-brief .avatar .profile-actions { visibility: hidden; }
 
-
-
 /*Рикардо поздравляет с НГ при наведении на него*/
-.l-top_menu-v2 .logo-container .glyph:hover 
-{ 
-  	background-image:url(https://i.imgur.com/g4UBzhn.gif); 
-  	width: 500px;
-    height: 500px;
-    background-size: contain;
-    background-position: bottom;
-    margin-top: 380px;
-    margin-left: -14px;
+.l-top_menu-v2 .logo-container .glyph:hover { 
+	background-image:url(https://i.imgur.com/g4UBzhn.gif); 
+	width: 500px;
+	height: 500px;
+	background-size: contain;
+	background-position: bottom;
+	margin-top: 380px;
+	margin-left: -14px;
 }
 
 /*Расплытие аватарки при наведении в просмотренных аниме*/
 .p-user_rates-index .l-menu .avatar img { filter: blur(3px);  transition: 0.5s ease; }
 .p-user_rates-index .l-menu .avatar img:hover { filter: none; transition: 0.5s ease-out; }
-
-
-
 
 /*Аниме/Манга/Ранобэ рядом с пунктами истории*/
 .history-page a:before { display: inline-block; vertical-align: top; width: 30px; }

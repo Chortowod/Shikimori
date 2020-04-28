@@ -2,56 +2,54 @@
 .mychar { position: fixed; right: 0; bottom: 0; }
  
 /* Персонаж в углу: облачко */
-.mychar .speech 
-{
-  position: absolute;
-  pointer-events: auto;
-  min-width: 10em; 
-  min-height: 2em; 
-  max-width: 12em;
-  padding: 0.38em 0.56em;
-  border-radius: 0.5em;
-  right: 225px;  /* положение облачка: отступ справа */
-  bottom: 360px; /* положение облачка: отступ снизу */
-  transform-origin: bottom left;
-  line-height: 1.25em;
-  text-align: center;
-  color: #FFF;                    /* цвет текста в облачке */
-  background: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
+.mychar .speech {
+	position: absolute;
+	pointer-events: auto;
+	min-width: 10em; 
+	min-height: 2em; 
+	max-width: 12em;
+	padding: 0.38em 0.56em;
+	border-radius: 0.5em;
+	right: 225px;  /* положение облачка: отступ справа */
+	bottom: 360px; /* положение облачка: отступ снизу */
+	transform-origin: bottom left;
+	line-height: 1.25em;
+	text-align: center;
+	color: #FFF;                    /* цвет текста в облачке */
+	background: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
 }
-.mychar .speech::after 
-{
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  bottom: 0.75em;
-  width: 0;
-  height: 0;
-  margin: -0.62em -1.24em 0 0;
-  border: 1.24em solid transparent;
-  border-right: 0;
-  border-bottom: 0;
-  border-left-color: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
+.mychar .speech::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	bottom: 0.75em;
+	width: 0;
+	height: 0;
+	margin: -0.62em -1.24em 0 0;
+	border: 1.24em solid transparent;
+	border-right: 0;
+	border-bottom: 0;
+	border-left-color: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
 }
  
 /* Персонаж в углу: анимированное облачко */
 .mychar .speech {
-  animation-name: mychar-speech-in;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-  animation-duration: 0.8s; /* длительность появления, исчезновения облачка */
-  animation-delay: 1.5s;   /* задержка появления, исчезновения облачка */
+	animation-name: mychar-speech-in;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-duration: 0.8s; /* длительность появления, исчезновения облачка */
+	animation-delay: 1.5s;   /* задержка появления, исчезновения облачка */
 }
 
 /* Персонаж в углу: анимированное облачко - сменяющиеся фразы */
 .mychar .speech div {
-  position: absolute;
-  visibility: hidden;
-  animation-name: mychar-phrase;
-  animation-timing-function: step-end;
-  animation-iteration-count: 1;
-  animation-duration: 3.5s; /* длительность показа фразы */
+	position: absolute;
+	visibility: hidden;
+	animation-name: mychar-phrase;
+	animation-timing-function: step-end;
+	animation-iteration-count: 1;
+	animation-duration: 3.5s; /* длительность показа фразы */
 }
 .mychar .speech div:nth-of-type(1) { animation-delay: 1.5s; } /* 1-ая фраза, начальная задержка = задержка появления облачка */
 .mychar .speech div:nth-of-type(2) { animation-delay: 5.0s; } /* 2-ая фраза, прибавляем длительность фразы */
