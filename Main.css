@@ -1,3 +1,24 @@
+/*---------------------------------------------------Unknown---------------------------------------------------*/
+.ac_results.menu-suggest .ac_even, 
+.ac_results.menu-suggest .ac_odd,
+.b-table tr, 
+.b-table td,
+.p-user_rates-index .list-groups .summary.posters.list,
+.p-user_rates-index .list-groups .summary.posters.library
+{ background: #000; border: none; color: #fff; }
+
+.ac_results.menu-suggest .ac_even:hover, 
+.ac_results.menu-suggest .ac_odd:hover 
+{ background: #34c34dfc; }
+
+.b-input input[disabled] { color: #fff; background: #333; border-color: #333; }
+
+.p-user_rates-index .list-lines tr td .new-value .item-add { position: relative; }
+.p-user_rates-index .list-lines tr .name a { color: #34c34dfc; font-weight: bold; }
+.p-user_rates-index .list-lines tr .name a:hover { color: #fff; }
+/*---------------------------------------------------Unknown---------------------------------------------------*/
+
+
 /*Изменение блока активности*/
 .bar.vertical .line .bar-container .bar:hover { background: #ca701afc; }
 .bar.vertical .line .bar-container .bar:hover .value { color: #ffffff; font-size: 14px; margin-bottom: 4px; font-weight: bold; }
@@ -24,7 +45,8 @@
 .b-db_entry-note .name-container .b-user_rate .b-add_to_list .trigger, 
 .b-db_entry-note .name-container .b-user_rate .b-add_to_list .option, 
 .b-add_to_list.planned .trigger, 
-.b-add_to_list.planned .option, .b-comments-notifier, 
+.b-add_to_list.planned .option, 
+.b-comments-notifier, 
 .b-add_to_list.completed .trigger, 
 .b-add_to_list.completed .option, 
 .b-add_to_list.rewatching .trigger, 
@@ -65,19 +87,7 @@
 .b-input input[type=file]
 { filter: invert(100%); }
 
-.ac_results.menu-suggest .ac_even, 
-.ac_results.menu-suggest .ac_odd,
-.b-table tr, 
-.b-table td,
-.p-user_rates-index .list-groups .summary.posters.list,
-.p-user_rates-index .list-groups .summary.posters.library
-{ background: #000; border: none; color: #fff; }
 
-.ac_results.menu-suggest .ac_even:hover, 
-.ac_results.menu-suggest .ac_odd:hover 
-{ background: #34c34dfc; }
-
-.b-input input[disabled] { color: #fff; background: #333; border-color: #333; }
 
 /*Перекрашивание ссылок из синего в кирпичный*/
 a,
@@ -207,10 +217,6 @@ div.b-db_entry-variant-list_item
 .l-top_menu .entry, 
 .p-profiles .profile-head .c-history .entry
 { border: none; }
-
-.p-user_rates-index .list-lines tr td .new-value .item-add { position: relative; }
-.p-user_rates-index .list-lines tr .name a { color: #34c34dfc; font-weight: bold; }
-.p-user_rates-index .list-lines tr .name a:hover { color: #fff; }
 
 /*Изменение цвета блока с выбором действий у аниме и манги, типа просмотрено, прочитанно, отложено и т.д.*/
 .b-link_button.dark, 
@@ -416,8 +422,6 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 .p-profiles-show .achievements .header .title { color: #fff; margin-left: 40%; }
 .p-profiles-show .achievements .header .size { margin-right: 7px; }
 
-
-
 /*Изменение цвета пропусков в нумерации строк кода и ползунка справа от редактора кода.*/
 .CodeMirror-gutter, 
 .CodeMirror-gutters, 
@@ -432,9 +436,6 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 .b-edit_styles .edit_style .style_css .CodeMirror, 
 .b-edit_styles .new_style .style_css .CodeMirror 
 { background: #000; border: 0px; }
-
-/*Удаление тени текста в редакторе кода. С ней текст был расплывчатый.*/
-.cm-s-solarized.cm-s-light { text-shadow: #000 0 0px; }
 
 /*Нумерация строк кода белым цветом*/
 .CodeMirror pre, 
