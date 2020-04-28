@@ -133,8 +133,7 @@ img.b-poster { max-width: 186.3px; border-radius: 42px; } /*Ограничени
 }
 .p-profiles-show .achievements > .subheadline > a { visibility: hidden; }
 
-/*Сокрытие надписи "Обо мне"*/
-.p-profiles-show .about .subheadline { display: none; }
+.p-profiles-show .about .subheadline { display: none; } /*Сокрытие надписи "Обо мне"*/
 
 /*Небольшой отступ второй строки в блоке "Избранное" и уменьшение его границ сверху и снизу (пустоты вокруг блока)*/
 .p-profiles-show .cc-favourites .c-column { margin-bottom: 1%; }
@@ -144,11 +143,9 @@ img.b-poster { max-width: 186.3px; border-radius: 42px; } /*Ограничени
 .collapsed { background: #23a52052; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
 .collapsed:hover { background: #ad6e1352; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
 
-/*Цвет надписи "онгоинг" в просмотренных аниме в профиле*/
-.p-user_rates-index .list-lines tr td .ongoing { color: #ff6700; }
+.p-user_rates-index .list-lines tr td .ongoing { color: #ff6700; } /*Цвет надписи "онгоинг" в просмотренных аниме в профиле*/
 
-/*Убрать нижнюю полосу со ссылками и копирайтом*/
-.l-footer { visibility: hidden; }
+.l-footer { visibility: hidden; } /*Убрать нижнюю полосу со ссылками и копирайтом*/
 
 /*Надпись "Избранное"*/
 .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after 
