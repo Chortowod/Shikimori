@@ -1,4 +1,4 @@
-img.b-poster { max-width: 186.3px; border-radius: 42px; }											/*Ограничение максимального размера картинки в шипперстве"*/
+
 .p-profiles .profile-head .c-info .c-additionals { margin-bottom: 0px; }							/*Уменьшение отступа после "Активности"*/ 
 .b-db_entry > .c-about .contest_winners .winners { margin-top: 17px; }								/*Увеличение отступа победителей*/ 
 .p-user_rates-index .list-lines tr td .rate-text { color: #e9e2da; } 								/*Изменение цвета кастомного описания анимешек в просмотренном*/
