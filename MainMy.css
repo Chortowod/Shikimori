@@ -14,6 +14,124 @@
 .l-top_menu-v2 .logo-container .glyph { background-image: url(https://i.imgur.com/nF4faHm.gif); }	/*Рикардо слева вверху, где логотип шики*/
 .cm-s-solarized.cm-s-light { text-shadow: #000 0 0px; }												/*Удаление тени текста в редакторе кода. С ней текст был расплывчатый.*/
 
+
+.b-stats_bar .stat_names .stat_name:after { color: white; content: '|'; }
+
+
+.l-top_menu-v2 .menu-dropdown .submenu {
+	top: auto;
+    opacity: 0;
+    transition: 0.4s all;
+    pointer-events: none;
+	border-radius: 0 0 20px 20px;
+}
+.l-top_menu-v2 .submenu > .legend { 
+    border-radius: 0 0 10px 10px;
+	margin-bottom: 3px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: rgba(var(--light-color), 1);
+    background: rgba(var(--block-color), 0.7);
+    box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.15);
+}
+
+.l-top_menu-v2 .menu-dropdown.profile > span { border-radius: 19px 0 0 0; }
+.l-top_menu-v2 .menu-dropdown.active .submenu { opacity: 1; pointer-events: auto; }
+
+
+
+/*Достижения франшиз*/
+body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
+.b-badge:before { background: none; display: block; }
+
+/*Блокировка рекламы*/
+.spns_yd_240x600,
+.spns_yd_970x90,
+.spns_yd_300x600
+{ display: none }
+
+/*Цвет графиков оценок у аниме и их округление*/
+.bar.simple .bar.s0, 
+.bar.simple .bar.s1, 
+.bar.simple .bar.s2, 
+.bar.simple .bar.s3 
+{ background: #34c34dfc; border-radius: 4px; }
+
+.p-user_rates-index .list-groups .summary.lines.library { border-color: #333; }
+
+.b-list li { color: #34c34dfc; list-style-image: none; list-style: disc; } /*Изменение пиктограмм списка*/
+
+.b-quote { background: #000!important; color: #fff!important; border: 1px dashed; } /*Изменение стиля цитат*/
+
+.b-to-top .slide:before { background: #000; } /*Изменение цвета блока "Наверх" слева*/
+
+.b-show_more { color: #1aca1a; font-size: 12px; } /*Показать остальное: цвет*/
+
+.b-feedback { visibility: hidden; } /*Скрытие блока с отчетом об ошибке слева*/
+
+/*Изменение цвета шкалы манги и аниме рядом с аватаркой*/
+.b-stats_bar .bar .third { background: #aaa; color: black; font-size: 12px; font-weight: bold;}
+.b-stats_bar.lifetime .bar .first { background: #01ff06fc; }
+.b-stats_bar.lifetime .bar .third { background: #ff9907d4; }
+
+.b-stats_bar.anime .bar .first,
+.b-stats_bar.manga .bar .first 
+{ background: #01ff06fc; color: black; font-size: 12px; font-weight: bold; }
+
+.b-stats_bar.anime .bar .second, 
+.b-stats_bar.manga .bar .second 
+{ background: #ff9907d4; color: black; font-size: 12px; font-weight: bold; }
+
+/*Изменение стиля текста под шкалой манги и аниме рядом с аватаркой*/
+.b-stats_bar .stat_names { font-size: 12px; line-height: 1.65; font: 12px Comfortaa, bsans-serif; }
+
+/*Цвет заголовков (название аниме/манги и т.п.)*/
+b,
+header.head h1, 
+header.head h2 
+{color: #fff; }
+
+/*Затемнение фона заголовков*/
+.headline, 
+.midheadline, 
+.subheadline  
+{ color: #fff; background: #000; border-left: 0px; }
+
+/*Блок с контентом*/
+.l-page 
+{
+  background: #000;
+  color: #f2f8ff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 20px;
+  opacity: 0.9; /*полупрозрачность*/
+  margin-top: 55px; /*отступ шапки 46px*/
+  margin-bottom: 14px;
+}
+
+/* Шапка */
+.l-top_menu-v2 { background: #000; transition: 0.3s all; position: fixed; width: 100%; top: 0px;}
+.is-overflowed-below::before, 
+.is-overflowed-below::after,
+.is-overflowed-above::before,
+.is-overflowed-above::after,
+.search-results.is-overflowed-below::after
+{ opacity: 0 !important; }
+
+
+/* Альтернативное расположение блоков в профиле */
+@media only screen and (min-width: 768px) 
+{
+  .p-profiles-show .lifetime { margin-bottom: 15px; }
+  .p-profiles-show .profile-content .cc-2 > .c-column { width: 100%; }
+  .p-profiles-show .profile-content .cc-2 > .c-right { float: none; }
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a { width: 23%; overflow: hidden; }
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column { width: 100%; margin: 0; }
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column:last-child { margin-top: 15px; }
+  .p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child { clear: both; }
+  .p-profiles-show .profile-content .cc-2 > .c-left  { position: relative; width: 77%; padding-right: 30px; margin-right: 0; z-index: 1; }
+}
+
 /*Невидимый фон у кнопки "Показать другие названия" у аниме*/
 .p-animes-show .other-names, 
 .p-mangas-show .other-names, 

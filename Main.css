@@ -420,3 +420,30 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 	.p-profiles-show .b-feedback:after { display: none; }
 	.l-page { background: #000; opacity: 0.9; margin-top: 0px; margin-bottom: 0px; border-radius: 0px; }
 }
+
+
+/* Мусор
+
+???
+.l-top_menu .menu-items .entry a, .l-top_menu .submenu > .entry, .b-main_search ul.popup { background: #000; border: 0px; }
+
+Спойлеры в блоке "Обо мне"
+.p-profiles .about.block .b-spoiler .after:before, .about.block .b-spoiler .before:before { content: ''; }
+.p-profiles .about.block .b-spoiler .before { width: 100%;  height: 50px; display: inline-block !important; margin-top: -50px; }
+.p-profiles .about.block .b-spoiler label 
+{
+  border: none;
+  display: inline-block !important;
+  font-weight: bold; 
+  color: #c2890ed1; 
+  background: #c2890ed1; 
+  height: 30px; 
+  width: 100%;
+  font-size: 12pt;
+  padding-top: 3px; 
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.b-stats_bar.manga .stat_names .stat_name[data-type="watching,rewatching"]:after { visibility: visible; }
+*/
