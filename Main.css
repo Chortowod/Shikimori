@@ -446,4 +446,10 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 }
 
 .b-stats_bar.manga .stat_names .stat_name[data-type="watching,rewatching"]:after { visibility: visible; }
+
+Свои обложки у персонажей
+.b-catalog_entry .image-cutter { background-size: cover; border-radius: 20px;}
+.b-catalog_entry-tooltip > a,
+.entry-tooltip_container > .image-link 
+{float: left; width: 160px; height: 249.34px; }
 */
