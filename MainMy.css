@@ -251,7 +251,7 @@ header.head h2
 { color: #34c34dfc; font: 24px Comfortaa, sans-serif; padding-right: 0px; }
 
 .p-profiles-show .achievements > .subheadline > a 
-{ color: #88ff00; font: 40px Comfortaa, sans-serif; padding-right: 0px; }
+{ color: #88ff00; text-shadow: 0 0 12px #7adc00; font: 40px Comfortaa, sans-serif; padding-right: 0px; }
 
 /* Изменение шрифта слова "Друзья" и "Клубы" в профиле */
 .p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline
