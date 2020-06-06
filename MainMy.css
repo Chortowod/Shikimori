@@ -242,19 +242,20 @@ header.head h2
 /* Убирает элементы типа "стрелочка" во всех заголовках */
 .subheadline > a:before { content: ""; }
 
-/* Изменение шрифта слова "История" в профиле */
-.profile-head > .c-history > .subheadline.m13 { text-align: center; }
-.profile-head > .c-history > .subheadline.m13 > a { color: #34c34dfc; font: 24px Comfortaa, sans-serif; }
+/* Изменение шрифта слов "История" и "Достижения" в профиле */
+.profile-head > .c-history > .subheadline.m13,
+.p-profiles-show .achievements > .subheadline 
+{ text-align: center; }
 
+.profile-head > .c-history > .subheadline.m13 > a
+{ color: #34c34dfc; font: 24px Comfortaa, sans-serif; padding-right: 0px; }
 
-/* Изменение шрифта слова "Друзья" в профиле */
-.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column > .subheadline {
-    color: #34c34dfc;
-    position: relative;
-    margin-left: 30%;
-    visibility: visible;
-    font: 24px Comfortaa, sans-serif;
-}
+.p-profiles-show .achievements > .subheadline > a 
+{ color: #34c34dfc; font: 40px Comfortaa, sans-serif; padding-right: 0px; }
+
+/* Изменение шрифта слова "Друзья" и "Клубы" в профиле */
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline
+{ color: #34c34dfc; text-align: center; font: 24px Comfortaa, sans-serif; }
 
 /* Изменение шрифта слова "Избранное" в профиле */
 .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after 
@@ -269,18 +270,6 @@ header.head h2
 	text-shadow: 0 0 12px #7adc00;
 }
 .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { visibility: hidden; }
-
-/* Изменение шрифта слова "Достижения" в профиле */
-.p-profiles-show .achievements > .subheadline > a:after {
-	content: 'Достижения';
-	color: #88ff00;
-	position: relative;
-	margin-left: 28.1%;
-	visibility: visible;
-	font: 40px Comfortaa, sans-serif;
-	text-shadow: 0 0 12px #7adc00;
-}
-.p-profiles-show .achievements > .subheadline > a { visibility: hidden; }
 
 /* Изменение шрифта "К манге" и "К аниме" в просмотренном */
 .p-profiles header.head .misc[title="к манге"] { font-size: 37px; color: #f36606; }
