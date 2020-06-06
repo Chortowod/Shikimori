@@ -60,3 +60,7 @@
 @keyframes mychar-speech-in { from { margin-right: -28px; opacity: 0; } to { margin-right: 0; opacity: 1; } }
 @keyframes mychar-speech-out { from { margin-right: 0; opacity: 1; } to { margin-right: -28px; opacity: 0; } }
 @keyframes mychar-phrase { from { position: static; visibility: visible; } }
+
+/* Собственно, сам персонаж. Он будет отображаться на всех страницах профиля, */
+/* но облачко с текстом будет только на главной */
+body { background: url(https://i.imgur.com/CmM6Pjk.gif) fixed right bottom / 310px no-repeat; }
