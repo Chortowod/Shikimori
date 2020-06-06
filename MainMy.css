@@ -243,15 +243,9 @@ header.head h2
 .subheadline > a:before { content: ""; }
 
 /* Изменение шрифта слова "История" в профиле */
-.profile-head > .c-history > .subheadline.m13 > a { visibility: hidden; }
-.profile-head > .c-history > .subheadline.m13:after {
-	visibility: visible;
-	content: "История";
-	position: absolute;
-	top: 0;
-	width: 90%;
-	text-align: center;
-}
+.profile-head > .c-history > .subheadline.m13 { text-align: center; }
+.profile-head > .c-history > .subheadline.m13 > a { color: #34c34dfc; font: 24px Comfortaa, sans-serif; }
+
 
 /* Изменение шрифта слова "Друзья" в профиле */
 .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column > .subheadline {
