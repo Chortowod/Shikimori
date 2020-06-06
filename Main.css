@@ -16,14 +16,19 @@
 .p-user_rates-index .list-lines tr td .new-value .item-add { position: relative; }
 .p-user_rates-index .list-lines tr .name a { color: #34c34dfc; font-weight: bold; }
 .p-user_rates-index .list-lines tr .name a:hover { color: #fff; }
+.p-user_rates-index .list-groups .summary.lines.library { border-color: #333; }
 /*---------------------------------------------------Unknown---------------------------------------------------*/
 
+@keyframes activity {
+	0%, 100% { transform: translateY(1px); }
+	50% { transform: translateY(7px); }
+}
 
-/*Изменение блока активности*/
+/* Изменение блока активности */
 .bar.vertical .line .bar-container .bar:hover { background: #ca701afc; }
 .bar.vertical .line .bar-container .bar:hover .value { color: #ffffff; font-size: 14px; margin-bottom: 4px; font-weight: bold; }
 
-/*Закругление большинства картинок и элементов*/
+/* Закругление большинства картинок и элементов */
 .avatar img, .b-comment>.inner header img { border-radius: 50%; }
 
 .b-user.detailed .info .image-name .image, 
@@ -72,7 +77,7 @@
 .b-catalog_entry-tooltip .image
 { border-radius: 10px; }
 
-/*Инверсия цвета для некоторых элементов*/
+/* Инверсия цвета для некоторых элементов */
 .b-rate .stars-container, 
 .l-top_menu-v2 .global-search input, 
 .b-height_shortener .shade, 
@@ -88,7 +93,7 @@
 { filter: invert(100%); }
 
 
-/*Перекрашивание ссылок из синего в кирпичный*/
+/* Перекрашивание ссылок из синего в кирпичный */
 a,
 .b-stats_bar a.title, 
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a, 
@@ -197,7 +202,7 @@ header.head a.edit,
 .b-topic.aside-expanded > .inner aside.buttons .main-controls .item-cancel
 { color: #34c34dfc; font-weight: bold; border: none; }
 
-/*Удаление обводки у некоторых элементов*/
+/* Удаление обводки у некоторых элементов */
 div.b-db_entry-variant-list_item
 .l-top_menu .menu-items .entry a, 
 .l-top_menu .submenu > .entry, 
@@ -217,7 +222,7 @@ div.b-db_entry-variant-list_item
 .p-profiles .profile-head .c-history .entry
 { border: none; }
 
-/*Изменение цвета блока с выбором действий у аниме и манги, типа просмотрено, прочитанно, отложено и т.д.*/
+/* Изменение цвета блока с выбором действий у аниме и манги, типа просмотрено, прочитанно, отложено и т.д. */
 .b-link_button.dark, 
 .b-link_button, 
 .b-add_to_list.watching .trigger, 
@@ -250,7 +255,7 @@ div.b-db_entry-variant-list_item
 .b-comments-notifier:hover
 { background: #34c34dfc; border: none; }
 
-/*Изменение цвета кнопок*/
+/* Изменение цвета кнопок */
 .b-form input[type=submit], 
 .b-button {
 	background: #34c34dfc;
@@ -259,7 +264,7 @@ div.b-db_entry-variant-list_item
 	transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
-/*Изменение цвета кнопок при наведении*/
+/* Изменение цвета кнопок при наведении */
 .b-form input[type=submit]:hover, 
 .b-button:hover
 { background: #34c34dfc; }
@@ -302,7 +307,7 @@ div.b-db_entry-variant-list_item
 .b-entry-info .line .b-tag { color: #34c34dfc; font-weight: bold; border: none; }
 .b-anime_status_tag.news { background-color: #34c34dfc; border: 1px solid #34c34dfc; }
 
-/*Изменение цвета некоторых надписей и кнопок на серый*/
+/* Изменение цвета некоторых надписей и кнопок на серый */
 header.head .notice, 
 .p-profiles .profile-head .c-brief header .notice, 
 .p-profiles-show .profile-content .activity .title,
@@ -371,12 +376,8 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 	animation-name: activity;
 }
 .activity .graph.vertical .line .bar:hover  { animation-name: none; transform: none; }
-@keyframes activity {
-	0%, 100% { transform: translateY(1px); }
-	50% { transform: translateY(7px); }
-}
 
-/*Блок "Достижения"*/
+/* Блок "Достижения" */
 .p-profiles-show .achievements .header {
 	box-shadow: 0 2px 6px 2px rgba(var(--block-color), 0.8);
 	border: 2px solid;
@@ -388,7 +389,7 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 .p-profiles-show .achievements .header .title { color: #fff; margin-left: 40%; }
 .p-profiles-show .achievements .header .size { margin-right: 7px; }
 
-/*Изменение цвета пропусков в нумерации строк кода и ползунка справа от редактора кода.*/
+/* Изменение цвета пропусков в нумерации строк кода и ползунка справа от редактора кода */
 .CodeMirror-gutter, 
 .CodeMirror-gutters, 
 .CodeMirror-linenumber, 
@@ -398,18 +399,18 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 .l-top_menu-v2 .menu-dropdown > span 
 { background: #000; }
 
-/*Удаление белой рамки вокруг редактора кода*/
+/* Удаление белой рамки вокруг редактора кода */
 .b-edit_styles .edit_style .style_css .CodeMirror, 
 .b-edit_styles .new_style .style_css .CodeMirror 
 { background: #000; border: 0px; }
 
-/*Нумерация строк кода белым цветом*/
+/* Нумерация строк кода белым цветом */
 .CodeMirror pre, 
 .cm-s-solarized.cm-s-light .CodeMirror-linenumber, 
 .b-shiki_editor .body .editor textarea 
 { color: #fff; border: 0px; }
 
-/*Изменение цвета позунка и ввода текста справа от редактора кода*/
+/* Изменение цвета позунка и ввода текста справа от редактора кода */
 .noUi-connects { background: #000; color: #fff; }
 .b-edit_styles .body_background #body_background_input { border-color: #000; }
 .b-input select { color: #000; }
@@ -420,36 +421,3 @@ body[data-locale=ru] .b-offtopic_marker.off:before { border: 0px; }
 	.p-profiles-show .b-feedback:after { display: none; }
 	.l-page { background: #000; opacity: 0.9; margin-top: 0px; margin-bottom: 0px; border-radius: 0px; }
 }
-
-
-/* Мусор
-
-???
-.l-top_menu .menu-items .entry a, .l-top_menu .submenu > .entry, .b-main_search ul.popup { background: #000; border: 0px; }
-
-Спойлеры в блоке "Обо мне"
-.p-profiles .about.block .b-spoiler .after:before, .about.block .b-spoiler .before:before { content: ''; }
-.p-profiles .about.block .b-spoiler .before { width: 100%;  height: 50px; display: inline-block !important; margin-top: -50px; }
-.p-profiles .about.block .b-spoiler label 
-{
-  border: none;
-  display: inline-block !important;
-  font-weight: bold; 
-  color: #c2890ed1; 
-  background: #c2890ed1; 
-  height: 30px; 
-  width: 100%;
-  font-size: 12pt;
-  padding-top: 3px; 
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-.b-stats_bar.manga .stat_names .stat_name[data-type="watching,rewatching"]:after { visibility: visible; }
-
-Свои обложки у персонажей
-.b-catalog_entry .image-cutter { background-size: cover; border-radius: 20px;}
-.b-catalog_entry-tooltip > a,
-.entry-tooltip_container > .image-link 
-{float: left; width: 160px; height: 249.34px; }
-*/
