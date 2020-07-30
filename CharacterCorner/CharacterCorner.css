@@ -57,7 +57,7 @@
 .mychar .speech div:nth-of-type(4) { animation-delay: 12.0s; animation-duration: 6000s; } /* 4-ая фраза, и снова */
 
 /* Персонаж в углу: анимация облачка */
-@keyframes mychar-speech-in { from { margin-right: -28px; opacity: 0; } to { margin-right: 0; opacity: 1; } }
+@keyframes mychar-speech-in { from { margin-bottom: -28px; opacity: 0; } to { margin-bottom: 0; opacity: 1; } }
 @keyframes mychar-speech-out { from { margin-right: 0; opacity: 1; } to { margin-right: -28px; opacity: 0; } }
 @keyframes mychar-phrase { from { position: static; visibility: visible; } }
 
