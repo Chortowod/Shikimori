@@ -10,8 +10,8 @@
 	max-width: 12em;
 	padding: 0.38em 0.56em;
 	border-radius: 0.5em;
-	right: 225px;  /* положение облачка: отступ справа */
-	bottom: 360px; /* положение облачка: отступ снизу */
+	right: 70px;  /* положение облачка: отступ справа */
+	bottom: 414px; /* положение облачка: отступ снизу */
 	transform-origin: bottom left;
 	line-height: 1.25em;
 	text-align: center;
@@ -19,18 +19,18 @@
 	background: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
 }
 .mychar .speech::after {
-	content: '';
-	position: absolute;
-	right: 0;
-	top: 50%;
-	bottom: 0.75em;
-	width: 0;
-	height: 0;
-	margin: -0.62em -1.24em 0 0;
-	border: 1.24em solid transparent;
-	border-right: 0;
-	border-bottom: 0;
-	border-left-color: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
+    content: '';
+    position: absolute;
+    right: 18%;
+    top: 114%;
+    transform: rotate(180deg);
+    width: 0;
+    height: 0;
+    margin: -0.62em -1.24em 0 0;
+    border: 1.24em solid transparent;
+    border-right: 0;
+    border-bottom: 0;
+    border-left-color: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
 }
  
 /* Персонаж в углу: анимированное облачко */
