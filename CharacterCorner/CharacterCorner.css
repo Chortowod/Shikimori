@@ -1,3 +1,11 @@
+/* Собственно, сам персонаж. Он будет отображаться на всех страницах профиля, */
+/* но облачко с текстом будет только на главной */
+/* если экран маленький, то убрать облачко */
+@media (max-width:1640px) {
+.mychar .speech { display: none; }
+body { background: url(https://i.imgur.com/CmM6Pjk.gif) fixed right bottom / 310px no-repeat; }
+}
+
 /* Персонаж в углу */
 .mychar { position: fixed; right: 0; bottom: 0; }
  
@@ -18,6 +26,7 @@
 	color: #FFF;                    /* цвет текста в облачке */
 	background: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
 }
+/* маленькая стрелочка от облачка для позиции говорящего
 .mychar .speech::after {
     content: '';
     position: absolute;
@@ -30,9 +39,9 @@
     border: 1.24em solid transparent;
     border-right: 0;
     border-bottom: 0;
-    border-left-color: rgba(30,30,30,0.7); /* цвет и прозрачность фона облачка */
+    border-left-color: rgba(30,30,30,0.7); цвет и прозрачность фона облачка
 }
- 
+*/
 /* Персонаж в углу: анимированное облачко */
 .mychar .speech {
 	animation-name: mychar-speech-in;
@@ -61,6 +70,5 @@
 @keyframes mychar-speech-out { from { margin-right: 0; opacity: 1; } to { margin-right: -28px; opacity: 0; } }
 @keyframes mychar-phrase { from { position: static; visibility: visible; } }
 
-/* Собственно, сам персонаж. Он будет отображаться на всех страницах профиля, */
-/* но облачко с текстом будет только на главной */
-body { background: url(https://i.imgur.com/CmM6Pjk.gif) fixed right bottom / 310px no-repeat; }
+
+
