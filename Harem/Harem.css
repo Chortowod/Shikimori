@@ -9,6 +9,8 @@ img.b-poster { max-width: 186.3px; border-radius: 42px; }
 	color: #88ff00;
 	font: 40px Comfortaa, sans-serif;
 	text-shadow: 0 0 12px #7adc00;
+	animation: hue 10s infinite linear;
+	-webkit-animation: hue 10s infinite linear;
 }
 .u-tabs [data-tab-switch] {
 	display: inline-block;
