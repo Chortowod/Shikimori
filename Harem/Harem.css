@@ -2,7 +2,7 @@
 @-webkit-keyframes hue { from { -webkit-filter: hue-rotate(0deg); } to { -webkit-filter: hue-rotate(-360deg); } }
 
 /* Ограничение максимального размера картинки в шипперстве" */
-.b-image.b-poster img { max-width: 186.3px; border-radius: 42px; }
+.chtw-ship img { max-width: 186.3px; border-radius: 42px; }
 
 .p-profiles-show .about > .headline {
 	text-align: center;
@@ -26,8 +26,32 @@
 	width: 12%;
 	font: 16px Comfortaa, sans-serif;
 }
-.block { margin-bottom: 0px; }
+.block { margin-bottom: 0; }
 .u-tabs > div:not([data-tab]) { white-space: nowrap; overflow-x: auto; text-align: center; margin-bottom: 30px; }
 .u-tabs .active[data-tab-switch] { color: #ffa200; opacity: 1; width: 12%; font: 16px Comfortaa, sans-serif;}
 .u-tabs [data-tab-switch]:not(:first-child) { margin-left: 10px; }
-.u-tabs [data-tab] { margin-top: 10px; }
+.u-tabs [data-tab] { margin-top: 10px; margin-left: 10px; }
+
+.chtw-ship > br { display: none; }
+.chtw-ship {
+	text-align: center;
+	margin-left: 10px;
+}
+.chtw-ship a:nth-of-type(2n) {
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+	.chtw-ship br:nth-of-type(4n) { display: inherit; }
+}
+@media screen and (max-width: 800px) {
+	.chtw-ship br:nth-of-type(2n) { display: inherit; }
+	.u-tabs [data-tab-switch] {
+		display: block;
+		margin: 2px auto !important;
+		width: 75% !important;
+	}
+}
+@media screen and (max-width: 420px) {
+	.chtw-ship img { max-width: 125px; }
+}

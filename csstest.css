@@ -5,23 +5,25 @@
 @import url(https://raw.githubusercontent.com/Chortowod/Shikimori/master/MainMy.css);
 @import url(https://raw.githubusercontent.com/Chortowod/Shikimori/master/roundList.css);
 
-#plashiki-inject {
-    padding-top: 15px;
-}
+/* Цитаты от пользователей с темным фоном */
+.b-quote-v2 { background-color: #040f06; }
+
+
+/* Блок с рейтингом, студией и онлайн-просмотром */
+
+#plashiki-inject { padding-top: 15px; }
 .p-animes-show .c-info-right .watch-online .kind,
 .p-mangas-show .c-info-right .watch-online .kind,
 .p-ranobe-show .c-info-right .watch-online .kind
 { display: none; }
 
-.c-info-right > .block {
-    text-align: center;
-}
+.c-info-right > .block,
+.c-about > .cc > .c-info-right > .block > .block
+{ text-align: center; }
 
-.c-info-right > .block:nth-child(2) {
-    margin-top: 10px;
-}
+.c-info-right > .block:nth-child(2) { margin-top: 10px; }
 
-/* Студия текстом большая */
+/* Студия без картинки (текст) большим шрифтом */
 .b-tag.active[href], .b-tag[href]:hover {
     background-color: transparent;
     border-bottom-color: transparent;
@@ -35,10 +37,6 @@
 .c-about > .cc > .c-info-right > .block > .block > .b-tag {
     font-size: 28px;
     margin-bottom: 18px;
-}
-
-.c-about > .cc > .c-info-right > .block > .block {
-    text-align: center;
 }
 
 
@@ -114,7 +112,7 @@ article[id="31008"]  img { background-image: url(https://i.imgur.com/3ZJD8Eg.png
 article[id="159165"] img { background-image: url(https://i.imgur.com/rk0ZMnY.png); object-position: 0px 9999px; background-size: cover; }
 article[id="22055"]  img { background-image: url(https://i.imgur.com/tceRXMG.png); object-position: 0px 9999px; background-size: cover; }
 article[id="22055"]  img:hover { background-image: url(https://i.imgur.com/3gMTcUE.png); }
-article[id="22052"]  img:hover { background-image: url(https://i.imgur.com/KJTu7Ti.jpg); object-position: 0px 9999px; background-size: cover; }
+article[id="22052"]  img:hover { background-image: url(https://i.imgur.com/KJTu7Ti.jpg); }
 article[id="24195"]  img { background-image: url(https://i.imgur.com/sugWMuc.png); object-position: 0px 9999px; background-size: cover; }
 article[id="23602"]  img { background-image: url(https://i.imgur.com/uzt0rkV.png); object-position: 0px 9999px; background-size: cover; }
 article[id="57499"]  img { background-image: url(https://i.imgur.com/SrdyP0F.png); object-position: 0px 9999px; background-size: cover; }
@@ -196,22 +194,14 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
 /* Адаптация под разные экраны */
 
 @media screen and (max-width: 480px) {
-    .p-profiles-show .cc-favourites .c-column:nth-child(6n) {
-        margin-right: 2%;
-    }
+    .p-profiles-show .cc-favourites .c-column:nth-child(6n) { margin-right: 2%; }
     .p-profiles-show .achievements > .subheadline > a,
-    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a {
-        font-size: 24px !important;
-    }
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { font-size: 24px !important; }
 }
 
 @media screen and (max-width: 1300px) {
-    .p-profiles .profile-head .c-history {
-        display: none;
-    }
-    .p-profiles .profile-head .c-brief {
-        padding-left: 0 !important;
-    }
+    .p-profiles .profile-head .c-history { display: none; }
+    .p-profiles .profile-head .c-brief { padding-left: 0 !important; }
 }
 
 @media screen and (max-width: 1200px) {
@@ -219,9 +209,7 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
         width: 16%;
         margin-left: 1px;
     }
-    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after {
-        content: none;
-    }
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after { content: none; }
     .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a {
         visibility: visible;
         color: #88ff00;
@@ -232,13 +220,6 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
     }
 }
 
-@media screen and (max-width: 768px) {
-    .u-tabs [data-tab-switch] {
-        display: block;
-        margin: 2px auto !important;
-        width: 75% !important;
-    }
-}
 
 
 
@@ -258,24 +239,11 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
 
 
 
-
-.p-profiles-show .cc-favourites .c-column:nth-child(11n+1) {
-    clear: left;
-}
-.p-profiles-show .cc-favourites .c-column:nth-child(8n+1) {
-    clear: inherit;
-}
-
-.p-profiles-show .cc-favourites .c-column:nth-child(11n) {
-    margin-right: 0;
-}
-.p-profiles-show .cc-favourites .c-column:nth-child(8n) {
-    margin-right: 2%;
-}
-
-.p-profiles-show .cc-favourites .c-column {
-    width: 7.27%;
-}
+.p-profiles-show .cc-favourites .c-column:nth-child(11n+1) { clear: left; }
+.p-profiles-show .cc-favourites .c-column:nth-child(8n+1) { clear: inherit; }
+.p-profiles-show .cc-favourites .c-column:nth-child(11n) { margin-right: 0; }
+.p-profiles-show .cc-favourites .c-column:nth-child(8n) { margin-right: 2%; }
+.p-profiles-show .cc-favourites .c-column { width: 7.27%; }
 
 
 
@@ -283,26 +251,18 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
 
 
 
-
+/* Клубы стандартным шрифтом */
 .p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline > a {
     padding: inherit;
     font-weight: inherit;
 }
 
 
-
-.p-profiles .profile-head .c-brief header h1 {
-    font: 55px Comfortaa, sans-serif;
-}
-.p-profiles .profile-head .c-history {
-    margin-top: 8%;
-}
+/* Большой размер шрифта ника */
+.p-profiles .profile-head .c-brief .avatar { display: none; }
 .p-profiles .profile-head .c-brief {
     padding-left: 23%;
     text-align: center;
-}
-.p-profiles .profile-head .c-brief .avatar {
-    display:none;
 }
 
 .p-profiles .profile-head:before {
@@ -317,23 +277,14 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
     margin-bottom: 10px;
 }
 
-
-
-
-/* $('.u-tabs > div:not(".hidden") .c-character') */
-
 .cc-9-g15>.c-column {
     margin-bottom: 6px;
 }
 
 @media screen and (min-width: 768px) {
-    .cc-9-g15 > .c-column:last-child {
-        margin-bottom: 0 !important;
-    }
+    .cc-9-g15 > .c-column:last-child { margin-bottom: 0 !important; }
 }
-    /* Скрывает списки коллекций и показывает только при наведении
-    div > .menu-slide-outer > .menu-slide-inner > .l-menu .block > .block { opacity: 0; }
-    div > .menu-slide-outer > .menu-slide-inner > .l-menu .block > .block:hover { opacity: 1; } */
+
 
 .b-db_entry > .c-image img:hover {
     max-width: initial;
@@ -342,48 +293,41 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
     z-index: 2;
 }
 
-.p-profiles .profile-head .c-brief .avatar img {
-    width: 255px;
-}
-
 /* Изменить цвет примечания "анонс" в списке запланированного */
 .p-user_rates-index .list-lines tr td .anons { color: #ff0073; }
 
 /* Нововведения шики со спойлерами надо будет пересмотреть */
 .b-spoiler_block.is-opened > div {background-color: #020e0f;}
 
-/* Буковка Р строки "Ранобэ" в правом верхнем выпадающем меню */
-#ctwRanobe:before { content: '℗'; font-size: 26px; }
-
 /* Обводка просмотренных тайтлов и убирание зеленой галочки */
 .c-column.b-catalog_entry.completed {
-    border: 1.5px solid #09f11b;
+    border: 1px solid #09f11b;
     border-radius: 20px 20px 0 0;
     background-color: #2fce2338;
 }
 .c-column.b-catalog_entry.planned {
-    border: 1.5px solid #ffdf003d;
+    border: 1px solid #ffdf003d;
     border-radius: 20px 20px 0 0;
     background-color: #ffdf003d;
 }
 .c-column.b-catalog_entry.on_hold {
-    border: 1.5px solid #c4c4c4;
+    border: 1px solid #c4c4c4;
     border-radius: 20px 20px 0 0;
     background-color: #ffffff1f;
 }
 .c-column.b-catalog_entry.watching {
-    border: 1.5px solid #08dbff;
+    border: 1px solid #08dbff;
     border-radius: 20px 20px 0 0;
     background-color: #00f4ff57;
 }
 .c-column.b-catalog_entry.dropped {
-    border: 1.5px solid #ff000045;
+    border: 1px solid #ff000045;
     border-radius: 20px 20px 0 0;
     background-color: #ff00004f;
 }
 
 .c-column.b-catalog_entry.rewatching {
-    border: 1.5px solid #d800ff45;
+    border: 1px solid #d800ff45;
     border-radius: 20px 20px 0 0;
     background-color: #682769;
 }
@@ -426,10 +370,7 @@ article[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif
 tr[data-target_id="7791"] span.current-value[data-field="score"] { visibility: hidden; margin-right: 13px; }
 tr[data-target_id="7791"] span.current-value[data-field="score"]:after { content: "❤"; color: red; visibility: visible; }
 
-/*Изменение оценки в просмотренном и описание пояснений цвета
-.status-2:before { content: 'Цветом апельсина отмечены анимешки, которые я смотрел с кем-то'; color: orange; }
-.b-collection_search:after { content: 'Цветом лайма отмечены анимешки, \A которые я смотрел в кино'; color: lime; }
-.list-groups:before { content: 'Цветом моря отмечены анимешки, которые я смотрел в дороге'; color: aqua; } */
+
 
 .p-user_rates-index .list-lines tr[data-target_id="15051"] .name a, .p-user_rates-index .list-lines tr[data-target_id="28957"] .name a,
 .p-user_rates-index .list-lines tr[data-target_id="36098"] .name a, .p-user_rates-index .list-lines tr[data-target_id="23289"] .name a,
@@ -498,7 +439,7 @@ tr[data-target_id="7791"] span.current-value[data-field="score"]:after { content
 /*Ветка ели: url(https://img1.picmix.com/output/stamp/normal/8/5/0/0/680058_f2005.gif) fixed right -45px top 330px / 420px no-repeat, */
 /*Ель: url(https://media.giphy.com/media/Vbsmuqt7OXPWPGpZkZ/giphy.gif) fixed left -290px bottom -300px / 1000px no-repeat, */
 
-/*Анимированные обои*/
+/* Анимированные обои */
 body
 {
     background:
@@ -523,7 +464,7 @@ body
                     /*Паймон*/
                     /*url(https://i.imgur.com/hveEe7a.gif) fixed left 30px bottom -10px / 340px no-repeat,*/
                     /*Сэйбер*/
-                url(https://i.imgur.com/MGeoUxB.png) fixed left 0px bottom -30px / 380px no-repeat,
+                url(https://i.imgur.com/MGeoUxB.png) fixed left 0 bottom -30px / 380px no-repeat,
                     /*Рам*/
                     /*url(https://i.imgur.com/etNWS2J.gif) fixed left 30px bottom -33px / 253px no-repeat,*/
                     /*Ветка сакуры*/
@@ -545,7 +486,7 @@ body
                     /*Паймон*/
                     /*url(https://i.imgur.com/hveEe7a.gif) fixed left 30px bottom -10px / 340px no-repeat,*/
                     /*Сэйбер*/
-                url(https://i.imgur.com/E79zfvt.png) fixed left 0px bottom -30px / 380px no-repeat,
+                url(https://i.imgur.com/E79zfvt.png) fixed left 0 bottom -30px / 380px no-repeat,
                     /*Рем*/
                     /*url(https://i.imgur.com/Uueli9h.gif) fixed left 30px bottom -10px / 225px no-repeat,*/
                     /*Ветка сакуры*/

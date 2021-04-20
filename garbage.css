@@ -65,3 +65,18 @@
 
 /* TEST */
 .b-comment.shiki-object[data-user_id="468878"]:hover {display: none;}
+
+/* Скрывает списки коллекций и показывает только при наведении */
+div > .menu-slide-outer > .menu-slide-inner > .l-menu .block > .block { opacity: 0; }
+div > .menu-slide-outer > .menu-slide-inner > .l-menu .block > .block:hover { opacity: 1; }
+
+/*Изменение оценки в просмотренном и описание пояснений цвета */
+.status-2:before { content: 'Цветом апельсина отмечены анимешки, которые я смотрел с кем-то'; color: orange; }
+.b-collection_search:after { content: 'Цветом лайма отмечены анимешки, \A которые я смотрел в кино'; color: lime; }
+.list-groups:before { content: 'Цветом моря отмечены анимешки, которые я смотрел в дороге'; color: aqua; }
+
+/* Буковка Р строки "Ранобэ" в правом верхнем выпадающем меню */
+#ctwRanobe:before { content: '℗'; font-size: 26px; }
+
+/* Размер аватарки*/
+.p-profiles .profile-head .c-brief .avatar img { width: 255px; }
