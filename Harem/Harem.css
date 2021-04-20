@@ -2,7 +2,7 @@
 @-webkit-keyframes hue { from { -webkit-filter: hue-rotate(0deg); } to { -webkit-filter: hue-rotate(-360deg); } }
 
 /* Ограничение максимального размера картинки в шипперстве" */
-.chtw-ship img { max-width: 186.3px; border-radius: 42px; }
+.chtw-ship .b-image.b-poster img { max-width: 186.3px; border-radius: 42px; }
 
 .p-profiles-show .about > .headline {
 	text-align: center;
@@ -53,5 +53,5 @@
 	}
 }
 @media screen and (max-width: 420px) {
-	.chtw-ship img { max-width: 125px; }
+	.chtw-ship .b-image.b-poster img { max-width: 125px; }
 }
