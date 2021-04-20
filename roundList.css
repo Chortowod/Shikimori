@@ -659,11 +659,11 @@
 @media screen and (max-width: 768px) {
     .c-lists-info .b-stats_bar .bar,
     .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a
-    { display: none !important; }
+    { display: none; }
 
     .c-lists-info .b-stats_bar .stat_names {
-        position: initial !important;
-        height: auto !important;
-        padding-left: 0 !important;
+        position: initial;
+        height: auto;
+        padding-left: 0;
     }
 }
