@@ -31,3 +31,37 @@
 .b-catalog_entry-tooltip > a,
 .entry-tooltip_container > .image-link 
 {float: left; width: 160px; height: 249.34px; }
+
+
+/*Анимированная аватарка*/
+.p-profiles .profile-head .c-brief .avatar
+{
+  background: url("https://i.imgur.com/ehmwdLv.gif");
+  background-position: center;  background-repeat: no-repeat;  background-size: contain;
+  transition: 0.5s all;
+  max-width: 300px;
+  margin: 0 0 0 0;
+}
+
+/*Аватарка при наведении*/
+.p-profiles .profile-head .c-brief .avatar:hover
+{
+  background: url("https://i.imgur.com/n9bL1ES.gif");
+  background-position: top;  background-repeat: no-repeat;  background-size: contain;
+  width: 1180px; height: 1000px;
+  float: none;
+  max-width: 1180px; max-height: 1000px;
+}
+
+/*Аватарка при нажатии*/
+.p-profiles .profile-head .c-brief .avatar:active
+{
+  background: url("https://i.imgur.com/2SWWeYs.gif");
+  background-position: top;  background-repeat: no-repeat;  background-size: contain;
+  width: 1180px; height: 1000px;
+  float: none;
+  max-width: 1180px; max-height: 1000px;
+}
+
+/* TEST */
+.b-comment.shiki-object[data-user_id="468878"]:hover {display: none;}
