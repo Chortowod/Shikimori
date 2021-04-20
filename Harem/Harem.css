@@ -33,12 +33,11 @@
 .u-tabs [data-tab] { margin-top: 10px; margin-left: 10px; }
 
 .chtw-ship > br { display: none; }
+.chtw-ship a:nth-of-type(2n) { margin-right: 10px; }
+
 .chtw-ship {
 	text-align: center;
 	margin-left: 10px;
-}
-.chtw-ship a:nth-of-type(2n) {
-	margin-right: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -52,6 +51,7 @@
 		width: 75% !important;
 	}
 }
+
 @media screen and (max-width: 420px) {
 	.chtw-ship .b-image.b-poster img { max-width: 125px; }
 }
