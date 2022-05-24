@@ -1,0 +1,2565 @@
+@import url('https://raw.githubusercontent.com/Chortowod/Shikimori/master/CSS/character_corner.css');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+@keyframes activity { 0%, 100% { transform: translateY(1px); } 50% { transform: translateY(7px); } }
+@keyframes slide { 0% { width: 100%; opacity: 1; } 5% { width: 100%; opacity: 1; } 80% { width: 100%; opacity: 1; } 95% { width: 100%; } 100% { opacity: 0; } }
+@keyframes hue { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(-360deg); } }
+@-webkit-keyframes hue { from { -webkit-filter: hue-rotate(0deg); } to { -webkit-filter: hue-rotate(-360deg); } }
+
+/* Запасные анимированные обои: https://i.imgur.com/vHxDyeO.gif */
+
+:root {
+    --chtw-main-text: #34c34dfc;
+    --chtw-second-text: #fff;
+    --chtw-main-background: #000;
+    --chtw-dropped: #f60000;
+    --chtw-on-hold: #dd5202;
+    --chtw-link-hover: #dd5202;
+    --chtw-subline: #041211;
+    --chtw-text-small: #ebebeb;
+    --chtw-top-image: url(https://i.imgur.com/1dFK8V3.jpg);
+    --chtw-background: url(https://i.imgur.com/TRcn63o.gif);
+    --chtw-background-hover: url(https://i.imgur.com/TRcn63o.gif);
+    --chtw-background-effects: url(https://i.imgur.com/tHTeCA3.gif);
+    --chtw-background-effects-hover: url(https://i.imgur.com/tHTeCA3.gif);
+    --chtw-left-bottom: url(https://i.imgur.com/MGeoUxB.png);
+    --chtw-left-bottom-hover: url(https://i.imgur.com/E79zfvt.png);
+    --chtw-left-bottom-2: url(https://i.imgur.com/uqwCk99.gif);
+    --chtw-left-bottom-2-hover: url(https://i.imgur.com/uqwCk99.gif);
+    --chtw-right-bottom: url(https://i.imgur.com/CmM6Pjk.gif);
+    --chtw-right-bottom-hover: url(https://i.imgur.com/CmM6Pjk.gif);
+    --chtw-right-center: url(https://i.imgur.com/KahlnlV.gif);
+    --chtw-right-center-hover: url(https://i.imgur.com/KahlnlV.gif);
+}
+
+
+/*<editor-fold desc="********** UNKNOWN **********">*/
+/*******************************************************************************************************************/
+/* UNKNOWN */
+/*******************************************************************************************************************/
+.ac_results.menu-suggest .ac_even,
+.ac_results.menu-suggest .ac_odd,
+.b-table tr,
+.p-user_rates-index .list-groups .summary.posters.list,
+.p-user_rates-index .list-groups .summary.posters.library
+{ background: #000; border: none; color: #fff; }
+
+.ac_results.menu-suggest .ac_even:hover,
+.ac_results.menu-suggest .ac_odd:hover
+{ background: #34c34dfc; }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ОБЩЕЕ **********">*/
+/*******************************************************************************************************************/
+/* ОБЩЕЕ */
+/*******************************************************************************************************************/
+
+/* Стиль недоступной кнопки */
+.b-input input[disabled] { color: #fff; background: #333; border-color: #333; }
+
+/* Цвет описания типа в небольших блоках с разным содержимым (тип, жанр, роль и т.п.) */
+.b-db_entry-variant-list_item > .info .line .key { color: #daddda; }
+
+/* Убирает элементы типа "стрелочка" во всех заголовках */
+.subheadline > a:before { content: ""; }
+
+/* Изменение цвета выделения */
+::selection { color: var(--chtw-second-text); background: var(--chtw-main-text); }
+
+/* Блок с контентом */
+.l-page {
+    background: #000;
+    color: #f2f8ff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    opacity: 0.9;
+    margin-top: 41px;
+    margin-bottom: 14px;
+}
+
+/* Затемнение фона заголовков */
+.headline, .midheadline { background: #000; color: #fff; border-left: 0; }
+/* Убрать задний фон у заголовков */
+.subheadline { background: #0000; color: #fff; border-left: 0; }
+
+/* Цвет заголовков (название аниме/манги и т.п.) */
+b, header.head h1, header.head h2
+{ color: #fff; }
+
+/* Изменение цвета блока "Наверх" слева */
+.b-to-top .slide:before { background: #000; }
+
+/* Показать остальное: цвет */
+.b-show_more { color: #1aca1a; font-size: 12px; }
+
+/* Скрытие блока с отчетом об ошибке слева */
+.b-feedback { visibility: hidden; }
+
+/* Изменение стиля цитат */
+.b-quote {
+    background: #010601;
+    color: #fff;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Имена и названия центрированы */
+.b-catalog_entry .cover .title,
+.p-contests-show .b-catalog_entry .cover .title
+{ text-align: center; }
+
+/* Убрать подчеркивание ссылок и при наведении сделать плавность и цвет */
+.c-lists-info .b-stats_bar .stat_names .stat_name > a,
+.b-stats_bar > a.title,
+.profile-head > .c-history > .subheadline > a,
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline > a,
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after,
+.p-profiles-show .achievements > .subheadline > a,
+.profile-content > div[class="block"] > .subheadline > a,
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline
+{ transition: 0.3s; }
+.c-lists-info .b-stats_bar .stat_names .stat_name > a:hover,
+.b-stats_bar > a.title:hover,
+.profile-head > .c-history > .subheadline > a:hover,
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline > a:hover,
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:hover:after,
+.p-profiles-show .achievements > .subheadline > a:hover,
+.profile-content > div[class="block"] > .subheadline > a:hover,
+.p-profiles .profile-head .c-info .c-additionals:hover:before,
+.p-profiles-show .profile-content .cc-2 > .c-left .activity .title:hover,
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline:hover,
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a:hover
+{ color: #feff00; text-decoration: none; }
+
+/* Закругление большинства картинок и элементов */
+.avatar img, .b-comment>.inner header img { border-radius: 50%; }
+
+.b-user.detailed .info .image-name .image,
+.b-user.moderation .info .image-name .image
+{ border-radius: 35px; }
+
+.b-catalog_entry .cover .image-decor img,
+.b-achievement .c-image .inner a img,
+.b-achievement .c-image .inner a .no-image,
+.b-achievement .c-image .inner a .border,
+.b-badge img,
+.b-badge .no-image,
+.p-profiles .about.block .b-spoiler label,
+.b-db_entry>.c-image img,
+.b-link_button.dark,
+.b-link_button,
+.b-add_to_list.watching .trigger,
+.b-add_to_list.watching .option,
+.b-db_entry-note .name-container .b-user_rate .b-add_to_list .trigger,
+.b-db_entry-note .name-container .b-user_rate .b-add_to_list .option,
+.b-add_to_list.planned .trigger,
+.b-add_to_list.planned .option,
+.b-comments-notifier,
+.b-add_to_list.completed .trigger,
+.b-add_to_list.completed .option,
+.b-add_to_list.rewatching .trigger,
+.b-add_to_list.rewatching .option,
+.b-add_to_list.on_hold .trigger,
+.b-add_to_list.on_hold .option,
+.b-add_to_list.dropped .trigger,
+.b-add_to_list.dropped .option,
+.b-image img,
+.p-animes .cc .c-video,
+.p-mangas .cc .c-video
+{ border-radius: 20px; }
+
+.p-profiles .profile-head .c-history .entry img,
+.b-db_entry-variant-list_item .image img,
+.l-top_menu-v2 .menu-dropdown.profile>span img,
+.b-catalog_entry-tooltip .inner .additional-images .link img,
+.b-hot_topics,
+.p-dashboards-show .cc-second .cc-inner .c-my_list,
+.tooltip-inner,
+.b-postloader.collapsed,
+.b-topic .footer-vote,
+.b-catalog_entry-tooltip .image
+{ border-radius: 10px; }
+
+/* Инверсия цвета для некоторых элементов */
+.l-top_menu-v2 .global-search input,
+.b-height_shortener .shade,
+.CodeMirror-vscrollbar,
+.b-main_search .input,
+.l-page .menu-toggler .toggler,
+.b-input select,
+.b-input input[type=number],
+.b-input textarea[type=number],
+.b-input input[type=text],
+.b-input input[type=file]
+{ filter: invert(100%); }
+
+/* Удаление обводки у некоторых элементов */
+div.b-db_entry-variant-list_item,
+.l-top_menu .menu-items .entry a,
+.l-top_menu .submenu > .entry,
+.b-main_search ul.popup,
+.b-main_search .popup li.active,
+.b-main_search .popup li:hover,
+.b-main_search .input input,
+.b-main_search ul.popup li,
+.ac_results,
+.p-dashboards-show .cc-news .c-generated_news .b-topic,
+.b-topic,
+.b-db_entry-note,
+.p-topics .l-menu .sticky-topics .topic,
+.p-topics .l-menu .clubs .entry,
+.p-topics .l-menu .reviews .entry,
+.l-top_menu .entry,
+.p-profiles .profile-head .c-history .entry
+{ border: none; }
+
+/* Изменение цвета блока с выбором действий у аниме и манги, типа просмотрено, прочитано, отложено и т.д. */
+.b-link_button.dark,
+.b-link_button,
+.b-add_to_list.watching .trigger,
+.b-add_to_list.watching .option,
+.b-db_entry-note .name-container .b-user_rate .b-add_to_list .trigger,
+.b-db_entry-note .name-container .b-user_rate .b-add_to_list .option,
+.b-add_to_list.planned .trigger,
+.b-add_to_list.planned .option,
+.b-comments-notifier,
+.b-add_to_list.completed .trigger,
+.b-add_to_list.completed .option,
+.b-add_to_list.rewatching .trigger,
+.b-add_to_list.rewatching .option,
+.b-add_to_list.on_hold .trigger,
+.b-add_to_list.on_hold .option,
+.b-add_to_list.dropped .trigger,
+.b-add_to_list.dropped .option,
+.b-anime_status_tag.news:before,
+.b-comments .comments-loader:hover,
+.b-comments .comments-expander:hover
+{ color: var(--chtw-second-text); background: var(--chtw-main-text); border: none; }
+
+.b-add_to_list .plus,
+.b-add_to_list.completed .edit,
+.b-add_to_list.dropped .edit,
+.b-add_to_list.on_hold .edit,
+.b-add_to_list .expanded-options .remove-trigger .text
+{ color: var(--chtw-second-text); }
+
+.b-link_button.dark:hover,
+.b-link_button:hover,
+.b-comments-notifier:hover
+{ background: var(--chtw-main-text); border: none; }
+
+/* Изменение цвета кнопок */
+.b-form input[type=submit],
+.b-button {
+    background: #34c34dfc;
+    border-radius: 3px;
+    transition: background-color .1s linear;
+    transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+/* Изменение цвета кнопок при наведении */
+.b-form input[type=submit]:hover,
+.b-button:hover
+{ background: var(--chtw-main-text); }
+
+.tooltip-inner .close,
+.b-comments .comments-loader,
+.b-comments .comments-hider,
+.b-comments .comments-expander,
+.p-animes-show .other-names.click-loader,
+.p-mangas-show .other-names.click-loader,
+.p-ranobe-show .other-names.click-loader,
+.p-user_rates-index .list-lines tr.edit-form form,
+.b-shiki_editor.previewed .body .preview,
+.b-hot_topics-v2,
+.b-hot_topics,
+.p-dashboards-show .cc-second .cc-inner .c-my_list,
+.tooltip-inner,
+.b-postloader.collapsed,
+.b-topic .footer-vote
+{ color: var(--chtw-second-text); background: var(--chtw-main-background); border: none; }
+
+.p-dashboards-show .cc-news .c-news_topics .b-topic,
+.b-comment,
+.l-top_menu .submenu,
+.p-dashboard .l-content .b-catalog_entry,
+.p-dashboard .l-menu .ongoing
+{ border: none; }
+
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.b-shiki_editor .body .editor textarea
+{ background: var(--chtw-main-background); border: 0; }
+
+.b-anime_status_tag.news { background-color: var(--chtw-main-text); border: 1px solid var(--chtw-main-text); }
+
+/* Изменение цвета некоторых надписей и кнопок на серый */
+header.head .notice,
+.p-profiles .profile-head .c-brief header .notice,
+.p-profiles-show .profile-content .activity .title,
+.bar.vertical .line .x_label,
+.b-hot_topics .topic.subject,
+.b-catalog_entry .cover .misc span,
+.b-entry-info .line .value,
+.b-rate .score-notice,
+.p-user_rates-index .list-groups .summary .stat-value,
+.p-user_rates-index .list-groups .summary.lines,
+.p-user_rates-index .l-content .order-control,
+.b-video_player .cc-player_controls .episode-num .video-link a,
+.p-anime_videos-index .same-videos .title,
+.p-anime_videos-index .c-anime_video_episodes .title,
+.p-anime_videos-index .c-videos .title,
+.b-video_variant .episode-num,
+.b-video_variant .video-id,
+.b-video_variant .episode-hostings,
+.b-video_variant .video-hosting,
+.b-video_variant .video-language,
+.b-user.detailed .history .line .event,
+.p-contests .match-day .match-link .c-column.loser a,
+.p-contests .match-day .match-link .c-column.created a,
+.b-animes-menu .total-rates,
+.c-actions .new_comment,
+.c-actions .new_review,
+.c-actions .fav-add,
+.c-actions .edit,
+.c-actions .fav-remove,
+.p-user_rates-index .list-lines tr td .rewatches
+{ color: #9da2a8; }
+
+/* Перекрашивание ссылок в заданный цвет */
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a,
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility span.link-replacement,
+.headline>a, .midheadline>a, .subheadline>a, .about-bb_codes, .l-footer .links a, .b-options-floated a,
+.b-options-floated .link, .b-form .cancel, .b-link,
+.b-stats_bar .stat_names .stat_name a, .p-profiles .profile-head .c-mobile-actions a,
+.p-profiles .profile-head .c-mobile-actions span, .b-catalog_entry .cover .title, a, .b-stats_bar a.title,
+.p-dashboards-show .c-content .options .option,
+.b-forums .forum .link-with-input .link, .b-topic > .inner header .name-date a.name,
+.p-dashboards .user_list .list-type > .title .switch, .p-dashboards .user_list .history > .title .switch,
+.p-dashboards .user_list .list-type>.title .link, .p-dashboards .user_list .history > .title .link,
+.b-entry-info .line a, .b-catalog_entry-tooltip .inner .line .value .tag,
+.b-db_entry > .c-about .additional-links .line-container > .link, .b-user16,
+.b-db_entry > .c-about .additional-links .line-container > a, .b-height_shortener .expand,
+.b-catalog_entry-tooltip .inner a.name, .b-db_entry-note .name-container .name, .b-spoiler label, .b-mention,
+.b-mention s, .b-comment>.inner header .name-date a.name, .b-user.named_avatar .name, .b-lang_trigger span,
+.b-animes-menu .menu-topics-block .entry .name, .p-user_rates-index .stat-categories .category,
+.b-options-floated .action, .b-options-floated.mobile-desktop a, .p-topics header h1 a.reload,
+header.head a.misc, header.head a.edit, header.head h1 a.back, header.head h2 a.back,
+.p-animes_collection-index .pagination .link, .p-mangas_collection-index .pagination .link,
+.p-recommendations-index .pagination .link, .p-userlist_comparer-show .pagination .link, .b-video_variant.active a,
+.p-anime_videos-index .c-videos .video-variant-switcher, .b-video_variant a, .b-video_variant .video-author,
+.subheadline .misc-links > a, .b-dialog > .inner header .name-date a.name, .b-message > .inner header .name-date a.name,
+.b-user.detailed .history .line a .event, .p-profiles-edit .account .change-password a,
+.p-profiles-edit .misc .profile-action a:not(.b-button), .p-profiles-edit .misc .profile-action .link,
+.p-profiles-edit .misc .nickname-changes a:not(.b-button), .p-profiles-edit .misc .nickname-changes .link,
+.p-profiles-edit .list .profile-action a:not(.b-button), .p-profiles-edit .list .profile-action .link,
+.p-profiles-edit .list .nickname-changes a:not(.b-button), .p-profiles-edit .list .nickname-changes .link,
+.b-js-link, .p-contests-index .contest a, .p-contests .results a,
+.p-contests .match-day .match-link a, .p-contests .rating .member a, .b-contest_match .vs .actions .action span,
+.b-club .name, .c-actions .new_comment:after, .c-actions .new_review:after,
+.c-actions .fav-add:after, .c-actions .edit:after, .b-options-floated.mobile-phone a,
+.b-tag, .b-topic .footer-vote .vote-group .vote, .p-profiles .profile-head .c-info .c-additionals div a,
+.c-actions .fav-remove:after, .p-user_history-index .history-page .history-interval p a,
+.b-options-floated.mobile-phone_portrait a, .p-userlist_comparer .comparer table .name a,
+.p-profiles-show .about a, .b-comments .comments-collapser, .club-actions .upload:after,
+.club-actions .invite:after, .club-actions .leave:after,
+.b-bb_codes-examples .result a, .b-edit_styles .edit_style .style_css .editor-expand.active,
+.b-edit_styles .edit_style .style_css .editor-collapse.active, .p-profiles .profile-head .c-brief header .notice a,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-reply,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-delete,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-cancel,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-edit,
+.b-comment.aside-expanded > .inner aside.buttons .main-controls .item-moderation,
+.b-topic.aside-expanded > .inner aside.buttons .main-controls .item-ignore,
+.b-topic.aside-expanded > .inner aside.buttons .main-controls .item-reply,
+.b-topic.aside-expanded > .inner aside.buttons .main-controls .item-cancel
+{ color: var(--chtw-main-text); font-weight: bold; border: none; }
+
+header.head h1 a.back:before,
+header.head h2 a.back:before,
+.p-profiles .profile-head .c-info .c-additionals b,
+.b-comment .inner .name-date a.name .normal,
+.b-hot_topics-v2 .subject
+{ color: #7b8084; }
+
+.p-user_rates-index .list-lines tr.edit-form .b-input.text textarea,
+.b-bb_codes-examples .example .textarea
+{ border: 1px solid #333;  color: #fff; background: #000; }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ОБЩЕЕ: ПОДСВЕТКА ТАЙТЛОВ **********">*/
+/*******************************************************************************************************************/
+/* ОБЩЕЕ: ПОДСВЕТКА ТАЙТЛОВ */
+/*******************************************************************************************************************/
+
+/* Обводка просмотренных тайтлов и убирание зеленой галочки */
+.c-column.b-catalog_entry.completed {
+    border: 1px solid #09f11b;
+    border-radius: 20px 20px 0 0;
+    background-color: #2fce2338;
+}
+.c-column.b-catalog_entry.planned {
+    border: 1px solid #ffdf003d;
+    border-radius: 20px 20px 0 0;
+    background-color: #ffdf003d;
+}
+.c-column.b-catalog_entry.on_hold {
+    border: 1px solid #c4c4c4;
+    border-radius: 20px 20px 0 0;
+    background-color: #ffffff1f;
+}
+.c-column.b-catalog_entry.watching {
+    border: 1px solid #08dbff;
+    border-radius: 20px 20px 0 0;
+    background-color: #00f4ff57;
+}
+.c-column.b-catalog_entry.dropped {
+    border: 1px solid #ff000045;
+    border-radius: 20px 20px 0 0;
+    background-color: #ff00004f;
+}
+
+.c-column.b-catalog_entry.rewatching {
+    border: 1px solid #d800ff45;
+    border-radius: 20px 20px 0 0;
+    background-color: #682769;
+}
+
+.c-column.b-catalog_entry.completed > .cover > .image-decor:after,
+.c-column.b-catalog_entry.planned > .cover > .image-decor:after,
+.c-column.b-catalog_entry.on_hold > .cover > .image-decor:after,
+.c-column.b-catalog_entry.watching > .cover > .image-decor:after,
+.c-column.b-catalog_entry.dropped > .cover > .image-decor:after,
+.c-column.b-catalog_entry.completed > .cover > .image-decor:before,
+.c-column.b-catalog_entry.planned > .cover > .image-decor:before,
+.c-column.b-catalog_entry.on_hold > .cover > .image-decor:before,
+.c-column.b-catalog_entry.watching > .cover > .image-decor:before,
+.c-column.b-catalog_entry.dropped > .cover > .image-decor:before
+{ content: none; }
+
+/* Подсветка красным очевидных рекапов и компиляций */
+.b-db_entry-variant-list_item[data-text*="Recap"] .name-ru { color: red; }
+.b-db_entry-variant-list_item .b-link[title*="Recap"] { color: red; }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ГЛАВНАЯ **********">*/
+/*******************************************************************************************************************/
+/* ГЛАВНАЯ */
+/*******************************************************************************************************************/
+
+/* Первое */
+.p-dashboards.p-dashboards-show .l-page {
+    background: #0000;
+    box-shadow: none;
+}
+.p-dashboards-show .v2 .fc-user-sections .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.p-dashboards-show .v2 .fc-user-sections .f-tags.ranobe-tags .forum-container {
+    margin: auto auto 0;
+}
+
+.p-dashboards-show .v2 .b-news_wall-topic {
+    background: black;
+    border-radius: 20px;
+    padding: 15px 15px;
+}
+
+.p-dashboards-show .v2 .fc-2_3>.f-column {
+    padding: 10px 20px 20px;
+    background: black;
+    border-radius: 20px;
+}
+.p-dashboards-show .v2 .headline {
+    text-align: center;
+    border-radius: 20px;
+}
+
+.p-dashboards-show .v2 .db-updates {
+    background: black;
+    border-radius: 20px;
+    padding: 20px;
+}
+.p-dashboards-show .v2 .linkheadline {
+    text-align: center;
+    border-radius: 6px;
+}
+
+.p-dashboards-show .v2 .b-news_wall-topic .title {
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center;
+    padding: 0 5px;
+    color: #ffd400;
+    background: #2424247a;
+    min-height: 47px;
+    max-height: fit-content;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-dashboards-show .v2 .b-news_wall-topic .poster .b-shiki_swiper {
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+    .p-dashboards-show .v2 .db-updates .inner {
+        flex-direction: inherit;
+    }
+}
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** СТРАНИЦА ТАЙТЛА **********">*/
+/*******************************************************************************************************************/
+/* СТРАНИЦА ТАЙТЛА, ПЕРСОВ, ЛЮДЕЙ */
+/*******************************************************************************************************************/
+
+/* Увеличить картинку у тайтла при наведении (мем с азиатом и бумажкой) */
+.b-db_entry > .c-image img:hover {
+    max-width: initial;
+    width: auto !important;
+    position: relative;
+    z-index: 2;
+}
+
+/* Убрать ссылки на онлайн просмотр, кроме основной; показывать остальные при наведении на основную */
+.p-animes-show .c-info-right .watch-online .kind,
+.p-mangas-show .c-info-right .watch-online .kind,
+.p-ranobe-show .c-info-right .watch-online .kind
+{ display: none; }
+.p-animes-show .c-info-right .watch-online:hover .kind,
+.p-mangas-show .c-info-right .watch-online:hover .kind,
+.p-ranobe-show .c-info-right .watch-online:hover .kind
+{ display: block; }
+
+/* Изменение цвета названия студии (маленькой) и unknown у тайтла */
+.b-anime_status_tag.episode,
+.b-anime_status_tag.studio
+{ background-color: #00ffc8c4; border: 1px solid #00ffc800; color: #000; border-radius: 2px; }
+
+/* Изменение цвета и отображения жанров тайтла */
+.b-entry-info .line .b-tag {
+    font-weight: bold;
+    border: none;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    color: black;
+    padding: 1px 5px;
+    background: #1489d8;
+    transition: 0.2s;
+}
+.b-tag.active[href], .b-tag[href]:hover { transform: none; background-color: #0e70b2; }
+
+/* Невидимый фон у кнопки "Показать другие названия" у тайтла */
+.p-animes-show .other-names, .p-mangas-show .other-names, .p-ranobe-show .other-names
+{ background: #0000; color: var(--chtw-main-text); border: none; font-size: 20pt; margin-left: 0; }
+.p-animes-show .other-names:hover, .p-mangas-show .other-names:hover, .p-ranobe-show .other-names:hover
+{ background-color: #0000; color: var(--chtw-link-hover); border-color: #0000; }
+
+/* Выделение студии, а то если черная надпись, то не видно */
+.p-db_entries .cc .c-info-right > div.block:not([itemprop]):not(.contest_winners) {
+    background: var(--chtw-subline);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+/* Студия без картинки (текст) большим шрифтом */
+.c-about > .cc > .c-info-right > .block > .block > .b-tag {
+    font-size: 22px;
+    transition: all 0.3s;
+    line-height: initial;
+}
+/* Студия без картинки (текст) при наведении */
+.c-info-right .b-tag.active[href], .c-info-right .b-tag[href]:hover { background-color: transparent; transform: scale(1.03); }
+/* Студия при наведении */
+.p-db_entries .studio-logo { transition: transform 0.5s; }
+.p-db_entries .studio-logo:hover { transform: scale(1.1); }
+/* Центрирование студии */
+.c-about > .cc > .c-info-right > .block > .block { text-align: center; }
+
+/* Убрать отступ у первых элементов */
+.p-db_entries .menu-slide-outer > .menu-slide-inner > .l-content .cc .c-info-left > .subheadline,
+.p-db_entries .cc .c-info-right > .block:first-child > .subheadline,
+.p-db_entries .cc .c-info-right > .subheadline:first-child {
+    margin-top: 0;
+}
+
+/* Название по центру */
+.p-db_entries .l-page > div > header.head h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-family: Comfortaa, sans-serif;
+    text-shadow: 1px 1px 4px #49ff00b5;
+}
+
+/* Хронология / связанное */
+.p-db_entries .cc-related-authors > .c-column.block_m:not(.c-authors) .b-options-floated {
+    background: var(--chtw-subline);
+    padding: 5px 10px 3px 10px;
+    border-radius: 10px 10px 0 0;
+    right: 0;
+    margin-top: 0;
+}
+.p-db_entries .cc-related-authors > .c-column.block_m:not(.c-authors) > .subheadline { border-radius: 10px 0 10px 10px; }
+
+/* Крошки */
+.b-breadcrumbs>span:after { content: '>'; }
+
+/* Хронология, кнопки режима просмотра */
+.p-db_entries .menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 4px; right: 7px; }
+@media screen and (max-width: 1023px) { .p-db_entries .menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 1px; right: 6px; } }
+@media screen and (max-width: 767px) { .p-db_entries .menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 16px; } }
+
+/* Центрирование года и типа аниме */
+.b-catalog_entry .cover .misc {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Покраска звезд рейтинга в зеленый */
+.b-rate .stars.score { color: var(--chtw-main-text); }
+.b-rate .stars.background { color: #333333; }
+
+/* Отступ у блока наград */
+.b-db_entry > .c-about .contest_winners { margin-top: 20px; }
+
+/* Изменяется цвет иконки "Добавить в избранное" после добавления в избранное */
+.b-subposter-action.fav-remove:before { color: red; }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** РАЗНОЕ **********">*/
+/*******************************************************************************************************************/
+/* РАЗНОЕ */
+/*******************************************************************************************************************/
+
+/* Достижения франшиз */
+body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
+.b-badge:before { background: none; display: block; }
+
+/* Блокировка рекламы */
+.spns_yd_240x600,
+.spns_yd_970x90,
+.spns_yd_300x600
+{ display: none }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ШАПКА **********">*/
+/*******************************************************************************************************************/
+/* ШАПКА */
+/*******************************************************************************************************************/
+
+/* Вывод картинки при наведении на лого шики */
+.l-top_menu-v2 .logo-container .glyph:hover:after {
+    content: " ";
+    background-image: url(https://i.imgur.com/2Eo49KF.gif);
+    width: 328px;
+    position: absolute;
+    height: 500px;
+    left: 0;
+    top: 0;
+}
+
+/* Смена картинки шики */
+.l-top_menu-v2 .logo-container .logo {
+    background-image: url(https://i.imgur.com/MYLjcxz.png);
+    background-position: center;
+    height: 100%;
+}
+
+/* Фиксация шапки и ее оформление */
+.l-top_menu-v2 { background: #000; transition: 0.3s all; position: fixed; width: 100%; top: 0;}
+.is-overflowed-below::before,
+.is-overflowed-below::after,
+.is-overflowed-above::before,
+.is-overflowed-above::after,
+.search-results.is-overflowed-below::after
+{ opacity: 0 !important; }
+
+/* Темное оформление блока поиска */
+.l-top_menu-v2 .global-search .search-results .nothing_found.active,
+.l-top_menu-v2 .global-search .search-results .nothing_found:focus,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus,
+.l-top_menu-v2 .global-search .search-results .search-mode.active,
+.l-top_menu-v2 .global-search .search-results .search-mode:focus
+{ background: linear-gradient(270deg, rgb(19, 32, 41) 0%, rgb(0, 0, 0) 100%),rgb(29, 27, 27); }
+
+.l-top_menu-v2 .global-search .search-results .nothing_found.active:before,
+.l-top_menu-v2 .global-search .search-results .nothing_found:focus:before,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item.active:before,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus:before,
+.l-top_menu-v2 .global-search .search-results .search-mode.active:before,
+.l-top_menu-v2 .global-search .search-results .search-mode:focus:before
+{ background: #d06d10; }
+
+.l-top_menu-v2 .global-search .search-results .nothing_found,
+.l-top_menu-v2 .global-search .search-results .search-mode
+{ color: #fff; background: linear-gradient(270deg, #2a2826 0%, rgb(48, 24, 7) 100%),rgb(33, 33, 30); }
+
+.l-top_menu-v2 .global-search .search-results .search-mode:hover
+{ background: linear-gradient(270deg, rgb(216, 82, 19) 0%, rgba(17, 173, 239, 0.81) 100%),rgb(43, 138, 204); }
+
+.l-top_menu-v2 .global-search .search-results .nothing_found,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item,
+.l-top_menu-v2 .global-search .search-results .search-mode
+{ border-top: 1px solid rgba(173, 85, 38, 0.66); }
+
+.l-top_menu-v2 .global-search .search-results .search-mode,
+.l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item
+{ background-color: #161616; }
+
+/* Округление и плавность выпадающего меню профиля */
+.l-top_menu-v2 .menu-dropdown .submenu {
+    top: auto;
+    opacity: 0;
+    transition: 0.4s all;
+    pointer-events: none;
+    border-radius: 0 0 20px 20px;
+}
+.l-top_menu-v2 .submenu > .legend {
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    font-size: 10px;
+    box-shadow: 0 6px 6px 1px rgba(0, 0, 0, 0.15);
+}
+.l-top_menu-v2 .menu-dropdown.profile > span { border-radius: 19px 0 0 0; }
+.l-top_menu-v2 .menu-dropdown.active .submenu { opacity: 1; pointer-events: auto; }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ОБЩЕЕ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ОБЩЕЕ */
+/*******************************************************************************************************************/
+
+.p-profiles-show .l-page { background: #0000; box-shadow: none; }
+
+/* Сокрытие надписи "Обо мне" */
+.p-profiles-show .about .subheadline { display: none; }
+
+/* Убрать нижнюю полосу со ссылками и копирайтом */
+.l-footer { visibility: hidden; }
+
+/* Изменение заголовков блоков */
+.b-stats_bar a.title, .p-profiles-show .profile-content .cc-2 > .c-left .activity .title,
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline,
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline > a,
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after,
+.p-profiles-show .achievements > .subheadline > a,
+.profile-content > div[class="block"] > .subheadline,
+.profile-content > div[class="block"] > .subheadline > a,
+.p-profiles .profile-head .c-info .c-additionals:before,
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a,
+.profile-head > .c-history > .subheadline > a {
+    font: 30px Comfortaa, sans-serif;
+    color: #88ff00;
+    text-shadow: 0 0 7px #7adc00;
+    text-transform: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subheadline > a { padding: 0; }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: БЭКГРАУНД И СЕКРЕТЫ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: БЭКГРАУНД И СЕКРЕТЫ */
+/*******************************************************************************************************************/
+
+/* Картинка и текст при загрузке страницы профиля */
+body.p-profiles.p-profiles-show:not(.p-dialogs):before {
+    background-image: url(https://i.imgur.com/Gfzcfux.gif);
+    content: "Погладь Шинобу :3";
+    background-size: 750px;
+    background-repeat:no-repeat;
+    cursor: grabbing;
+    background-position-x: center;
+    background-position-y: 30vh;
+    background-color: #000;
+    color: #666;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    overflow: hidden;
+    padding-top: 200px;
+    position: fixed;
+    top:0; left:0;
+    height:100%; width: 0;
+    z-index: 10000;
+    animation: 3s ease-out 0s 1 slide;
+    -webkit-animation: 3s ease-out 0s 1 slide;
+    -o-animation: 3s ease-out 0s 1 slide
+}
+
+/* Значок Гиасса слева вверху, где логотип шики */
+.l-top_menu-v2 .logo-container .glyph { background-image: url(https://i.imgur.com/nF4faHm.gif); }
+
+/* Добавление картинки над профилем */
+.p-profiles .profile-head:before {
+    display: block;
+    border-radius: 10px;
+    content: '';
+    background-image: var(--chtw-top-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 15%;
+    margin-bottom: 10px;
+}
+
+/* Анимированные обои */
+.additional-wallpappers {
+    background:
+            url(https://i.imgur.com/E79zfvt.png), /* Сэйбер 2 */
+            url(https://i.imgur.com/MGeoUxB.png), /* Сэйбер */
+            url(https://i.imgur.com/CmM6Pjk.gif), /* Оуги */
+            url(https://i.imgur.com/Uueli9h.gif), /* Рем */
+            url(https://bit.ly/36Dx2w8), /* Шинобу */
+            url(https://i.imgur.com/hveEe7a.gif), /* Паймон */
+            url(https://i.imgur.com/etNWS2J.gif), /* Рам */
+            url(https://i.imgur.com/TRcn63o.gif), /* Коеми */
+            url(https://i.imgur.com/JL30lEG.gif), /* Ветка сакуры */
+            url(https://i.imgur.com/KahlnlV.gif), /* Ветка ели */
+            url(https://i.imgur.com/OgvXwWh.png), /* Сакура */
+            url(https://i.imgur.com/uqwCk99.gif), /* Ель */
+            url(https://i.imgur.com/tHTeCA3.gif), /* Снег */
+            url(https://i.imgur.com/94LfKZx.gif); /* Падающая сакура */
+}
+
+@media (min-width:768px) {
+    body {
+        background:
+                url(https://i.imgur.com/JL30lEG.gif) fixed right -5px top 350px / 320px no-repeat, /* Ветка сакуры */
+                url(https://i.imgur.com/94LfKZx.gif) repeat, /* Падающая сакура */
+                url(https://i.imgur.com/TRcn63o.gif) fixed center / cover !important; /* Коеми */
+        animation: blef 10s linear infinite;
+    }
+}
+
+@media (min-width:1640px) {
+    body {
+        background:
+                var(--chtw-right-bottom) fixed right bottom / 310px no-repeat,
+                var(--chtw-left-bottom) fixed left bottom / 380px no-repeat,
+                var(--chtw-right-center) fixed right -35px top 350px / 320px no-repeat,
+                var(--chtw-background-effects) repeat,
+                var(--chtw-left-bottom-2) fixed left -210px bottom -20px / 800px no-repeat,
+                var(--chtw-background) fixed center / cover!important;
+        animation: blef 10s linear infinite;
+    }
+
+     /*Изменение обоев при уходе курсора со страницы */
+    body:hover {
+        background:
+                var(--chtw-right-bottom-hover) fixed right bottom / 310px no-repeat,
+                var(--chtw-left-bottom-hover) fixed left bottom / 380px no-repeat,
+                var(--chtw-right-center-hover) fixed right -35px top 350px / 320px no-repeat,
+                var(--chtw-background-effects-hover) repeat,
+                var(--chtw-left-bottom-2-hover) fixed left -210px bottom -20px / 800px no-repeat,
+                var(--chtw-background-hover) fixed center / cover!important;
+        animation: blef 10s linear infinite;
+    }
+}
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: АКТИВНОСТЬ и ИСТОРИЯ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: График активности */
+/*******************************************************************************************************************/
+
+
+
+/* Анимированный график активности */
+.activity .graph.vertical .line:nth-of-type(6n+2) .bar { animation-delay: -.25s; }
+.activity .graph.vertical .line:nth-of-type(6n+4) .bar { animation-delay: -.5s; }
+.activity .graph.vertical .line:nth-of-type(6n+3) .bar { animation-delay: -.75s; }
+.activity .graph.vertical .line:nth-of-type(6n+6) .bar { animation-delay: -1s; }
+.activity .graph.vertical .line:nth-of-type(6n+5) .bar { animation-delay: -1.25s; }
+.activity .graph.vertical .line .bar {
+    box-sizing: content-box;
+    transform: translateY(1px);
+    transform-origin: center bottom;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-name: activity;
+}
+.activity .graph.vertical .line .bar:hover  { animation-name: none; transform: none; min-height: 20px; background: #ca701afc;}
+.activity .graph.vertical .line .bar .value { color: #ffffff; font-size: 12px; margin-bottom: 4px; font-weight: bold; }
+
+/* Центровка */
+.p-profiles-show .profile-head > .c-history > .subheadline { text-align: center; }
+
+/* История */
+.p-profiles .profile-head .c-history.x3 {
+    background: #000;
+    border-radius: 20px;
+    position: absolute;
+    width: 30%;
+    float: none;
+    bottom: -320px;
+    margin: 0;
+    z-index: 10;
+    padding: 0 20px;
+}
+.p-profiles .profile-head .c-history.x3 .b-block_list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.p-profiles .profile-head .c-history .entry {
+    padding: 5px;
+    border: 1px solid #96ff001f;
+    border-radius: 3px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.p-profiles .profile-head .c-history .entry:first-child {
+    border-top: 1px solid #96ff001f;
+    padding-top: 5px;
+}
+
+.profile-head {
+    position: relative;
+}
+
+
+
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: НИК и ИНФО **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: Блок с ником и аватаркой */
+/*******************************************************************************************************************/
+
+/* Цвет и подсветка никнейма в профиле */
+.p-profiles .profile-head .c-brief header h1 {
+    position: relative;
+    cursor: pointer;
+    color: #c900ff;
+    text-shadow: 0 0 9px #00a6ff;
+    font: bold 55px Comfortaa, sans-serif;
+    transition: 0.5s ease;
+}
+.p-profiles .profile-head .c-brief header h1::after {
+    transition: all 0.35s ease-in-out;
+    content: "owo";
+    position: absolute;
+    right: 39px;
+    color: #04dcbc;
+    text-shadow: 0 -7px 14px #ff0000;
+    opacity: 0;
+}
+.p-profiles .profile-head .c-brief header h1:hover::after { opacity: 1; }
+
+/* Весь блок */
+.p-profiles .profile-head .c-brief {
+    display: flex; flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+}
+
+/* Отступы */
+.p-profiles .profile-head .c-brief header {
+    background: #000;
+    border-radius: 20px;
+    margin-bottom: -1px;
+    padding: 10px 10px 30px;
+}
+/* Почта, настройки и пр. кнопки */
+.p-profiles .profile-head .c-brief .avatar .profile-actions {
+    width: 100%;
+    margin-top: 0;
+    bottom: 4px;
+    position: absolute;
+}
+
+/* Невидимая аватарка */
+.p-profiles .profile-head .c-brief .avatar { margin: 0; }
+.p-profiles .profile-head .c-brief .avatar img { display: none; }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ДЕЙСТВИЯ НА САЙТЕ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ДЕЙСТВИЯ НА САЙТЕ (мини-раздел) */
+/*******************************************************************************************************************/
+
+/* Скрыть надпись "Активность" */
+.p-profiles .profile-head .c-info .c-additionals b {
+    display: none;
+}
+.p-profiles-show .profile-content .cc-2 > .c-left {
+    background: #000;
+    padding: 70px 20px 30px 30%;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+.p-profiles-show .profile-content .cc-2 > .c-left .activity .title {
+    left: 0;
+    height: 34px;
+    text-align: center;
+    width: 100%;
+    top: 20px;
+    position: absolute;
+    margin: 0;
+    cursor: default;
+}
+.p-profiles-show .l-page .profile-content .activity {
+    position: initial;
+}
+/* Уменьшение отступа после "Активности" */
+.p-profiles .profile-head .c-info .c-additionals {
+    padding: 10px 10px 15px 10px;
+    margin: 10px 0 0 0;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background: #000;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.p-profiles .profile-head .c-info {
+    position: relative;
+    padding-top: 10px;
+}
+.p-profiles .profile-content {
+    margin-top: 10px;
+}
+
+/* Оглавление мини-раздела */
+.p-profiles .profile-head .c-info .c-additionals:before {
+    content: 'Действия на сайте';
+    padding: 10px;
+    width: 100%;
+}
+
+/* Размер отзывов, комментов и пр. */
+.p-profiles .profile-head .c-info .c-additionals div {
+    margin: 10px 5px;
+}
+.p-profiles .profile-head .c-info .c-additionals div a {
+    padding: 8px 12px;
+    text-transform: uppercase;
+    border: 1px solid #ffb70066;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+.p-profiles .profile-head .c-info .c-additionals div a:hover {
+    text-decoration: none;
+    border-color: var(--chtw-on-hold);
+}
+
+/* Убрать разделитель в виде палки */
+.p-profiles .profile-head .c-info .c-additionals div:after {
+    content: '';
+    padding: 0;
+}
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: АНИМЕ и МАНГА **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: Блок аниме и манги */
+/*******************************************************************************************************************/
+
+/* Похожие пользователи / Совместимость */
+.p-profiles .c-info .b-stats_bar .compatibility {
+    position: absolute;
+    font-size: 14px;
+    top: 0;
+    background: #181818;
+    border-radius: 0 15px;
+    padding: 5px 10px;
+    right: 0;
+}
+.p-profiles .c-info .b-stats_bar .compatibility a { color: #9da2a8; cursor: pointer; }
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility .rate:before,
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility .rate:after {
+    content: '';
+}
+.p-profiles .c-info .b-stats_bar .compatibility .rate {
+
+}
+
+/* Расположение блоков */
+.c-lists-info { display: flex; justify-content: space-between; }
+.c-lists-info .b-stats_bar {
+    padding: 20px;
+    background: #000;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 49%;
+    position: relative;
+}
+
+/* Текстовая статистика */
+.c-lists-info .b-stats_bar .stat_names {
+    display: inline-flex;
+    top: 60px;
+    left: calc(175px + 10%);
+    flex-direction: column;
+    justify-content: center;
+    width: calc(90% - 175px);
+    line-height: 1.65;
+    font: 12px Comfortaa, bsans-serif;
+    position: absolute;
+    height: 150px;
+}
+
+.c-lists-info .b-stats_bar .stat_names .stat_name a:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    margin-right: 5px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.c-lists-info .b-stats_bar .stat_names .stat_name a {
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    line-height: 25px;
+}
+.x1000 .c-lists-info .b-stats_bar .stat_names a {
+    font-size: 11px;
+    width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* Unknown */
+.x1000 .c-lists-info .b-stats_bar .stat_names a span,
+.c-lists-info .b-stats_bar .bar > div.third,
+.c-lists-info .b-stats_bar .stat_names .stat_name:after
+{ display: none }
+.c-lists-info .b-stats_bar .bar > div.second { transform: scale(-1, 1) }
+.c-lists-info .b-stats_bar .bar:before { background: #FFF8DC }
+.c-lists-info .b-stats_bar .bar, .c-lists-info .b-stats_bar .bar > div
+{ height: 150px !important; width: 150px !important; }
+.c-lists-info .b-stats_bar .bar:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+    left: 50px;
+    top: 50px;
+}
+.c-lists-info .b-stats_bar .bar > div {
+    clip: rect(0px, 150px, 150px, 75px);
+    background-color: transparent !important;
+    font-size: 0 !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.c-lists-info .b-stats_bar .bar > div:before,
+.c-lists-info .b-stats_bar .bar > div:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    border: 75px solid #333;
+    clip: rect(0px, 75px, 150px, 0px);
+    border-radius: 50%;
+    transform: rotate(0deg);
+}
+.b-stats_bar a.title,
+.b-stats_bar .stat_names .stat_name a
+{ color: #34c34dfc; cursor: pointer; }
+.b-stats_bar .stat_names .stat_name { font-size: inherit; }
+
+/* Выделение цифр списков в блоке аниме-манги профиля */
+.b-stats_bar .stat_names .stat_name .size:before,
+.b-stats_bar .stat_names .stat_name .size:after {
+    content: '';
+}
+.b-stats_bar .stat_names .stat_name .size {
+    padding: 2px 0.42rem 0 0.52rem;
+    border-radius: 1rem;
+    background: #232323;
+}
+
+/* Изменение цвета шкалы манги и аниме рядом с аватаркой + цвет полосы активности (время) */
+.b-stats_bar .bar .first, .b-stats_bar.lifetime .bar .first  { background: #01ff06fc; }
+.b-stats_bar .bar .second { background: #ff9907d4; }
+.b-stats_bar .bar .third { background: #ffa07a66; }
+
+/* Изменение цвета "Запланировано", "Брошено", "Просмотрено" и т.д. в истории просмотра */
+.b-options-floated.mobile-desktop > a[data-id="planned"] { color: #27c8d5; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="watching"] { color: #34c34dfc; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="rewatching"] { color: #34c34dfc; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="completed"] { color: #12f316; font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="on_hold"] { color: var(--chtw-on-hold); font-size: 15px; }
+.b-options-floated.mobile-desktop > a[data-id="dropped"] { color: var(--chtw-dropped); font-size: 15px; }
+
+/* Изменение стиля "Запланировано", "Брошено", "Просмотрено" и т.д. */
+.b-stats_bar .stat_names .stat_name[data-type="planned"] { font-size: 25px; color: #f18100;}
+.b-stats_bar .stat_names .stat_name[data-type="watching,rewatching"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="completed"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="on_hold"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="dropped"] { font-size: 25px; }
+.b-stats_bar .stat_names .stat_name[data-type="watching,rewatching"]:after { visibility: hidden; }
+.b-stats_bar .stat_names .stat_name[data-type="on_hold"]:after { visibility: hidden; }
+
+.b-stats_bar > .stat_names > .stat_name[data-type="planned"] > a { color: #27c8d5; }
+.b-stats_bar > .stat_names > .stat_name[data-type="completed"] > a { color: #12f316; }
+.b-stats_bar > .stat_names > .stat_name[data-type="on_hold"] > a { color: var(--chtw-on-hold); }
+.b-stats_bar > .stat_names > .stat_name[data-type="dropped"] > a { color: var(--chtw-dropped); }
+
+
+.b-stats_bar a.title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 26px;
+}
+
+.c-lists-info .b-stats_bar .bar,
+.b-stats_bar .stat_names .stat_name[data-type="dropped"] > a:before {
+    border-color: transparent;
+    background-color: var(--chtw-dropped);
+}
+
+.c-lists-info .b-stats_bar.manga .bar > div.first:before,
+.c-lists-info .b-stats_bar.manga .bar > div.first:after,
+.c-lists-info .b-stats_bar.manga .stat_names .stat_name a[href*="completed"]:before,
+.c-lists-info .b-stats_bar.anime .bar > div.first:before,
+.c-lists-info .b-stats_bar.anime .bar > div.first:after,
+.c-lists-info .b-stats_bar.anime .stat_names .stat_name a[href*="completed"]:before {
+    border-color: transparent;
+    background-color: #25ce1d
+}
+
+.c-lists-info .b-stats_bar.manga .bar > div.second:before,
+.c-lists-info .b-stats_bar.manga .bar > div.second:after,
+.c-lists-info .b-stats_bar.manga .stat_names .stat_name a[href*="planned"]:before,
+.c-lists-info .b-stats_bar.manga .stat_names .stat_name a[href*="watching"]:before,
+.c-lists-info .b-stats_bar.manga .stat_names .stat_name a[href*="on_hold"]:before,
+.c-lists-info .b-stats_bar.anime .bar > div.second:before,
+.c-lists-info .b-stats_bar.anime .bar > div.second:after,
+.c-lists-info .b-stats_bar.anime .stat_names .stat_name a[href*="planned"]:before,
+.c-lists-info .b-stats_bar.anime .stat_names .stat_name a[href*="watching"]:before,
+.c-lists-info .b-stats_bar.anime .stat_names .stat_name a[href*="on_hold"]:before {
+    border-color: transparent;
+    background-color: var(--chtw-on-hold)
+}
+
+/* Статистика в виде кружочков */
+.c-lists-info .b-stats_bar .bar {
+    margin: 25px 0 10px 20px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 1."]:before {    transform: rotate(3.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 2."]:before {    transform: rotate(7.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 3."]:before {    transform: rotate(10.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 4."]:before {    transform: rotate(14.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 5."]:before {    transform: rotate(18deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 6."]:before {    transform: rotate(21.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 7."]:before {    transform: rotate(25.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 8."]:before {    transform: rotate(28.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 9."]:before {    transform: rotate(32.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 10."]:before {    transform: rotate(36deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 11."]:before {    transform: rotate(39.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 12."]:before {    transform: rotate(43.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 13."]:before {    transform: rotate(46.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 14."]:before {    transform: rotate(50.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 15."]:before {    transform: rotate(54deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 16."]:before {    transform: rotate(57.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 17."]:before {    transform: rotate(61.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 18."]:before {    transform: rotate(64.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 19."]:before {    transform: rotate(68.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 20."]:before {    transform: rotate(72deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 21."]:before {    transform: rotate(75.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 22."]:before {    transform: rotate(79.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 23."]:before {    transform: rotate(82.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 24."]:before {    transform: rotate(86.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 25."]:before {    transform: rotate(90deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 26."]:before {    transform: rotate(93.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 27."]:before {    transform: rotate(97.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 28."]:before {    transform: rotate(100.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 29."]:before {    transform: rotate(104.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 30."]:before {    transform: rotate(108deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 31."]:before {    transform: rotate(111.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 32."]:before {    transform: rotate(115.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 33."]:before {    transform: rotate(118.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 34."]:before {    transform: rotate(122.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 35."]:before {    transform: rotate(126deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 36."]:before {    transform: rotate(129.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 37."]:before {    transform: rotate(133.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 38."]:before {    transform: rotate(136.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 39."]:before {    transform: rotate(140.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 40."]:before {    transform: rotate(144deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 41."]:before {    transform: rotate(147.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 42."]:before {    transform: rotate(151.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 43."]:before {    transform: rotate(154.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 44."]:before {    transform: rotate(158.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 45."]:before {    transform: rotate(162deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 46."]:before {    transform: rotate(165.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 47."]:before {    transform: rotate(169.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 48."]:before {    transform: rotate(172.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 49."]:before {    transform: rotate(176.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 50."]:before {    transform: rotate(180deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 51."]:before {    transform: rotate(183.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 52."]:before {    transform: rotate(187.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 53."]:before {    transform: rotate(190.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 54."]:before {    transform: rotate(194.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 55."]:before {    transform: rotate(198deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 56."]:before {    transform: rotate(201.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 57."]:before {    transform: rotate(205.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 58."]:before {    transform: rotate(208.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 59."]:before {    transform: rotate(212.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 60."]:before {    transform: rotate(216deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 61."]:before {    transform: rotate(219.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 62."]:before {    transform: rotate(223.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 63."]:before {    transform: rotate(226.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 64."]:before {    transform: rotate(230.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 65."]:before {    transform: rotate(234deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 66."]:before {    transform: rotate(237.66deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 67."]:before {    transform: rotate(241.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 68."]:before {    transform: rotate(244.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 69."]:before {    transform: rotate(248.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 70."]:before {    transform: rotate(252deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 71."]:before {    transform: rotate(255.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 72."]:before {    transform: rotate(259.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 73."]:before {    transform: rotate(262.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 74."]:before {    transform: rotate(266.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 75."]:before {    transform: rotate(27deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 76."]:before {    transform: rotate(273.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 77."]:before {    transform: rotate(277.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 78."]:before {    transform: rotate(280.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 79."]:before {    transform: rotate(284.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 80."]:before {    transform: rotate(288deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 81."]:before {    transform: rotate(291.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 82."]:before {    transform: rotate(295.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 83."]:before {    transform: rotate(298.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 84."]:before {    transform: rotate(302.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 85."]:before {    transform: rotate(306deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 86."]:before {    transform: rotate(309.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 87."]:before {    transform: rotate(313.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 88."]:before {    transform: rotate(316.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 89."]:before {    transform: rotate(320.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 90."]:before {    transform: rotate(324deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 91."]:before {    transform: rotate(327deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 92."]:before {    transform: rotate(331.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 93."]:before {    transform: rotate(334.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 94."]:before {    transform: rotate(338.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 95."]:before {    transform: rotate(342deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 96."]:before {    transform: rotate(345.6deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 97."]:before {    transform: rotate(349.2deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 98."]:before {    transform: rotate(352.8deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 99."]:before {    transform: rotate(356.4deg)}
+.c-lists-info .b-stats_bar .bar > div[style*="width: 100."]:before {    transform: rotate(360deg)}
+
+.c-lists-info .b-stats_bar .bar > div[style*="width: 51."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 52."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 53."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 54."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 55."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 56."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 57."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 58."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 59."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 60."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 61."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 62."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 63."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 64."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 65."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 66."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 67."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 68."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 69."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 70."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 71."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 72."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 73."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 74."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 75."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 76."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 77."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 78."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 79."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 80."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 81."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 82."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 83."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 84."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 85."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 86."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 87."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 88."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 89."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 90."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 91."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 92."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 93."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 94."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 95."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 96."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 97."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 98."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 99."]:after,
+.c-lists-info .b-stats_bar .bar > div[style*="width: 100."]:after
+{ transform: rotate(180deg); }
+
+.c-lists-info .b-stats_bar .bar > div[style*="width: 51."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 52."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 53."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 54."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 55."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 56."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 57."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 58."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 59."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 60."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 61."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 62."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 63."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 64."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 65."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 66."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 67."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 68."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 69."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 70."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 71."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 72."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 73."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 74."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 75."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 76."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 77."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 78."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 79."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 80."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 81."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 82."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 83."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 84."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 85."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 86."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 87."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 88."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 89."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 90."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 91."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 92."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 93."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 94."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 95."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 96."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 97."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 98."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 99."],
+.c-lists-info .b-stats_bar .bar > div[style*="width: 100."]
+{ clip: rect(auto, auto, auto, auto); }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ДРУЗЬЯ и КЛУБЫ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ДРУЗЬЯ и КЛУБЫ */
+/*******************************************************************************************************************/
+
+/* Изменение шрифта слов "История" и "Достижения" в профиле */
+.p-profiles-show .profile-head > .c-history > .subheadline.m13,
+.p-profiles-show .achievements > .subheadline
+{ text-align: center; }
+
+/* Изменение шрифта слова "Друзья" и "Клубы" в профиле */
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline
+{ text-align: center; padding-bottom: 6px; }
+
+/* Убрать невидимый отступ */
+.cc-2a:after { display: none; }
+
+.p-profiles-show .profile-content > .cc-2 > .c-right .cc-2a {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.p-profiles-show .profile-content > .cc-2 > .c-right .cc-2a > .c-column {
+    border-radius: 20px;
+    padding: 20px 20px;
+    height: 160px;
+    background: #000;
+    margin-right: 0;
+    width: 49%;
+}
+
+.p-profiles-show .profile-content > .cc-2 > .c-right .cc-2a > .c-column .b-clubs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.b-clubs.one-line .b-club {
+    margin-right: 0;
+    width: inherit;
+}
+.p-profiles-show .profile-content > .cc-2 > .c-column { width: 100%; }
+.p-profiles-show .profile-content > .cc-2 > .c-right > .m30 { margin-bottom: 10px !important; }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ИЗБРАННОЕ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ИЗБРАННОЕ */
+/*******************************************************************************************************************/
+
+/* Изменение шрифта слова "Избранное" в профиле */
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline {
+    height: 43px;
+    background: #000;
+    border-radius: 20px;
+}
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { visibility: hidden; }
+.p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after {
+    content: 'Любимые сэйю';
+    color: #88ff00;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    display: flex;
+    bottom: -2px;
+    position: absolute;
+    visibility: visible;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* Нормальное позиционирование элементов */
+.p-profiles-show .cc-favourites .c-column { margin: 0; }
+.p-profiles-show .cc-favourites.d-cutted_covers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ДОСТИЖЕНИЯ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ДОСТИЖЕНИЯ */
+/*******************************************************************************************************************/
+
+/* Центровка */
+.p-profiles-show .achievements > .subheadline  { text-align: center; padding: 0; }
+
+/* Нижняя округлость у описания ачивок */
+.p-profiles-show .b-achievement.is-badge:before {
+    text-align: center;
+    background: #000000c7;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Цвет */
+.p-profiles-show .achievements > .subheadline > a {
+    color: #88ff00; text-shadow: 0 0 12px #7adc00; font: 40px Comfortaa, sans-serif;
+    background: #000;
+    padding: 7px 10px 3px;
+    border-radius: 20px;
+    text-align: center;
+}
+.p-profiles-show .achievements .header {
+    border-radius: 10px;
+    background: #000;
+    justify-content: center;
+    padding: 5px 5px;
+}
+.p-profiles-show .achievements { margin-top: 15px; }
+
+.p-profiles-show .achievements .header .title { color: #fff; }
+.p-profiles-show .achievements .header .size { position: absolute; right: 12px; }
+
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ГАРЕМ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ГАРЕМ */
+/*******************************************************************************************************************/
+
+.profile-content .about.block {
+    margin-top: 10px;
+}
+
+.chtw-info {
+    background: #000;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Ограничение максимального размера картинки в шипперстве" */
+.chtw-ship .b-image.b-poster img { max-width: 178px; border-radius: 42px; }
+
+.p-profiles-show .about .chtw-harem {
+    padding: 20px 15px;
+    background: #000;
+    border-radius: 20px;
+}
+.p-profiles-show .about .chtw-harem > .headline {
+    text-align: center;
+    color: #88ff00;
+    font: 40px Comfortaa, sans-serif;
+    text-shadow: 0 0 12px #7adc00;
+    animation: hue 10s infinite linear;
+    -webkit-animation: hue 10s infinite linear;
+    background: #0000;
+}
+.block { margin-bottom: 0; }
+
+/* Вкладки */
+.u-tabs > div:not([data-tab]) {
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.u-tabs [data-tab-switch] {
+    display: inline-block;
+    padding: .25em .75em;
+    border: 2px solid;
+    border-radius: 20px;
+    opacity: .5;
+    cursor: pointer;
+    min-width: 12%;
+    font: bold 16px Comfortaa, sans-serif;
+    transition: 0.3s;
+}
+
+
+.u-tabs .active[data-tab-switch], .u-tabs [data-tab-switch]:hover { color: #ffa200; opacity: 1; }
+.u-tabs [data-tab] { margin-top: 10px; }
+
+/* Выравнивание персов и изменение отступов */
+.cc-9-g15 > .c-column { margin-bottom: 0; margin-right: 0; }
+.about.block .d-cutted_covers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.chtw-ship > br { display: none; }
+.chtw-ship a:nth-of-type(2n) { margin-right: 10px; }
+
+.chtw-ship {
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Увеличить перса при наведении */
+.p-profiles-show .about .chtw-harem a:hover { transform: scale(1.4); }
+.p-profiles-show .about .chtw-harem a { transition: transform 0.5s; }
+
+/* Раскрывающиеся вкладки-спойлеры */
+.about.block .b-spoiler_block { margin: 5px 0; }
+.about.block .b-spoiler_block > span {
+    border: 2px solid #a6f9af1c;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    min-height: 35px;
+    background-color: #0000;
+}
+.about.block .b-spoiler_block > div {
+    background-color: #0000;
+    border-left: none;
+    padding: 12px 0;
+}
+.about.block .b-spoiler_block > span:after {
+    position: absolute;
+    right: 10px;
+}
+.about.block .b-spoiler_block > span:hover { font-size: 28px; }
+
+/* Вкладка с кастомными персами */
+.p-profiles-show .about .chtw-non-shiki {
+    display: flex;
+    gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.p-profiles-show .about .nsp {
+    width: 19%;
+    min-width: 120px;
+}
+.p-profiles-show .about .nsp-image {
+    height: 300px;
+    width: 100%;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+.p-profiles-show .about .nsp-text {
+    display: block;
+    height: 30px;
+    text-align: center;
+}
+.p-profiles-show .about .nsp-text:after {
+    text-align: center;
+    color: #34c34dfc;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    .chtw-ship br:nth-of-type(4n) { display: inherit; }
+}
+@media screen and (max-width: 1024px) {
+    .p-profiles-show .about .nsp {
+        width: 15%;
+    }
+    .p-profiles-show .about .nsp-image {
+        height: 230px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .p-profiles-show .about .nsp-image {
+        height: 190px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .chtw-ship br:nth-of-type(2n) { display: inherit; }
+}
+@media screen and (max-width: 420px) {
+    .chtw-ship .b-image.b-poster img { max-width: 125px; }
+}
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ГАРЕМ (КАРТИНКИ И ВЫДЕЛЕНИЕ) **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ГАРЕМ (КАРТИНКИ И ВЫДЕЛЕНИЕ) */
+/*******************************************************************************************************************/
+
+/* Кастомные картинки у персов */
+.c-person[id="51512"]	  img { background-image: url(https://i.imgur.com/IIVBIAG.jpg); object-position: 0 9999px; background-size: cover; }
+@media screen and (min-width: 1201px) { .c-person[id="51512"] img { height: 196px; } }
+.c-character[id="12055"]  img { background-image: url(https://i.imgur.com/cTXH9D8.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="147867"] img { background-image: url(https://i.imgur.com/DtF9592.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="118777"] img { background-image: url(https://i.imgur.com/NR7Iy6Z.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="161954"] img { background-image: url(https://i.imgur.com/JWjMgpW.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="155554"] img { background-image: url(https://i.imgur.com/I37xBCG.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="40624"]  img { background-image: url(https://i.imgur.com/ynR1qwC.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="503"]    img { background-image: url(https://i.imgur.com/x4y74K3.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="118767"] img { background-image: url(https://i.imgur.com/xdgYu0l.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="82929"]  img { background-image: url(https://i.imgur.com/LyspN2a.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="38695"]  img { background-image: url(https://i.imgur.com/DQqjIf4.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="122819"] img { background-image: url(https://i.imgur.com/t4wMRe3.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="152362"] img { background-image: url(https://i.imgur.com/pd61yLd.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="38036"]  img { background-image: url(https://i.imgur.com/RGlmsid.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="22036"]  img { background-image: url(https://i.imgur.com/siT5MMT.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="53641"]  img { background-image: url(https://i.imgur.com/RA5nKH2.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="81763"]  img { background-image: url(https://i.imgur.com/WlaNSAy.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="149517"] img { background-image: url(https://i.imgur.com/ZPoYBZU.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157522"] img { background-image: url(https://i.imgur.com/E1Gmp2Y.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="143076"] img { background-image: url(https://i.imgur.com/ae6QmAh.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="79995"]  img { background-image: url(https://i.imgur.com/IIlmBwT.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="122829"] img { background-image: url(https://i.imgur.com/DW7gyhr.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="122827"] img { background-image: url(https://i.imgur.com/0auL39k.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132067"] img { background-image: url(https://i.imgur.com/OCj6eCm.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157520"] img { background-image: url(https://i.imgur.com/Ilv78Py.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="143077"] img { background-image: url(https://i.imgur.com/qKSqdT6.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="143075"] img { background-image: url(https://i.imgur.com/punfMhM.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="83419"]  img { background-image: url(https://i.imgur.com/kbjz5hc.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="135879"] img { background-image: url(https://i.imgur.com/mQzCAdw.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="175552"] img { background-image: url(https://i.imgur.com/Yviau2N.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="497"]    img { background-image: url(https://i.imgur.com/i0r4uJw.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="98477"]  img { background-image: url(https://i.imgur.com/H1s1UeO.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="161261"] img { background-image: url(https://i.imgur.com/55R3wcY.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="50057"]  img { background-image: url(https://i.imgur.com/pa6rhB3.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="106641"] img { background-image: url(https://i.imgur.com/zXWym2o.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="142098"] img { background-image: url(https://i.imgur.com/ehoZU0R.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="140810"] img { background-image: url(https://i.imgur.com/zdN5Mao.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="92805"]  img { background-image: url(https://i.imgur.com/wFG8P18.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="19568"]  img { background-image: url(https://i.imgur.com/2ifWjeX.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="19565"]  img { background-image: url(https://i.imgur.com/GIxFgEx.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="19566"]  img { background-image: url(https://i.imgur.com/wJBobYS.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="112893"] img { background-image: url(https://i.imgur.com/e4V0Wmb.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132504"] img { background-image: url(https://i.imgur.com/4NvNfRH.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="69505"]  img { background-image: url(https://i.imgur.com/aD6QhWp.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="91479"]  img { background-image: url(https://i.imgur.com/NayjVRA.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="40006"]  img { background-image: url(https://i.imgur.com/DoIeFjh.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="148598"] img { background-image: url(https://i.imgur.com/IlLrn9X.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="112559"] img { background-image: url(https://i.imgur.com/2Nms6OX.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="131936"] img { background-image: url(https://i.imgur.com/MJAsrcB.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="1105"]   img { background-image: url(https://i.imgur.com/PZILQxt.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="155978"] img { background-image: url(https://i.imgur.com/RN3nlWo.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="81751"]  img { background-image: url(https://i.imgur.com/KngvRkT.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="30919"]  img { background-image: url(https://i.imgur.com/6E9llfI.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="601"]    img { background-image: url(https://i.imgur.com/bqE7WAC.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="35252"]  img { background-image: url(https://i.imgur.com/RFJE0Xn.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132818"] img { background-image: url(https://i.imgur.com/o1VqQ7q.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="104387"] img { background-image: url(https://i.imgur.com/mGmyjAY.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="82523"]  img { background-image: url(https://i.imgur.com/iFLDyFe.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157874"] img { background-image: url(https://i.imgur.com/NGpqOIV.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="417"]    img { background-image: url(https://i.imgur.com/BjIzTuZ.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="118505"] img { background-image: url(https://i.imgur.com/vPVOs1D.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="55951"]  img { background-image: url(https://i.imgur.com/G9V1tkC.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="83419"]  img { background-image: url(https://i.imgur.com/2mBbqRe.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="138297"] img { background-image: url(https://i.imgur.com/W335RAk.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="143853"] img { background-image: url(https://i.imgur.com/xYx6GHX.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157523"] img { background-image: url(https://i.imgur.com/IsYwLJ1.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157530"] img { background-image: url(https://i.imgur.com/BUjmZFF.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="146491"] img { background-image: url(https://i.imgur.com/fX5qGoN.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="31008"]  img { background-image: url(https://i.imgur.com/3ZJD8Eg.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="159165"] img { background-image: url(https://i.imgur.com/rk0ZMnY.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="22055"]  img { background-image: url(https://i.imgur.com/tceRXMG.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="22055"]  img:hover { background-image: url(https://i.imgur.com/3gMTcUE.png); }
+.c-character[id="22052"]  img:hover { background-image: url(https://i.imgur.com/KJTu7Ti.jpg); }
+.c-character[id="24195"]  img { background-image: url(https://i.imgur.com/sugWMuc.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="23602"]  img { background-image: url(https://i.imgur.com/uzt0rkV.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="57499"]  img { background-image: url(https://i.imgur.com/SrdyP0F.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="90393"]  img { background-image: url(https://i.imgur.com/T0sDriB.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="22050"]  img { background-image: url(https://i.imgur.com/5YXeNjq.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="36563"]  img { background-image: url(https://i.imgur.com/XDaqVJy.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="29595"]  img { background-image: url(https://i.imgur.com/zjez1t1.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="29594"]  img { background-image: url(https://i.imgur.com/ltLKQIb.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="148233"] img { background-image: url(https://i.imgur.com/lTrqrVq.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="28556"]  img { background-image: url(https://i.imgur.com/EHZx065.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="130338"] img { background-image: url(https://i.imgur.com/rHkLScc.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="31274"]  img { background-image: url(https://i.imgur.com/TDhRxQh.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="179622"] img { background-image: url(https://i.imgur.com/nLmRpws.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="31522"]  img { background-image: url(https://i.imgur.com/DPW8M2Z.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="147755"] img { background-image: url(https://i.imgur.com/RPfuYUY.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="153073"] img { background-image: url(https://i.imgur.com/7Srd9ZF.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="143630"] img { background-image: url(https://i.imgur.com/gUF0R2F.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="122953"] img { background-image: url(https://i.imgur.com/xTD2uTm.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="75188"]  img { background-image: url(https://i.imgur.com/2TgktbA.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="75082"]  img { background-image: url(https://i.imgur.com/XhjFEHz.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="80243"]  img { background-image: url(https://i.imgur.com/zL9Pjk1.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132430"] img { background-image: url(https://i.imgur.com/Rh5lH3t.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="136727"] img { background-image: url(https://i.imgur.com/teNXYcg.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="16023"]  img { background-image: url(https://i.imgur.com/fuqVAJm.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="148705"] img { background-image: url(https://i.imgur.com/pipQlyy.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="178227"] img { background-image: url(https://i.imgur.com/0HAVG3V.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="171890"] img { background-image: url(https://i.imgur.com/fl7X7pg.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="177539"] img { background-image: url(https://i.imgur.com/feFRV1g.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="145733"] img { background-image: url(https://i.imgur.com/PnkTIiP.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="2514"]   img { background-image: url(https://i.imgur.com/c8quWuE.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="67769"]  img { background-image: url(https://i.imgur.com/t75FqRG.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="168968"] img { background-image: url(https://i.imgur.com/3HMommq.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="2087"]   img { background-image: url(https://i.imgur.com/1JBr2q4.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="459"]    img { background-image: url(https://i.imgur.com/PiPSL5q.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="64165"]  img { background-image: url(https://i.imgur.com/wMu5qg8.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="136359"] img { background-image: url(https://i.imgur.com/8OH0aTX.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="127"]    img { background-image: url(https://i.imgur.com/qUNo196.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="64173"]  img { background-image: url(https://i.imgur.com/iikT5dq.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="3385"]   img { background-image: url(https://i.imgur.com/Ahifu8m.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="174177"] img { background-image: url(https://i.imgur.com/naYxUWo.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="67071"]  img { background-image: url(https://i.imgur.com/cy0woWA.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="51523"]  img { background-image: url(https://i.imgur.com/XNcM5e2.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157519"] img { background-image: url(https://i.imgur.com/brbYAjk.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="117225"] img { background-image: url(https://i.imgur.com/B4TKlWh.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="116319"] img { background-image: url(https://i.imgur.com/378yU7P.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="112909"] img { background-image: url(https://i.imgur.com/GZ4hfx8.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="82525"]  img { background-image: url(https://i.imgur.com/0NdkWRU.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="117063"] img { background-image: url(https://i.imgur.com/BLYdE8z.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="99661"]  img { background-image: url(https://i.imgur.com/4wR7EGi.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="42469"]  img { background-image: url(https://i.imgur.com/vEfmnqu.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="10010"]  img { background-image: url(https://i.imgur.com/oIh3TyI.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="70069"]  img { background-image: url(https://i.imgur.com/4oyYZ4E.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="124049"] img { background-image: url(https://i.imgur.com/Q5GcnO8.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="176436"] img { background-image: url(https://i.imgur.com/KN0spS6.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="155896"] img { background-image: url(https://i.imgur.com/dQ3JDI1.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="135879"] img { background-image: url(https://i.imgur.com/CTz37je.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="176248"] img { background-image: url(https://i.imgur.com/l8DJEE9.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="198572"] img { background-image: url(https://i.imgur.com/dPlUpso.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="198570"] img { background-image: url(https://i.imgur.com/JrbUK6N.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="198570"] img:hover { background-image: url(https://i.imgur.com/3nUhKUR.png); }
+.c-character[id="254"]    img { background-image: url(https://i.imgur.com/CGqOr57.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="173128"] img { background-image: url(https://i.imgur.com/WNHO8Sw.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="47005"]  img { background-image: url(https://i.imgur.com/K1aAU7S.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="153862"] img { background-image: url(https://i.imgur.com/9DmlIqr.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="53369"]  img { background-image: url(https://i.imgur.com/z6WP6ID.png); object-position: 0 9999px; background-size: cover; }
+
+/* Выделение лучших персов в гареме */
+.entry-117225   .name-ru, .entry-82525  .name-ru, .entry-116319 .name-ru, .entry-117063 .name-ru,
+.entry-99661    .name-ru, .entry-23602  .name-ru, .entry-157519 .name-ru, .entry-29594  .name-ru,
+.entry-112909   .name-ru, .entry-42469  .name-ru, .entry-53641  .name-ru, .entry-10010  .name-ru,
+.entry-51523    .name-ru, .entry-19568  .name-ru, .entry-70069  .name-ru, .entry-118767 .name-ru,
+.entry-124049   .name-ru, .entry-122953 .name-ru, .entry-155896 .name-ru, .entry-135879 .name-ru,
+.entry-198570   .name-ru, .entry-198572 .name-ru, .entry-176248 .name-ru, .entry-254    .name-ru,
+.entry-47005    .name-ru, .entry-153862 .name-ru, .entry-53369 .name-ru
+{ color: #ff5900; }
+
+/* Выделение персов с фигурками */
+.entry-51523  .name-ru:before, .entry-82525  .name-ru:before, .entry-23602  .name-ru:before,
+.entry-497    .name-ru:before, .entry-118763 .name-ru:before, .entry-70069  .name-ru:before,
+.entry-157519 .name-ru:before, .entry-117063 .name-ru:before, .entry-116275 .name-ru:before
+{ content: "✔"; color: green; padding-right: 2px; }
+
+/* Цвета у категорий вайфу */
+.chtw-nasuverse > div > span { color: #ffb000; text-shadow: 2px 2px 8px #c55b00f7; }
+.chtw-nisiosin > div > span { color: #fbc7c8; text-shadow: 3px 4px 8px #d23692; }
+.chtw-kyoto > div > span { color: #fd8f31; text-shadow: 3px 4px 8px #c55b00f7; }
+.chtw-sbr > div > span { color: #5c69f9; text-shadow: 3px 4px 8px #d819ae; }
+.chtw-bndori > div > span { color: #ff00c8; text-shadow: 3px 4px 8px #b400ff; }
+.chtw-lwa > div > span { color: #e4ff00; text-shadow: 3px 4px 8px #a8b020; }
+.chtw-overlord > div > span { color: #ff000c; text-shadow: 3px 4px 8px #c11142; }
+.chtw-gabriel > div > span { color: #7900fd; text-shadow: 3px 4px 8px #5600ff; }
+.chtw-sg > div > span { color: #ffffff; text-shadow: 3px 4px 7px #ff0000; }
+.chtw-aot > div > span { color: #7a230d; text-shadow: 3px 4px 7px #50200c; }
+.chtw-nekopara > div > span { color: #00b5fd; text-shadow: 3px 4px 8px #0997c1; }
+.chtw-clamp > div > span { color: #da00ff; text-shadow: 3px 4px 8px #cb00ff; }
+.chtw-konosuba > div > span { color: #ff0044; text-shadow: 3px 4px 8px #ff0076; }
+.chtw-rezero > div > span { color: #009eff; text-shadow: 3px 4px 8px #008aff; }
+.chtw-oregairu > div > span { color: #005204; text-shadow: 3px 4px 8px #197200b3; }
+.chtw-domekano > div > span { color: #9b00c7; text-shadow: 3px 4px 8px #5c0072e3; }
+.chtw-vtube > div > span { color: #14c700;text-shadow: 3px 4px 8px #00720de3; }
+
+
+
+/* Вкладка с кастомными персами */
+.nsp-hina .nsp-image { background-image: url(https://pbs.twimg.com/media/FDwqJltWYAMEkiV.jpg); }
+.nsp-hina .nsp-text:after { content: 'Hina'; }
+.nsp-aru .nsp-image { background-image: url(https://i.imgur.com/1mkPDSTh.jpg); }
+.nsp-aru .nsp-text:after { content: 'Aru'; }
+.nsp-laplus .nsp-image { background-image: url(https://i.imgur.com/OvvEICw.jpg); }
+.nsp-laplus .nsp-text:after { content: 'Shion'; }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: КОММЕНТАРИИ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: КОММЕНТАРИИ */
+/*******************************************************************************************************************/
+
+/* Unknown */
+.profile-content > div[class="block"] {
+    background: #000;
+    padding: 20px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.profile-content > div[class="block"] > .subheadline > a {
+    text-align: center;
+    padding: 0;
+}
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: СПИСКИ ПРОСМОТРЕННОГО **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: СПИСКИ ПРОСМОТРЕННОГО И СРАВНИВАЕМОГО*/
+/*******************************************************************************************************************/
+
+/* Цвет надписи "онгоинг" */
+.p-user_rates-index .list-lines tr td .ongoing { color: var(--chtw-link-hover); }
+/* Цвет надписи "анонс" */
+.p-user_rates-index .list-lines tr td .anons { color: #ff0073; }
+
+/* Цвет ячейки изменения количества эпизодов и оценки */
+.p-user_rates-index .list-lines tr td .new-value input { background: #333; border: none; }
+
+/* Мутная аватарка и нормальная при наведении */
+.p-user_rates-index .l-menu .avatar img { filter: blur(3px);  transition: 0.5s ease; }
+.p-user_rates-index .l-menu .avatar img:hover { filter: none; transition: 0.5s ease-out; }
+
+/* Замена цвета скрытого блока в просмотренных аниме в профиле */
+.collapsed { background: #23a52052; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
+.collapsed:hover { background: #ad6e1352; border-radius: 15px; border: none; color: #fff; font-size: 8pt; }
+
+/* Цвет названия тайтла */
+.p-user_rates-index .list-lines tr .name a { color: #34c34dfc; font-weight: bold; }
+
+/* Цвет общих эпизодов в онгоингах */
+.p-user_rates-index .list-lines tr td .episodes_total { color: #e1e02a; font-size: 11px; }
+
+/* Увеличение при наведении */
+.p-user_rates-index .list-lines .selectable:hover,
+.p-userlist_comparer .comparer table .selectable:hover {
+    background-color: #0000;
+    transform: scale(1.01);
+    color: var(--chtw-link-hover);
+}
+.p-user_rates-index .list-lines .selectable,
+.p-userlist_comparer .comparer table .selectable,
+.p-user_rates-index .list-lines tr .name a,
+.p-userlist_comparer .comparer table .name a
+{ transition: all 0.2s; }
+.p-user_rates-index .list-lines tr .name a:hover,
+.p-userlist_comparer .comparer table .name a:hover
+{ text-decoration: none; }
+/* Выделение поярче при наведении */
+.p-user_rates-index .list-lines .selectable:hover .name a span { filter: brightness(1.5); }
+
+/* Ник и иже с ним */
+.p-user_rates header.head .misc {
+    font-size: 26px;
+    background: var(--chtw-subline);
+    padding: 5px 10px;
+    border-radius: 20px;
+    line-height: initial;
+    margin-left: 5px;
+}
+
+/* Запланировано, смотрю и т.п. */
+.p-user_rates-index .b-options-floated a:after,
+.p-user_rates-index .b-options-floated .link:after
+{ display: none; }
+.p-user_rates-index .b-options-floated.mobile-desktop { gap: 5px; justify-content: center; }
+.p-user_rates-index .b-options-floated.mobile-desktop a {
+    background: var(--chtw-subline);
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+/* Сравниваемое */
+.p-userlist_comparer .comparer table .almost-same, .p-userlist_comparer .legend .almost-same {
+    background: #040c04;
+}
+.p-userlist_comparer .comparer table .slightly-difr, .p-userlist_comparer .legend .slightly-difr {
+    background: #160d0d;
+}
+.p-userlist_comparer .comparer table .abslt-difr, .p-userlist_comparer .legend .abslt-difr {
+    background: #230909;
+}
+.p-userlist_comparer .comparer table .exact-same, .p-userlist_comparer .legend .exact-same {
+    background: #041604;
+}
+
+/* Если есть отзыв, то показываем кружок */
+.p-user_rates-index .list-lines tr td .rate-text:not(:empty):before {
+    background: #ffd100;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    padding: 3px;
+    content: ' ';
+    display: inline;
+    visibility: visible;
+    position: absolute;
+}
+/* По умолчанию отзывов не видно + их цвет */
+.p-user_rates-index .list-lines tr td .rate-text {
+    color: #e9e2da;
+    height: 0;
+    visibility: hidden;
+}
+/* При наведении виден отзыв */
+.p-user_rates-index .list-lines tr { position: relative; }
+.p-user_rates-index .list-lines tr td:hover .rate-text { height: initial !important; visibility: visible !important; }
+
+/* По идее ниже нет ничего, для чего он был бы родителем, но пусть останется */
+.p-user_rates-index .list-lines tr td .new-value .item-add { position: relative; }
+
+/* Заголовки */
+.menu-slide-outer > .menu-slide-inner > .l-content > .subheadline > a { padding-right: 0; }
+.menu-slide-outer > .menu-slide-inner > .l-content .subheadline {
+    text-align: center;
+    margin-top: 20px;
+    background: var(--chtw-subline);
+    border-radius: 10px;
+}
+/* Надписи справа у заголовков */
+.menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 18px; right: 10px; }
+.menu-slide-outer > .menu-slide-inner .list-groups header .b-options-floated { margin-top: 9px; }
+
+/* Строка поиска */
+.b-collection_search .field { margin: 15px 0; }
+.b-collection_search .field input { border: none; background-color: var(--chtw-subline); }
+
+/* Цвет графиков оценок у аниме и их округление */
+.bar.simple .bar.s0,
+.bar.simple .bar.s1,
+.bar.simple .bar.s2,
+.bar.simple .bar.s3
+{ background: var(--chtw-main-text); border-radius: 4px; }
+/* Инфа справа */
+.l-menu .block:not(.avatar, .mini-charts), .l-menu .b-favoured {
+    margin-bottom: 15px;
+    background: var(--chtw-subline);
+    border-radius: 10px;
+    padding: 5px 10px 10px;
+}
+.l-menu .b-collection-filters .filter { right: 10px; }
+.l-menu .subheadline { text-align: center; }
+.l-menu .block.avatar { margin-bottom: 15px; }
+.l-menu .b-nothing_here,
+.l-menu .block .b-list { margin-left: 0; text-align: center; }
+
+.bar.horizontal .line .x_label { color: var(--chtw-text-small); }
+.b-block_list li { color: #ebebeb; font-family: Comfortaa, sans-serif; }
+.b-block_list li.selected { font-weight: bold; }
+
+
+/* Сердечко вместо оценки в просмотренном */
+tr[data-target_id="7791"] span.current-value[data-field="score"],
+tr[data-target_id="9253"] span.current-value[data-field="score"],
+tr[data-target_id="30484"] span.current-value[data-field="score"]
+{ visibility: hidden; margin-right: 13px; }
+tr[data-target_id="7791"] span.current-value[data-field="score"]:after,
+tr[data-target_id="9253"] span.current-value[data-field="score"]:after,
+tr[data-target_id="30484"] span.current-value[data-field="score"]:after
+{ content: "❤"; color: red; visibility: visible; }
+
+/* Просмотрено вместе */
+.p-user_rates-index tr[data-target_id="15051"] .name > a:before, .p-user_rates-index tr[data-target_id="28957"] .name > a:before,
+.p-user_rates-index tr[data-target_id="36098"] .name > a:before, .p-user_rates-index tr[data-target_id="23289"] .name > a:before,
+.p-user_rates-index tr[data-target_id="33524"] .name > a:before, .p-user_rates-index tr[data-target_id="32542"] .name > a:before,
+.p-user_rates-index tr[data-target_id="4224"]  .name > a:before, .p-user_rates-index tr[data-target_id="38040"] .name > a:before,
+.p-user_rates-index tr[data-target_id="5391"]  .name > a:before, .p-user_rates-index tr[data-target_id="1639"]  .name > a:before,
+.p-user_rates-index tr[data-target_id="37786"] .name > a:before, .p-user_rates-index tr[data-target_id="37989"] .name > a:before,
+.p-user_rates-index tr[data-target_id="36028"] .name > a:before, .p-user_rates-index tr[data-target_id="37873"] .name > a:before,
+.p-user_rates-index tr[data-target_id="38759"] .name > a:before, .p-user_rates-index tr[data-target_id="36633"] .name > a:before,
+.p-user_rates-index tr[data-target_id="18857"] .name > a:before, .p-user_rates-index tr[data-target_id="13659"] .name > a:before,
+.p-user_rates-index tr[data-target_id="10020"] .name > a:before, .p-user_rates-index tr[data-target_id="8769"]  .name > a:before,
+.p-user_rates-index tr[data-target_id="36296"] .name > a:before, .p-user_rates-index tr[data-target_id="38610"] .name > a:before,
+.p-user_rates-index tr[data-target_id="34881"] .name > a:before, .p-user_rates-index tr[data-target_id="32071"] .name > a:before,
+.p-user_rates-index tr[data-target_id="32995"] .name > a:before, .p-user_rates-index tr[data-target_id="35849"] .name > a:before,
+.p-user_rates-index tr[data-target_id="10893"] .name > a:before, .p-user_rates-index tr[data-target_id="34497"] .name > a:before,
+.p-user_rates-index tr[data-target_id="19703"] .name > a:before, .p-user_rates-index tr[data-target_id="37208"] .name > a:before,
+.p-user_rates-index tr[data-target_id="35608"] .name > a:before, .p-user_rates-index tr[data-target_id="30484"] .name > a:before,
+.p-user_rates-index tr[data-target_id="31812"] .name > a:before, .p-user_rates-index tr[data-target_id="33352"] .name > a:before,
+.p-user_rates-index tr[data-target_id="30"]    .name > a:before, .p-user_rates-index tr[data-target_id="20541"] .name > a:before,
+.p-user_rates-index tr[data-target_id="23227"] .name > a:before, .p-user_rates-index tr[data-target_id="35557"] .name > a:before,
+.p-user_rates-index tr[data-target_id="37521"] .name > a:before, .p-user_rates-index tr[data-target_id="22071"] .name > a:before,
+.p-user_rates-index tr[data-target_id="30240"] .name > a:before, .p-user_rates-index tr[data-target_id="32485"] .name > a:before,
+.p-user_rates-index tr[data-target_id="39026"] .name > a:before, .p-user_rates-index tr[data-target_id="47"]    .name > a:before,
+.p-user_rates-index tr[data-target_id="39565"] .name > a:before, .p-user_rates-index tr[data-target_id="38031"] .name > a:before,
+.p-user_rates-index tr[data-target_id="48736"] .name > a:before, .p-user_rates-index tr[data-target_id="38710"] .name > a:before,
+.p-user_rates-index tr[data-target_id="17341"] .name > a:before, .p-user_rates-index tr[data-target_id="14355"] .name > a:before,
+.p-user_rates-index tr[data-target_id="26055"] .name > a:before, .p-user_rates-index tr[data-target_id="31933"] .name > a:before,
+.p-user_rates-index tr[data-target_id="14719"] .name > a:before, .p-user_rates-index tr[data-target_id="1535"]  .name > a:before,
+.p-user_rates-index tr[data-target_id="20899"] .name > a:before, .p-user_rates-index tr[data-target_id="37105"] .name > a:before,
+.p-user_rates-index tr[data-target_id="37884"] .name > a:before, .p-user_rates-index tr[data-target_id="48583"] .name > a:before,
+.p-user_rates-index tr[data-target_id="41168"] .name > a:before, .p-user_rates-index tr[data-target_id="39247"] .name > a:before,
+.p-user_rates-index tr[data-target_id="21557"] .name > a:before
+{ content: "⬤"; padding: 0 3px; color: orange; }
+
+/* Просмотрено в дороге */
+.p-user_rates-index tr[data-target_id="7791"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="17843"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="18041"] .name > a > span:before, .p-user_rates-index tr[data-target_id="28927"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="26243"] .name > a > span:before, .p-user_rates-index tr[data-target_id="34213"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="32681"] .name > a > span:before, .p-user_rates-index tr[data-target_id="32039"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="17341"] .name > a > span:before, .p-user_rates-index tr[data-target_id="14355"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="37826"] .name > a > span:before, .p-user_rates-index tr[data-target_id="35484"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="16774"] .name > a > span:before, .p-user_rates-index tr[data-target_id="34481"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="35424"] .name > a > span:before, .p-user_rates-index tr[data-target_id="27887"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="21435"] .name > a > span:before, .p-user_rates-index tr[data-target_id="21435"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="32038"] .name > a > span:before, .p-user_rates-index tr[data-target_id="27441"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="1210"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="34414"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="35425"] .name > a > span:before, .p-user_rates-index tr[data-target_id="35086"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="21743"] .name > a > span:before, .p-user_rates-index tr[data-target_id="3901"]  .name > a > span:before,
+.p-user_rates-index tr[data-target_id="2251"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="35672"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="35673"] .name > a > span:before, .p-user_rates-index tr[data-target_id="14349"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="6862"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="9734"]  .name > a > span:before,
+.p-user_rates-index tr[data-target_id="5680"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="16001"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="11887"] .name > a > span:before, .p-user_rates-index tr[data-target_id="8425"]  .name > a > span:before,
+.p-user_rates-index tr[data-target_id="3702"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="29067"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="26349"] .name > a > span:before, .p-user_rates-index tr[data-target_id="2251"]  .name > a > span:before,
+.p-user_rates-index tr[data-target_id="13535"] .name > a > span:before, .p-user_rates-index tr[data-target_id="30714"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="36904"] .name > a > span:before, .p-user_rates-index tr[data-target_id="17342"] .name > a > span:before
+{ content: "⬤"; padding: 0 3px; color: aqua; }
+
+/* Просмотренное в кино */
+.p-user_rates-index tr[data-target_id="35851"] .name > a > span:before, .p-user_rates-index tr[data-target_id="12477"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="38826"] .name > a > span:before, .p-user_rates-index tr[data-target_id="35848"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="37987"] .name > a > span:before
+{ content: "⬤"; padding: 0 3px; color: lime; }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ПРОФИЛЬ: ИСТОРИЯ **********">*/
+/*******************************************************************************************************************/
+/* ПРОФИЛЬ: ИСТОРИЯ */
+/*******************************************************************************************************************/
+
+/* Аниме/Манга/Ранобэ рядом с пунктами истории */
+.history-page a:before { display: inline-block; vertical-align: top; width: 30px; }
+.history-page a[href ^= "/a"]:before { content: '[А] '; color: #34a853; }
+.history-page a[href ^= "/m"]:before { content: '[М] '; color: #9c27b0; }
+.history-page a[href ^= "/r"]:before { content: '[Р] '; color: #039be5; }
+
+/* Легкая подсветка при наведении */
+.p-user_history-index .history-page .history-interval p { transition: all 0.3s; }
+.p-user_history-index .history-page .history-interval p:hover { background: #20202059; }
+
+/* "Просмотрено n эпизодов" чуть темнее */
+.history-interval { color: #c1c1c1; }
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** РЕДАКТОР КОДА **********">*/
+/*******************************************************************************************************************/
+/* РЕДАКТОР КОДА */
+/*******************************************************************************************************************/
+
+/* Изменение цвета пропусков в нумерации строк кода и ползунка справа от редактора кода */
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber,
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.b-edit_styles .page_background_color .range-slider .noUi-handle,
+.l-top_menu-v2 .menu-dropdown > span
+{ background: #000; }
+
+/* Цвет редактора внутри */
+.ProseMirror { background: #0000; color: #f8fffd; }
+
+/* Удаление белой рамки вокруг редактора кода */
+.b-edit_styles .edit_style .style_css .CodeMirror,
+.b-edit_styles .new_style .style_css .CodeMirror
+{ background: #000; border: 0; }
+
+/* Нумерация строк кода белым цветом */
+.CodeMirror pre,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.b-shiki_editor .body .editor textarea
+{ color: #fff; border: 0; }
+
+/* Изменение цвета ползунка и ввода текста справа от редактора кода */
+.noUi-connects { background: #000; color: #fff; }
+.b-edit_styles .body_background #body_background_input { border-color: #000; }
+.b-input select { color: #000; }
+
+/* Цвет комментариев в редакторе - зеленый */
+.cm-s-solarized .cm-comment { color: #0dff4a; font-style: italic; }
+
+/* Удаление тени текста в редакторе кода. С ней текст был расплывчатый */
+.cm-s-solarized.cm-s-light { text-shadow: #000 0 0; }
+
+/* Unknown */
+.b-edit_styles .edit_style .style_css .editor-expand.active:hover,
+.b-edit_styles .edit_style .style_css .editor-collapse.active:hover
+{ filter: brightness(0.6); }
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** КОММЕНТАРИИ И РЕДАКТОР ТЕКСТА **********">*/
+/*******************************************************************************************************************/
+/* КОММЕНТАРИИ И РЕДАКТОР ТЕКСТА */
+/*******************************************************************************************************************/
+
+/* Выделение банов в комментах */
+.b-comment .ban {
+    background: #e013132b;
+    padding: 2px 10px 2px 5px;
+    border-radius: 5px;
+    width: fit-content;
+}
+.b-comment > .inner .body .ban .resolution {
+    color: inherit;
+}
+
+/* Кнопка и указатель оффтопика */
+body[data-locale=ru] .b-offtopic_marker.active:hover:before { background-color: #484848; }
+body[data-locale=ru] .b-offtopic_marker:before,
+body[data-locale=ru] .b-offtopic_marker.off:hover:before {
+    border-radius: 3px;
+    background: #ffee004d;
+    padding: 1px 0;
+    border: none;
+    color: #fff;
+}
+
+/* Цитаты от пользователей с темным фоном */
+.b-quote-v2 { background-color: #040f06; }
+
+/* Кнопочка "развернуть" и длинные комменты больше не ломают мобильную версию */
+.b-comment .b-height_shortener .expand, .b-comment .b-height_shortener {
+    position: relative;
+}
+
+/* Блок спойлера */
+.b-spoiler_block.is-opened > div { color: #f8fffd; background-color: #020e0f; }
+
+/* Отзывы */
+.b-reviews_navigation { margin-top: 10px; }
+.b-reviews_navigation .navigation-node-all { color: #3db34b; }
+body .b-reviews_navigation .navigation-node,
+body .b-reviews_navigation .navigation-node.is-active
+{ align-items: center; }
+.b-reviews_navigation .navigation-node-positive,
+.b-reviews_navigation .navigation-node-negative,
+.b-reviews_navigation .navigation-node-all,
+.b-reviews_navigation .navigation-node-neutral
+{ background-color: inherit; }
+
+.editor-container .subheadline {
+    padding: 2px 10px;
+    text-align: center;
+    background: var(--chtw-subline);
+    border-radius: 10px;
+}
+
+.icon[data-v-dcc6b890]:not(.is-disabled) {
+    color: #cfcfcf;
+}
+.icon.is-disabled[data-v-dcc6b890] {
+    color: #cfcfcf30;
+}
+.menubar[data-v-61d07518] {
+    background: #0000;
+}
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** АДАПТАЦИЯ **********">*/
+/*******************************************************************************************************************/
+/* АДАПТАЦИЯ */
+/*******************************************************************************************************************/
+
+@media screen and (max-width: 1200px) {
+    /* Показать почту, историю и т.п. в блоке с ником */
+    .p-profiles .profile-head .c-mobile-actions {
+        display: inherit;
+        top: -25px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin: 0;
+        height: 0;
+        padding: 0 5px;
+    }
+    .p-profiles .profile-head .c-brief header { padding: 10px 10px 28px; }
+
+    .p-profiles-show .profile-content .cc-2 > .c-left { padding: 70px 20px 30px 20px; }
+    .p-profiles .profile-head .c-brief .avatar .profile-actions { display: none; }
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline { height: inherit; padding: 7px 10px 3px; border-radius: 20px; }
+    .p-profiles .profile-head .c-history { display: none; }
+    .p-profiles .profile-head .c-brief { padding-left: 0 !important; }
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after { content: none; }
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a { visibility: visible; padding-right: 0; }
+    .l-page { margin-top: 46px; margin-bottom: 0; border-radius: 0; }
+}
+
+@media screen and (max-width: 1024px){
+    body { background-size: auto !important; }
+    .p-profiles-show .b-feedback:after { display: none; }
+    .l-page { background: #000; opacity: 0.9; margin-bottom: 0; border-radius: 0; }
+
+    .b-options-floated.mobile-desktop a { padding: 4px 10px; }
+
+}
+@media screen and (max-width: 1023px){
+    /* Надписи справа у заголовков */
+    .menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 16px; right: 5px; }
+    .menu-slide-outer > .menu-slide-inner .list-groups header .b-options-floated { margin-top: 6px; }
+
+    /* АНИМЕ: Хронология, кнопки режима просмотра */
+    .p-db_entries .menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 1px; right: 6px; }
+}
+
+@media screen and (max-width: 1000px) {
+    .c-lists-info .b-stats_bar {
+        padding: 20px 10px;
+    }
+    .c-lists-info .b-stats_bar .bar {
+        margin: 25px 0 10px 0;
+    }
+    .c-lists-info .b-stats_bar .stat_names {
+        left: 170px;
+        width: calc(100% - 170px);
+    }
+    .c-lists-info .b-stats_bar .stat_names .stat_name a {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 870px) {
+    /* АНИМЕ: Хронология - кнопки хронологии и пр. */
+    .p-db_entries .menu-slide-outer > .menu-slide-inner .b-options-floated.before-buttons-2 { padding-right: 70px; }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .c-lists-info .b-stats_bar .bar
+    { display: none; }
+
+    .c-lists-info .b-stats_bar .stat_names {
+        position: initial;
+        height: auto;
+        padding-left: 0;
+    }
+    .c-lists-info .b-stats_bar {
+        padding: 25px 10px 20px;
+    }
+
+
+    body { background: #5f5f5f !important; }
+    body.p-profiles.p-profiles-show:not(.p-dialogs):before {
+        background-size: 100vw;
+        background-position-y: 30vh;
+        padding-top: 200px;
+    }
+    .c-lists-info .b-stats_bar .stat_names {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar { margin-bottom: 0; }
+    .c-lists-info .b-stats_bar .stat_names .stat_name a:before { display: none; }
+    .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar { text-align: center; }
+    .b-stats_bar .stat_names .stat_name .size {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 1px 0.42rem 0 0.42rem;
+    }
+    .activity .graph.vertical .line .bar .value { -webkit-transform: rotate(270deg); margin-bottom: 6px; margin-left: 1px; }
+
+}
+
+@media screen and (max-width: 767px) {
+    header.head h1, header.head h2 { display: inline-block; }
+
+    /* АНИМЕ: Хронология / связанное */
+    .p-db_entries .cc-related-authors > .c-column.block_m:not(.c-authors) .b-options-floated { margin-bottom: 0; }
+    .p-db_entries .cc-related-authors > .c-column.block_m:not(.c-authors) > .subheadline {
+        margin-top: 0;
+        border-radius: 0 0 10px 10px;
+    }
+    /* АНИМЕ: Хронология, кнопки режима просмотра */
+    .p-db_entries .menu-slide-outer > .menu-slide-inner .subheadline-buttons { margin-top: 16px; }
+
+    .menu-slide-outer > .menu-slide-inner > .l-content .subheadline {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .activity .graph.vertical .line .bar .value { letter-spacing: 2px; margin-left: 0; }
+}
+
+@media (max-width:460px) {
+    .c-lists-info .b-stats_bar .stat_names .stat_name a { font-size: 12px; }
+}
+
+@media screen and (max-width: 360px) {
+    .activity .graph.vertical .line .bar .value { font-size: 10px; letter-spacing: 5px; font-weight: normal; }
+}
+
+@media screen and (max-width: 480px) {
+    /* Показать почту, историю и т.п. в блоке с ником */
+    .p-profiles .profile-head .c-brief header { padding: 10px 10px 48px; }
+    .p-profiles .profile-head .c-mobile-actions { top: -44px; }
+
+    .p-profiles-show .achievements > .subheadline > a,
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a
+    { font-size: 24px !important; }
+    .b-stats_bar a.title, .p-profiles-show .profile-content .cc-2 > .c-left .activity .title,
+    .p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline,
+    .p-profiles-show .profile-content > .cc-2 > .c-right > .m30 > .m0 > .subheadline > a,
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a:after,
+    .p-profiles-show .achievements > .subheadline > a,
+    .profile-content > div[class="block"] > .subheadline > a,
+    .p-profiles-show .profile-content .cc-2 > .c-right > .block > .subheadline > a,
+    .p-profiles .profile-head .c-info .c-additionals:before
+    { font-size: 24px; }
+}
+
+@media screen and (min-width: 768px) {
+    .cc-9-g15 > .c-column:last-child { margin-bottom: 0 !important; }
+    .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar { margin-bottom: 0; }
+}
+
+
+
+
+
+
+
+/*</editor-fold>*/
+
+
+
+/*<editor-fold desc="********** ЛИЧНОЕ **********">*/
+/*******************************************************************************************************************/
+/* ЛИЧНОЕ */
+/*******************************************************************************************************************/
+
+/* Добавление к комменту текста */
+.b-comment[id="5833179"] > .inner > .body:after { content: " и мой Господин"; }
+.b-comment[id="5833179"] > .inner > aside.buttons { display: none; }
+
+/*</editor-fold>*/
+
+
