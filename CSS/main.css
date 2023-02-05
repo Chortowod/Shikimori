@@ -8,6 +8,100 @@
 
 /* Запасные анимированные обои: https://i.imgur.com/vHxDyeO.gif */
 
+/* Фикс для тултипа, где тайтл уменьшался до жмыха */
+@media screen and (min-width: 768px) {
+  .p-characters-show .b-catalog_entry-tooltip .c-anime, .p-characters-show .b-catalog_entry-tooltip .c-manga {
+      width: 100%;
+  }
+}
+
+/* Обрамление у тултипа */
+.dropshadow-top {
+    background: url(https://i.imgur.com/NzSmlrZ.png) no-repeat;
+    height: 16px;
+    background-size: cover;
+    top: -5px;
+}
+.dropshadow-top-right {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    background-size: cover;
+    height: 40px;
+  	width: 40px;
+    right: -15px;
+    top: -15px;
+}
+.dropshadow-right {
+    background: url(https://i.imgur.com/sze5PYW.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    rotate: 180deg;
+    right: -5px;
+    top: 0px;
+    width: 14px;
+}
+.dropshadow-bottom-right {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    rotate: 90deg;
+    background-size: cover;
+    bottom: -15px;
+    height: 40px;
+    right: -15px;
+    width: 40px;
+}
+.dropshadow-bottom {
+    background: url(https://i.imgur.com/NzSmlrZ.png) no-repeat;
+    background-size: cover;
+    bottom: -5px;
+    height: 16px;
+}
+.dropshadow-bottom-left {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    rotate: 180deg;
+    background-size: cover;
+    bottom: -15px;
+    height: 40px;
+    left: -15px;
+    width: 40px;
+}
+.dropshadow-left {
+    background: url(https://i.imgur.com/sze5PYW.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 14px;
+}
+.dropshadow-top-left {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    rotate: 270deg;
+    background-size: cover;
+    height: 40px;
+    left: -15px;
+    position: absolute;
+    top: -15px;
+    width: 40px;
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #34c34d8f;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--chtw-main-text);
+}
+::-webkit-scrollbar-track {
+    display: none;
+    width: 6px;
+    background: transparent;
+}
+
 
 /* Анимированные обои */
 .additional-wallpappers {
@@ -806,6 +900,7 @@ body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
 /*******************************************************************************************************************/
 
 .p-profiles-show .l-page { background: #0000; box-shadow: none; }
+.p-profiles-show.p-dialogs-show .l-page { background: #000; box-shadow: 0 0 10px #00000080; }
 
 /* Сокрытие надписи "Обо мне" */
 .p-profiles-show .about .subheadline { display: none; }
@@ -891,6 +986,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
                 var(--chtw-background-effects) repeat, /* Падающая сакура */
                 var(--chtw-background) fixed center / cover !important; /* Коеми */
         animation: blef 10s linear infinite;
+      	overflow: overlay;
     }
 }
 
@@ -906,7 +1002,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
         animation: blef 10s linear infinite;
     }
 
-     /*Изменение обоев при уходе курсора со страницы */
+    /*Изменение обоев при уходе курсора со страницы */
     body:hover {
         background:
                 var(--chtw-right-bottom-hover) fixed right bottom / 310px no-repeat,
@@ -1613,11 +1709,25 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /* Центровка */
 .p-profiles-show .achievements > .subheadline  { text-align: center; padding: 0; }
 
+.p-profiles-show .achievements .cc-achievements {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+}
+.p-profiles-show .achievements .cc-achievements .b-achievement {
+    margin-right: 0;
+    float: none;
+    width: 24%;
+}
+
 /* Увеличение при наведении */
 .p-profiles-show .achievements .cc-achievements .b-achievement,
 .p-profiles-show .achievements .cc-franchises .b-badge
 { transition: 0.3s; }
-.p-profiles-show .achievements .cc-achievements .b-achievement:hover { transform: scale(1.02); }
+.p-profiles-show .achievements .cc-achievements .b-achievement:hover {
+    transform: scale(1.8);
+    z-index: 99999;
+}
 .p-profiles-show .achievements .cc-franchises .b-badge:hover { transform: scale(1.1); }
 
 /* Верхняя округлость у описания ачивок */
@@ -1632,7 +1742,8 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 
 /* Цвет */
 .p-profiles-show .achievements > .subheadline > a {
-    color: #88ff00; text-shadow: 0 0 12px #7adc00; font: 40px Comfortaa, sans-serif;
+    color: #88ff00; text-shadow: 0 0 12px #7adc00;
+    font: 30px Comfortaa, sans-serif;
     background: #000;
     padding: 7px 10px 3px;
     border-radius: 20px;
@@ -1719,13 +1830,15 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 
 /* Выравнивание персов и изменение отступов */
 .cc-9-g15 > .c-column { margin-bottom: 0; margin-right: 0; }
-.about.block .d-cutted_covers {
+.about.block .d-cutted_covers, 
+.chtw-harem .m0  { /* Выравнивание сломалось, поэтому добавил m0 */
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     row-gap: 10px;
     justify-content: center;
 }
+
 
 .chtw-ship br { display: none; }
 .chtw-ship a:nth-of-type(2n) { margin-right: 10px; }
@@ -1781,6 +1894,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
+    transition: 0.3s;
 }
 .p-profiles-show .about .nsp-text {
     display: block;
@@ -1799,6 +1913,17 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
+}
+.p-profiles-show .about .chtw-music .chtw-mbs {
+    width: 49%;
+}
+.p-profiles-show .about .chtw-music .chtw-mbs .b-video {
+    width: 23%;
+}
+
+/* плавное изменение картинки при наведении */
+.c-character img {
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2025,6 +2150,11 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .c-character[id="47005"]  img { background-image: url(https://i.imgur.com/K1aAU7S.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="153862"] img { background-image: url(https://i.imgur.com/9DmlIqr.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="53369"]  img { background-image: url(https://i.imgur.com/z6WP6ID.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="164968"] img { background-image: url(https://i.imgur.com/A9S2zHk.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="182976"] img { background-image: url(https://i.imgur.com/QNjXF70.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="188108"] img { background-image: url(https://i.imgur.com/2GRBEni.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="159580"] img { background-image: url(https://i.imgur.com/E6z0LY4.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="213389"] img { background-image: url(https://i.imgur.com/G2VWAhC.jpg); object-position: 0 9999px; background-size: cover; }
 
 /* Выделение лучших персов в гареме */
 .entry-117225   .name-ru, .entry-82525  .name-ru, .entry-116319 .name-ru, .entry-117063 .name-ru,
@@ -2033,13 +2163,15 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .entry-51523    .name-ru, .entry-19568  .name-ru, .entry-70069  .name-ru, .entry-118767 .name-ru,
 .entry-124049   .name-ru, .entry-122953 .name-ru, .entry-155896 .name-ru, .entry-135879 .name-ru,
 .entry-198570   .name-ru, .entry-198572 .name-ru, .entry-176248 .name-ru, .entry-254    .name-ru,
-.entry-47005    .name-ru, .entry-153862 .name-ru, .entry-53369 .name-ru
+.entry-47005    .name-ru, .entry-153862 .name-ru, .entry-53369 .name-ru,  .entry-164968 .name-ru,
+.entry-182976   .name-ru, .entry-159580 .name-ru
 { color: #ff5900; }
 
 /* Выделение персов с фигурками */
 .entry-51523  .name-ru:before, .entry-82525  .name-ru:before, .entry-23602  .name-ru:before,
 .entry-497    .name-ru:before, .entry-118763 .name-ru:before, .entry-70069  .name-ru:before,
-.entry-157519 .name-ru:before, .entry-117063 .name-ru:before, .entry-116275 .name-ru:before
+.entry-157519 .name-ru:before, .entry-117063 .name-ru:before, .entry-116275 .name-ru:before,
+.entry-198572 .name-ru:before, .entry-7373 .name-ru:before
 { content: "✔"; color: green; padding-right: 2px; }
 
 /* Цвета у категорий вайфу */
@@ -2071,6 +2203,11 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .nsp-aru .nsp-text:after { content: 'Aru'; }
 .nsp-laplus .nsp-image { background-image: url(https://i.imgur.com/OvvEICw.jpg); }
 .nsp-laplus .nsp-text:after { content: 'Shion'; }
+.nsp-nahida .nsp-image { background-image: url(https://i.imgur.com/HYhc1ZR.jpg); }
+.nsp-nahida .nsp-image:hover { background-image: url(https://i.imgur.com/KD3fznt.jpg); }
+.nsp-nahida .nsp-text:after { content: 'Nahida'; }
+.nsp-fauna .nsp-image { background-image: url(https://i.imgur.com/2xD4d2F.jpg); }
+.nsp-fauna .nsp-text:after { content: 'Ceres Fauna'; }
 /*</editor-fold>*/
 
 
@@ -2439,6 +2576,11 @@ body[data-locale=ru] .b-offtopic_marker.off:hover:before {
 
 /* Цитаты от пользователей с темным фоном */
 .b-quote-v2 { background-color: #040f06; }
+
+/* Двойные цитаты с темным фоном */
+.b-quote .b-quote {
+    background: inherit;
+}
 
 /* Кнопочка "развернуть" и длинные комменты больше не ломают мобильную версию */
 .b-comment .b-height_shortener .expand, .b-comment .b-height_shortener {
