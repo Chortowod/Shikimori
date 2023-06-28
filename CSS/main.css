@@ -8,102 +8,31 @@
 
 /* Запасные анимированные обои: https://i.imgur.com/vHxDyeO.gif */
 
-/* Фикс для тултипа, где тайтл уменьшался до жмыха */
-@media screen and (min-width: 768px) {
-  .p-characters-show .b-catalog_entry-tooltip .c-anime, .p-characters-show .b-catalog_entry-tooltip .c-manga {
-      width: 100%;
-  }
-}
+/* Пока пусть будет тут: лень скроллить в самый низ */
+.chtw-harem .entry-173968.b-catalog_entry .image-decor:after, .c-poster meta[content*="/173968"] ~ picture:after { content: 'Хозяйственная и преданная кошкожена с твердым характером' }
+.chtw-harem .entry-136175.b-catalog_entry .image-decor:after, .c-poster meta[content*="/136175"] ~ picture:after { content: 'Прекрасная и милая булочка, кажущаяся наивной, хотя на деле вполне смышленная' }
+.chtw-harem .entry-224273.b-catalog_entry .image-decor:after, .c-poster meta[content*="/224273"] ~ picture:after { content: 'Безумно красивый чардиз, изящные движения, рожки, ножки и бог знает что еще' }
+.chtw-harem .entry-23602.b-catalog_entry  .image-decor:after, .c-poster meta[content*="/23602"]  ~ picture:after { content: 'Лучшая лоля всея мира. Change my mind.' }
+.chtw-harem .entry-193067.b-catalog_entry .image-decor:after, .c-poster meta[content*="/193067"] ~ picture:after { content: 'Богиня мира юри и СМ; воплощает в себе все необходимые качества, свойственные такому типажу' }
+.chtw-harem .entry-198572.b-catalog_entry .image-decor:after, .c-poster meta[content*="/198572"] ~ picture:after { content: 'Здесь совпало все - рожки, голос, волосы, одежда, характер. Эталон вайфу.' }
+.chtw-harem .entry-53641.b-catalog_entry  .image-decor:after, .c-poster meta[content*="/53641"]  ~ picture:after { content: 'Какой красавец, я не могу. Не могу избавиться от желания приобрести нормальную фигурку по нему, которых нет :С' }
+.chtw-harem .entry-143108.b-catalog_entry .image-decor:after, .c-poster meta[content*="/143108"] ~ picture:after { content: 'Как говорится: "достаточно одного взгляда". Хотя мангу я немного полистал на главах с ней.' }
+.chtw-harem .entry-18547.b-catalog_entry  .image-decor:after, .c-poster meta[content*="/18547"]  ~ picture:after { content: 'Сильная, с характером, и в то же время ранимая, зависимая и заботливая.' }
+.chtw-harem .entry-173969.b-catalog_entry .image-decor:after, .c-poster meta[content*="/173969"] ~ picture:after { content: 'Полуфансервисный-полусерьезный перс. Чаще всего ведет себя инфантильно, но в нужный момент серьезна и не бросает друзей.' }
+.chtw-harem .entry-207492.b-catalog_entry .image-decor:after, .c-poster meta[content*="/207492"] ~ picture:after { content: 'Адекватная лоли-хакер без мании величия (почти). Разве нужно что-то еще?' }
+.chtw-harem .entry-175492.b-catalog_entry .image-decor:after, .c-poster meta[content*="/175492"] ~ picture:after { content: 'Слишком много страданий выпало на ее долю. Жаль, что она вовремя не встретила нужного человека.' }
+.chtw-harem .entry-226655.b-catalog_entry .image-decor:after, .c-poster meta[content*="/226655"] ~ picture:after { content: 'Милый голос разума и адекватности.' }
+.chtw-harem .entry-164582.b-catalog_entry .image-decor:after, .c-poster meta[content*="/164582"] ~ picture:after { content: 'Животные инстинкты и привязанность не дают персонажу быть плохим. Кусается.' }
+.chtw-harem .entry-189354.b-catalog_entry .image-decor:after, .c-poster meta[content*="/189354"] ~ picture:after { content: 'Уу-руу-шии! Крутейшая подруга ГГ, кошачья улыбка, голос Каны и заразительная доброта.' }
 
-/* Обрамление у тултипа */
-.dropshadow-top {
-    background: url(https://i.imgur.com/NzSmlrZ.png) no-repeat;
-    height: 16px;
-    background-size: cover;
-    top: -5px;
-}
-.dropshadow-top-right {
-    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
-    background-size: cover;
-    height: 40px;
-  	width: 40px;
-    right: -15px;
-    top: -15px;
-}
-.dropshadow-right {
-    background: url(https://i.imgur.com/sze5PYW.png) no-repeat;
-    background-size: cover;
-    height: 100%;
-    rotate: 180deg;
-    right: -5px;
-    top: 0px;
-    width: 14px;
-}
-.dropshadow-bottom-right {
-    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
-    rotate: 90deg;
-    background-size: cover;
-    bottom: -15px;
-    height: 40px;
-    right: -15px;
-    width: 40px;
-}
-.dropshadow-bottom {
-    background: url(https://i.imgur.com/NzSmlrZ.png) no-repeat;
-    background-size: cover;
-    bottom: -5px;
-    height: 16px;
-}
-.dropshadow-bottom-left {
-    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
-    rotate: 180deg;
-    background-size: cover;
-    bottom: -15px;
-    height: 40px;
-    left: -15px;
-    width: 40px;
-}
-.dropshadow-left {
-    background: url(https://i.imgur.com/sze5PYW.png) no-repeat;
-    background-size: cover;
-    height: 100%;
-    position: absolute;
-    left: -5px;
-    top: 0;
-    width: 14px;
-}
-.dropshadow-top-left {
-    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
-    rotate: 270deg;
-    background-size: cover;
-    height: 40px;
-    left: -15px;
-    position: absolute;
-    top: -15px;
-    width: 40px;
-}
-
-/* Скроллбар */
-::-webkit-scrollbar {
-    width: 10px;
-    background-color: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #34c34d8f;
-    border-radius: 8px;
-    transition: 0.2s;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--chtw-main-text);
-}
-::-webkit-scrollbar-track {
-    display: none;
-    width: 6px;
-    background: transparent;
-}
+/*<editor-fold desc="********** ПЕРЕМЕСТИТЬ В НУЖНОЕ МЕСТО **********">*/
 
 
-/* Анимированные обои */
+
+/*</editor-fold>*/
+
+
+/* Старые и запасные картинки для профиля */
 .additional-wallpappers {
     background:
             url(https://i.imgur.com/bH3ya0H.jpg), /* Чайки полоса */
@@ -125,6 +54,7 @@
             url(https://i.imgur.com/94LfKZx.gif); /* Падающая сакура */
 }
 
+/* База */
 :root {
     --chtw-main-text: #34c34dfc;
     --chtw-second-text: #fff;
@@ -134,9 +64,10 @@
     --chtw-link-hover: #dd5202;
     --chtw-subline: #041211;
     --chtw-text-small: #ebebeb;
-    --chtw-load-image: url(https://i.imgur.com/Gfzcfux.gif);
+    /*--chtw-load-image: url(https://i.imgur.com/Gfzcfux.gif);*/
+    --chtw-load-image: none;
     --chtw-load-text: none;
-    --chtw-logo-image: url(https://i.imgur.com/nF4faHm.gif);
+    --chtw-logo-image: url(https://i.imgur.com/75haGiu.gif);
     --chtw-top-image: url(https://i.imgur.com/bH3ya0H.jpg);
     --chtw-background: url(https://i.imgur.com/8c4oDJY.jpg);
     --chtw-background-hover: url(https://i.imgur.com/8c4oDJY.jpg);
@@ -170,7 +101,6 @@
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ОБЩЕЕ **********">*/
 /*******************************************************************************************************************/
 /* ОБЩЕЕ */
@@ -180,6 +110,25 @@
 .b-spoiler_block.is-opened>span { border-bottom-left-radius: 0; }
 .b-spoiler_block>div { border-left: 4px solid #b03c3cf0; }
 .b-spoiler_block>span:hover~div { border-left: 4px solid #1d78b7; }
+
+/* Скроллбар */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #34c34d8f;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--chtw-main-text);
+}
+::-webkit-scrollbar-track {
+    display: none;
+    width: 6px;
+    background: transparent;
+}
 
 /* Стиль недоступной кнопки */
 .b-input input[disabled] { color: #fff; background: #333; border-color: #333; }
@@ -516,7 +465,6 @@ header.head h2 a.back:before,
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ОБЩЕЕ: ПОДСВЕТКА ТАЙТЛОВ **********">*/
 /*******************************************************************************************************************/
 /* ОБЩЕЕ: ПОДСВЕТКА ТАЙТЛОВ */
@@ -571,7 +519,6 @@ header.head h2 a.back:before,
 .b-db_entry-variant-list_item[data-text*="Recap"] .name-ru { color: red; }
 .b-db_entry-variant-list_item .b-link[title*="Recap"] { color: red; }
 /*</editor-fold>*/
-
 
 
 /*<editor-fold desc="********** ГЛАВНАЯ **********">*/
@@ -646,16 +593,35 @@ header.head h2 a.back:before,
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** СТРАНИЦА ТАЙТЛА **********">*/
 /*******************************************************************************************************************/
 /* СТРАНИЦА ТАЙТЛА, ПЕРСОВ, ЛЮДЕЙ */
 /*******************************************************************************************************************/
 
+.p-characters .c-poster meta ~ picture:after {
+    border: 1px solid #1d1d1d;
+    text-align: center;
+    display: flex;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+/* (клубы в одну строку на странице аниме) */
+.b-animes-menu .b-clubs.one-line {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.b-animes-menu .b-clubs.one-line .b-club {
+    margin-right: 0;
+}
+
 /* Увеличить картинку у тайтла при наведении (мем с азиатом и бумажкой) */
 .b-db_entry > .c-image img:hover {
     max-width: initial;
     width: auto !important;
+    height: auto;
+    max-height: 600px;
     position: relative;
     z-index: 2;
 }
@@ -784,7 +750,6 @@ header.head h2 a.back:before,
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** РАЗНОЕ **********">*/
 /*******************************************************************************************************************/
 /* РАЗНОЕ */
@@ -794,6 +759,10 @@ header.head h2 a.back:before,
 body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
 .b-badge:before { background: none; display: block; }
 
+/* Кнопки сортировки у автора в работах */
+@media screen and (min-width: 1024px) { .p-people.p-people-works .b-options-floated { margin-top: 30px; } }
+@media screen and (max-width: 1023px) { .p-people.p-people-works .b-options-floated { margin-top: 25px; } }
+
 /* Блокировка рекламы */
 .spns_yd_240x600,
 .spns_yd_970x90,
@@ -801,11 +770,86 @@ body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
 .spns_special_x300,
 .spns_special_x1170,
 .spns_istari_x300,
-.spns_istari_x1170
+.spns_istari_x1170,
+.spns_special_x894
 { display: none }
 
-/*</editor-fold>*/
+/* Обрамление у тултипа */
+.dropshadow-top {
+    background: url(https://i.imgur.com/NzSmlrZ.png) no-repeat;
+    height: 16px;
+    background-size: cover;
+    top: -5px;
+}
+.dropshadow-top-right {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    right: -15px;
+    top: -15px;
+}
+.dropshadow-right {
+    background: url(https://i.imgur.com/sze5PYW.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    rotate: 180deg;
+    right: -5px;
+    top: 0px;
+    width: 14px;
+}
+.dropshadow-bottom-right {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    rotate: 90deg;
+    background-size: cover;
+    bottom: -15px;
+    height: 40px;
+    right: -15px;
+    width: 40px;
+}
+.dropshadow-bottom {
+    background: url(https://i.imgur.com/NzSmlrZ.png) no-repeat;
+    background-size: cover;
+    bottom: -5px;
+    height: 16px;
+}
+.dropshadow-bottom-left {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    rotate: 180deg;
+    background-size: cover;
+    bottom: -15px;
+    height: 40px;
+    left: -15px;
+    width: 40px;
+}
+.dropshadow-left {
+    background: url(https://i.imgur.com/sze5PYW.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 14px;
+}
+.dropshadow-top-left {
+    background: url(https://i.imgur.com/HUBNTXX.png) no-repeat;
+    rotate: 270deg;
+    background-size: cover;
+    height: 40px;
+    left: -15px;
+    position: absolute;
+    top: -15px;
+    width: 40px;
+}
 
+/* Фикс для тултипа, где тайтл уменьшался до жмыха */
+@media screen and (min-width: 768px) {
+    .p-characters-show .b-catalog_entry-tooltip .c-anime, .p-characters-show .b-catalog_entry-tooltip .c-manga {
+        width: 100%;
+    }
+}
+
+/*</editor-fold>*/
 
 
 /*<editor-fold desc="********** ШАПКА **********">*/
@@ -893,7 +937,6 @@ body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: ОБЩЕЕ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: ОБЩЕЕ */
@@ -931,11 +974,77 @@ body.p-achievements.p-profiles.p-profiles .b-badge img { transition: 0.3s all; }
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: БЭКГРАУНД И СЕКРЕТЫ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: БЭКГРАУНД И СЕКРЕТЫ */
 /*******************************************************************************************************************/
+
+/* Ссылки слева */
+.b-to-top, .b-to-top.active {
+    display: none;
+}
+.chtw-links {
+    position: fixed;
+    left: -100px;
+    top: 5rem;
+}
+.chtw-link {
+    position: relative;
+    height: 50px;
+    background: transparent;
+    box-shadow: 0 2px 4px 2px rgb(0 0 0 / 40%);
+    text-shadow: 0 1px 2px #00000040;
+    border-radius: 0 1rem 1rem 0;
+    overflow: hidden;
+    z-index: 20;
+    opacity: 0.8;
+    transition: 0.5s ease-in-out;
+    left: 0;
+    width: 150px;
+    margin-bottom: 5px;
+}
+.chtw-link:hover {
+    left: 100px;
+    z-index: 60;
+    opacity: 0.8;
+    background: black;
+}
+.chtw-link br { display: none; }
+.chtw-link strong {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    margin: auto 0;
+    border-radius: 100px;
+    box-shadow: 0 0 3px 3px #00000026;
+    pointer-events: none;
+    background-color: #cfd0d21a;
+    background-position: center;
+    border: 2px solid #1f1e1ee6;
+    background-size: cover;
+}
+.chtw-link .b-link {
+    display: flex;
+    align-items: center;
+    height: 100% !important;
+    font-size: 16px !important;
+    color: rgba(var(--dark-color), var(--hundred)) !important;
+    justify-content: center;
+    padding-right: 3rem;
+}
+.button-left-1 > strong { background-image: url("https://desu.shikimori.one/system/user_images/original/208335/1607108.jpg"); }
+.button-left-2 > strong { background-image: url("https://www.last.fm/static/images/lastfm_avatar_twitter.52a5d69a85ac.png"); }
+.button-left-3 > strong { background-image: url("https://moe.shikimori.one/system/user_images/original/208335/1607102.jpg"); }
+.button-left-4 > strong { background-image: url("https://static.myfigurecollection.net/ressources/assets/webicon.png"); }
+
+@media screen and (max-width: 1200px) {
+    .chtw-link {
+        display: none;
+    }
+}
 
 /* Картинка и текст при загрузке страницы профиля */
 body.p-profiles.p-profiles-show:not(.p-dialogs):before {
@@ -986,7 +1095,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
                 var(--chtw-background-effects) repeat, /* Падающая сакура */
                 var(--chtw-background) fixed center / cover !important; /* Коеми */
         animation: blef 10s linear infinite;
-      	overflow: overlay;
+        overflow: overlay;
     }
 }
 
@@ -1014,8 +1123,8 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
         animation: blef 10s linear infinite;
     }
 }
-/*</editor-fold>*/
 
+/*</editor-fold>*/
 
 
 /*<editor-fold desc="********** ПРОФИЛЬ: АКТИВНОСТЬ и ИСТОРИЯ **********">*/
@@ -1086,7 +1195,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: НИК и ИНФО **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: Блок с ником и аватаркой */
@@ -1141,8 +1249,15 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .p-profiles .profile-head .c-brief .avatar { margin: 0; }
 .p-profiles .profile-head .c-brief .avatar img { display: none; }
 
-/*</editor-fold>*/
+/* Был онлайн */
+.p-profiles header.head .misc {
+    display: block;
+    padding: 0px 0 4px 0;
+    font-size: 12px;
+    margin: 0;
+}
 
+/*</editor-fold>*/
 
 
 /*<editor-fold desc="********** ПРОФИЛЬ: ДЕЙСТВИЯ НА САЙТЕ **********">*/
@@ -1229,7 +1344,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 }
 
 /*</editor-fold>*/
-
 
 
 /*<editor-fold desc="********** ПРОФИЛЬ: АНИМЕ и МАНГА **********">*/
@@ -1639,7 +1753,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: ДРУЗЬЯ и КЛУБЫ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: ДРУЗЬЯ и КЛУБЫ */
@@ -1689,7 +1802,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: ИЗБРАННОЕ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: ИЗБРАННОЕ */
@@ -1700,11 +1812,18 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: ДОСТИЖЕНИЯ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: ДОСТИЖЕНИЯ */
 /*******************************************************************************************************************/
+
+/* Спрятать блок с достижениями и показывать при наведении */
+.p-profiles-show .achievements > .cc-2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.p-profiles-show .achievements:hover > div.cc-2 { max-height: 500px; }
 
 /* Центровка */
 .p-profiles-show .achievements > .subheadline  { text-align: center; padding: 0; }
@@ -1755,7 +1874,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     justify-content: center;
     padding: 5px 5px;
 }
-.p-profiles-show .achievements { margin-top: 15px; }
 
 .p-profiles-show .achievements .header .title { color: #fff; }
 .p-profiles-show .achievements .header .size { position: absolute; right: 12px; }
@@ -1764,14 +1882,13 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: ГАРЕМ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: ГАРЕМ */
 /*******************************************************************************************************************/
 
-.profile-content .about.block {
-    margin-top: 10px;
+.profile-content .about.block > br {
+    display: none;
 }
 
 .chtw-info {
@@ -1780,6 +1897,35 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     padding: 10px 10px;
     border-radius: 20px;
     font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* подпись у персонажа в гареме */
+.chtw-harem .b-catalog_entry .image-decor:after {
+    line-height: 14px;
+    color: white;
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    max-height: 35px;
+    font-size: 13px;
+    overflow: hidden;
+    background: #000000d1;
+    border: 1px solid #1d1d1d8c;
+    z-index: 999;
+    bottom: 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    max-width: 100%;
+    padding: 4px 5%;
+    text-align: center;
+    width: 100%;
+}
+.chtw-harem .b-catalog_entry .image-decor:hover:after {
+    max-height: 100px;
+    font-size: 8px;
+    line-height: 10px;
+    padding: 3px 10%;
 }
 
 /* Ограничение максимального размера картинки в шипперстве" */
@@ -1798,7 +1944,24 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     animation: hue 10s infinite linear;
     -webkit-animation: hue 10s infinite linear;
     background: #0000;
+    padding: 4px 10px 0;
 }
+
+.p-profiles-show .about .chtw-harem > .headline .figures-desc {
+    height: auto;
+    max-height: 0;
+    text-shadow: none;
+    animation: none;
+    -webkit-animation: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.p-profiles-show .about .chtw-harem > .headline:hover .figures-desc {
+    max-height: 20px;
+    white-space: normal;
+}
+
+
 .block { margin-bottom: 0; }
 
 /* Вкладки */
@@ -1830,7 +1993,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 
 /* Выравнивание персов и изменение отступов */
 .cc-9-g15 > .c-column { margin-bottom: 0; margin-right: 0; }
-.about.block .d-cutted_covers, 
+.about.block .d-cutted_covers,
 .chtw-harem .m0  { /* Выравнивание сломалось, поэтому добавил m0 */
     display: flex;
     flex-wrap: wrap;
@@ -1991,17 +2154,18 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     /* Исключения */
     .chtw-loli > div.chtw-urara,
     .chtw-loli > div.chtw-nasuverse,
-    .chtw-loli > div.chtw-dragonwork
+    .chtw-loli > div.chtw-dragonwork,
+    .chtw-loli > div.chtw-usagi
     { width: 49%; }
     .chtw-loli > div.chtw-urara .cc-9-g15 > .c-column,
     .chtw-loli > div.chtw-nasuverse .cc-9-g15 > .c-column,
+    .chtw-loli > div.chtw-usagi .cc-9-g15 > .c-column,
     .chtw-loli > div.chtw-dragonwork .cc-9-g15 > .c-column
     { width: 18%; }
 
 
 }
 /*</editor-fold>*/
-
 
 
 /*<editor-fold desc="********** ПРОФИЛЬ: ГАРЕМ (КАРТИНКИ И ВЫДЕЛЕНИЕ) **********">*/
@@ -2013,30 +2177,30 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .c-person[id="51512"]	  img { background-image: url(https://i.imgur.com/IIVBIAG.jpg); object-position: 0 9999px; background-size: cover; }
 @media screen and (min-width: 1201px) { .c-person[id="51512"] img { height: 196px; } }
 .c-character[id="12055"]  img { background-image: url(https://i.imgur.com/cTXH9D8.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="147867"] img { background-image: url(https://i.imgur.com/DtF9592.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="118777"] img { background-image: url(https://i.imgur.com/NR7Iy6Z.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="147867"] img { background-image: url(https://i.imgur.com/mEdDMJU.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="118777"] img { background-image: url(https://i.imgur.com/BM6eoMC.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="161954"] img { background-image: url(https://i.imgur.com/JWjMgpW.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="155554"] img { background-image: url(https://i.imgur.com/I37xBCG.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="40624"]  img { background-image: url(https://i.imgur.com/ynR1qwC.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="503"]    img { background-image: url(https://i.imgur.com/x4y74K3.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="40624"]  img { background-image: url(https://i.imgur.com/BH95scy.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="503"]    img { background-image: url(https://i.imgur.com/86g1Ia1.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="118767"] img { background-image: url(https://i.imgur.com/xdgYu0l.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="82929"]  img { background-image: url(https://i.imgur.com/LyspN2a.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="82929"]  img { background-image: url(https://i.imgur.com/Rzaryww.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="38695"]  img { background-image: url(https://i.imgur.com/DQqjIf4.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="122819"] img { background-image: url(https://i.imgur.com/t4wMRe3.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="152362"] img { background-image: url(https://i.imgur.com/pd61yLd.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="152362"] img { background-image: url(https://i.imgur.com/IDUm64a.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="38036"]  img { background-image: url(https://i.imgur.com/RGlmsid.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="22036"]  img { background-image: url(https://i.imgur.com/siT5MMT.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="53641"]  img { background-image: url(https://i.imgur.com/RA5nKH2.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="81763"]  img { background-image: url(https://i.imgur.com/WlaNSAy.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="22036"]  img { background-image: url(https://i.imgur.com/nHsBTZu.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="53641"]  img { background-image: url(https://i.imgur.com/bE9q7Ii.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="81763"]  img { background-image: url(https://i.imgur.com/C5kcqFd.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="149517"] img { background-image: url(https://i.imgur.com/ZPoYBZU.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="157522"] img { background-image: url(https://i.imgur.com/E1Gmp2Y.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="143076"] img { background-image: url(https://i.imgur.com/ae6QmAh.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="79995"]  img { background-image: url(https://i.imgur.com/IIlmBwT.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="122829"] img { background-image: url(https://i.imgur.com/DW7gyhr.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="79995"]  img { background-image: url(https://i.imgur.com/UzuoLPV.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="122829"] img { background-image: url(https://i.imgur.com/2KWE8te.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="122827"] img { background-image: url(https://i.imgur.com/0auL39k.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="132067"] img { background-image: url(https://i.imgur.com/OCj6eCm.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="157520"] img { background-image: url(https://i.imgur.com/Ilv78Py.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="143077"] img { background-image: url(https://i.imgur.com/qKSqdT6.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="143077"] img { background-image: url(https://i.imgur.com/p7R7gJi.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="143075"] img { background-image: url(https://i.imgur.com/punfMhM.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="83419"]  img { background-image: url(https://i.imgur.com/kbjz5hc.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="135879"] img { background-image: url(https://i.imgur.com/mQzCAdw.jpg); object-position: 0 9999px; background-size: cover; }
@@ -2049,28 +2213,28 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .c-character[id="142098"] img { background-image: url(https://i.imgur.com/ehoZU0R.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="140810"] img { background-image: url(https://i.imgur.com/zdN5Mao.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="92805"]  img { background-image: url(https://i.imgur.com/wFG8P18.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="19568"]  img { background-image: url(https://i.imgur.com/2ifWjeX.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="19568"]  img { background-image: url(https://i.imgur.com/qlIdTPO.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="19565"]  img { background-image: url(https://i.imgur.com/GIxFgEx.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="19566"]  img { background-image: url(https://i.imgur.com/wJBobYS.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="112893"] img { background-image: url(https://i.imgur.com/e4V0Wmb.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="132504"] img { background-image: url(https://i.imgur.com/4NvNfRH.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132504"] img { background-image: url(https://i.imgur.com/zNcN7cn.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="69505"]  img { background-image: url(https://i.imgur.com/aD6QhWp.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="91479"]  img { background-image: url(https://i.imgur.com/NayjVRA.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="40006"]  img { background-image: url(https://i.imgur.com/DoIeFjh.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="148598"] img { background-image: url(https://i.imgur.com/IlLrn9X.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="112559"] img { background-image: url(https://i.imgur.com/2Nms6OX.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="112559"] img { background-image: url(https://i.imgur.com/PB8vPHW.gif); object-position: 0 9999px; background-size: cover; }
 .c-character[id="131936"] img { background-image: url(https://i.imgur.com/MJAsrcB.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="1105"]   img { background-image: url(https://i.imgur.com/PZILQxt.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="155978"] img { background-image: url(https://i.imgur.com/RN3nlWo.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="1105"]   img { background-image: url(https://i.imgur.com/uuB6N5y.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="155978"] img { background-image: url(https://i.imgur.com/KeGEHka.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="81751"]  img { background-image: url(https://i.imgur.com/KngvRkT.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="30919"]  img { background-image: url(https://i.imgur.com/6E9llfI.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="601"]    img { background-image: url(https://i.imgur.com/bqE7WAC.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="35252"]  img { background-image: url(https://i.imgur.com/RFJE0Xn.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="132818"] img { background-image: url(https://i.imgur.com/o1VqQ7q.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="30919"]  img { background-image: url(https://i.imgur.com/Fc3zkWJ.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="601"]    img { background-image: url(https://i.imgur.com/gPvI2pS.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="35252"]  img { background-image: url(https://i.imgur.com/1HLgZrm.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132818"] img { background-image: url(https://i.imgur.com/vfkToi7.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="104387"] img { background-image: url(https://i.imgur.com/mGmyjAY.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="82523"]  img { background-image: url(https://i.imgur.com/iFLDyFe.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="82523"]  img { background-image: url(https://i.imgur.com/BCrB747.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="157874"] img { background-image: url(https://i.imgur.com/NGpqOIV.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="417"]    img { background-image: url(https://i.imgur.com/BjIzTuZ.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="417"]    img { background-image: url(https://i.imgur.com/SA8eQL8.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="118505"] img { background-image: url(https://i.imgur.com/vPVOs1D.gif); object-position: 0 9999px; background-size: cover; }
 .c-character[id="55951"]  img { background-image: url(https://i.imgur.com/G9V1tkC.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="83419"]  img { background-image: url(https://i.imgur.com/2mBbqRe.jpg); object-position: 0 9999px; background-size: cover; }
@@ -2085,13 +2249,13 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .c-character[id="22055"]  img:hover { background-image: url(https://i.imgur.com/3gMTcUE.png); }
 .c-character[id="22052"]  img:hover { background-image: url(https://i.imgur.com/KJTu7Ti.jpg); }
 .c-character[id="24195"]  img { background-image: url(https://i.imgur.com/sugWMuc.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="23602"]  img { background-image: url(https://i.imgur.com/uzt0rkV.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="23602"]  img { background-image: url(https://i.imgur.com/fBxyXvx.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="57499"]  img { background-image: url(https://i.imgur.com/SrdyP0F.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="90393"]  img { background-image: url(https://i.imgur.com/T0sDriB.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="22050"]  img { background-image: url(https://i.imgur.com/5YXeNjq.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="36563"]  img { background-image: url(https://i.imgur.com/XDaqVJy.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="29595"]  img { background-image: url(https://i.imgur.com/zjez1t1.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="29594"]  img { background-image: url(https://i.imgur.com/ltLKQIb.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="29594"]  img { background-image: url(https://i.imgur.com/C4csVQ0.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="148233"] img { background-image: url(https://i.imgur.com/lTrqrVq.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="28556"]  img { background-image: url(https://i.imgur.com/EHZx065.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="130338"] img { background-image: url(https://i.imgur.com/rHkLScc.png); object-position: 0 9999px; background-size: cover; }
@@ -2101,7 +2265,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .c-character[id="147755"] img { background-image: url(https://i.imgur.com/RPfuYUY.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="153073"] img { background-image: url(https://i.imgur.com/7Srd9ZF.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="143630"] img { background-image: url(https://i.imgur.com/gUF0R2F.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="122953"] img { background-image: url(https://i.imgur.com/xTD2uTm.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="122953"] img { background-image: url(https://i.imgur.com/OccGiNL.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="75188"]  img { background-image: url(https://i.imgur.com/2TgktbA.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="75082"]  img { background-image: url(https://i.imgur.com/XhjFEHz.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="80243"]  img { background-image: url(https://i.imgur.com/zL9Pjk1.png); object-position: 0 9999px; background-size: cover; }
@@ -2117,61 +2281,90 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .c-character[id="67769"]  img { background-image: url(https://i.imgur.com/t75FqRG.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="168968"] img { background-image: url(https://i.imgur.com/3HMommq.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="2087"]   img { background-image: url(https://i.imgur.com/1JBr2q4.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="459"]    img { background-image: url(https://i.imgur.com/PiPSL5q.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="459"]    img { background-image: url(https://i.imgur.com/Wj1Ud4Z.jpg); object-position: 0 9999px; background-size: cover; }
 .c-character[id="64165"]  img { background-image: url(https://i.imgur.com/wMu5qg8.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="136359"] img { background-image: url(https://i.imgur.com/8OH0aTX.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="127"]    img { background-image: url(https://i.imgur.com/qUNo196.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="64173"]  img { background-image: url(https://i.imgur.com/iikT5dq.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="64173"]  img { background-image: url(https://i.imgur.com/Ama7HJ6.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="3385"]   img { background-image: url(https://i.imgur.com/Ahifu8m.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="174177"] img { background-image: url(https://i.imgur.com/naYxUWo.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="174177"] img { background-image: url(https://i.imgur.com/uF1lB6C.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="67071"]  img { background-image: url(https://i.imgur.com/cy0woWA.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="51523"]  img { background-image: url(https://i.imgur.com/XNcM5e2.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="157519"] img { background-image: url(https://i.imgur.com/brbYAjk.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="117225"] img { background-image: url(https://i.imgur.com/B4TKlWh.gif); object-position: 0 9999px; background-size: cover; }
-.c-character[id="116319"] img { background-image: url(https://i.imgur.com/378yU7P.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="112909"] img { background-image: url(https://i.imgur.com/GZ4hfx8.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="82525"]  img { background-image: url(https://i.imgur.com/0NdkWRU.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="117063"] img { background-image: url(https://i.imgur.com/BLYdE8z.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="99661"]  img { background-image: url(https://i.imgur.com/4wR7EGi.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="42469"]  img { background-image: url(https://i.imgur.com/vEfmnqu.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="10010"]  img { background-image: url(https://i.imgur.com/oIh3TyI.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="51523"]  img { background-image: url(https://i.imgur.com/3aRLPUS.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="157519"] img { background-image: url(https://i.imgur.com/4rXoeU3.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="117225"] img { background-image: url(https://i.imgur.com/jbYKcZ0.gif); object-position: 0 9999px; background-size: cover; }
+.c-character[id="116319"] img { background-image: url(https://i.imgur.com/2uVKPAB.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="112909"] img { background-image: url(https://i.imgur.com/LHwRNPB.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="82525"]  img { background-image: url(https://i.imgur.com/IhKVs5I.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="117063"] img { background-image: url(https://i.imgur.com/JSGWASZ.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="99661"]  img { background-image: url(https://i.imgur.com/9xZr47i.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="42469"]  img { background-image: url(https://i.imgur.com/NVXdpST.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="10010"]  img { background-image: url(https://i.imgur.com/QpiUzZC.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="118767"] img { background-image: url(https://i.imgur.com/1mcwAVy.gif); object-position: 0 9999px; background-size: cover; }
-.c-character[id="70069"]  img { background-image: url(https://i.imgur.com/4oyYZ4E.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="124049"] img { background-image: url(https://i.imgur.com/Q5GcnO8.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="70069"]  img { background-image: url(https://i.imgur.com/5zF3y9U.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="124049"] img { background-image: url(https://i.imgur.com/2JU3nfn.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="176436"] img { background-image: url(https://i.imgur.com/KN0spS6.gif); object-position: 0 9999px; background-size: cover; }
-.c-character[id="155896"] img { background-image: url(https://i.imgur.com/dQ3JDI1.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="135879"] img { background-image: url(https://i.imgur.com/CTz37je.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="176248"] img { background-image: url(https://i.imgur.com/l8DJEE9.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="198572"] img { background-image: url(https://i.imgur.com/dPlUpso.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="198570"] img { background-image: url(https://i.imgur.com/JrbUK6N.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="198570"] img:hover { background-image: url(https://i.imgur.com/3nUhKUR.png); }
-.c-character[id="254"]    img { background-image: url(https://i.imgur.com/CGqOr57.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="155896"] img { background-image: url(https://i.imgur.com/SKChj2n.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="135879"] img { background-image: url(https://i.imgur.com/nSiSpzV.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="176248"] img { background-image: url(https://i.imgur.com/3V7qWKF.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="198572"] img { background-image: url(https://i.imgur.com/dl8j59l.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="198570"] img { background-image: url(https://i.imgur.com/buGaxCU.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="198570"] img:hover { background-image: url(https://i.imgur.com/UDQn7mL.png); }
+.c-character[id="254"]    img { background-image: url(https://i.imgur.com/BrKKFky.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="173128"] img { background-image: url(https://i.imgur.com/WNHO8Sw.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="47005"]  img { background-image: url(https://i.imgur.com/K1aAU7S.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="153862"] img { background-image: url(https://i.imgur.com/9DmlIqr.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="53369"]  img { background-image: url(https://i.imgur.com/z6WP6ID.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="164968"] img { background-image: url(https://i.imgur.com/A9S2zHk.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="182976"] img { background-image: url(https://i.imgur.com/QNjXF70.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="47005"]  img { background-image: url(https://i.imgur.com/VZ95wLG.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="153862"] img { background-image: url(https://i.imgur.com/jBe2dfn.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="53369"]  img { background-image: url(https://i.imgur.com/jQlM6ej.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="164968"] img { background-image: url(https://i.imgur.com/nKxr5SD.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="182976"] img { background-image: url(https://i.imgur.com/tz681Rg.png); object-position: 0 9999px; background-size: cover; }
 .c-character[id="188108"] img { background-image: url(https://i.imgur.com/2GRBEni.jpg); object-position: 0 9999px; background-size: cover; }
-.c-character[id="159580"] img { background-image: url(https://i.imgur.com/E6z0LY4.png); object-position: 0 9999px; background-size: cover; }
-.c-character[id="213389"] img { background-image: url(https://i.imgur.com/G2VWAhC.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="159580"] img { background-image: url(https://i.imgur.com/ANdhKa3.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="213389"] img { background-image: url(https://i.imgur.com/rfUepSd.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="162596"] img { background-image: url(https://i.imgur.com/2a7jMVL.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="144552"] img { background-image: url(https://i.imgur.com/7uQ40ZE.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="193067"] img { background-image: url(https://i.imgur.com/p8Z1PpH.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="132226"] img { background-image: url(https://i.imgur.com/kFCEXdr.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="217592"] img { background-image: url(https://i.imgur.com/TAZgozi.png); object-position: 0 9999px; background-size: cover; }
+.c-character[id="215644"] img { background-image: url(https://i.imgur.com/rFEdEzQ.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="224274"] img { background-image: url(https://i.imgur.com/bVRlF9X.jpg); object-position: 0 9999px; background-size: cover; }
+.c-character[id="224274"] img:hover { background-image: url(https://i.imgur.com/wn48Eiu.jpg); }
+.c-character[id="7156"]   img { background-image: url(https://i.imgur.com/L1E1ngl.jpg); object-position: 0 9999px; background-size: cover; }
 
 /* Выделение лучших персов в гареме */
 .entry-117225   .name-ru, .entry-82525  .name-ru, .entry-116319 .name-ru, .entry-117063 .name-ru,
-.entry-99661    .name-ru, .entry-23602  .name-ru, .entry-157519 .name-ru, .entry-29594  .name-ru,
-.entry-112909   .name-ru, .entry-42469  .name-ru, .entry-53641  .name-ru, .entry-10010  .name-ru,
+.entry-99661    .name-ru, .entry-157519 .name-ru, .entry-29594  .name-ru,
+.entry-112909   .name-ru, .entry-42469  .name-ru, .entry-10010  .name-ru,
 .entry-51523    .name-ru, .entry-19568  .name-ru, .entry-70069  .name-ru, .entry-118767 .name-ru,
 .entry-124049   .name-ru, .entry-122953 .name-ru, .entry-155896 .name-ru, .entry-135879 .name-ru,
-.entry-198570   .name-ru, .entry-198572 .name-ru, .entry-176248 .name-ru, .entry-254    .name-ru,
-.entry-47005    .name-ru, .entry-153862 .name-ru, .entry-53369 .name-ru,  .entry-164968 .name-ru,
-.entry-182976   .name-ru, .entry-159580 .name-ru
+.entry-198570   .name-ru, .entry-176248 .name-ru, .entry-254    .name-ru,
+.entry-47005    .name-ru, .entry-153862 .name-ru, .entry-53369  .name-ru, .entry-164968 .name-ru,
+.entry-182976   .name-ru, .entry-159580 .name-ru, .entry-132226 .name-ru, .entry-217592 .name-ru
 { color: #ff5900; }
 
+/* Выделение самых лучших персов в гареме */
+.entry-23602  .name-ru, .entry-53641  .name-ru, .entry-193067 .name-ru, .entry-198572 .name-ru
+{ color: red; }
+
 /* Выделение персов с фигурками */
-.entry-51523  .name-ru:before, .entry-82525  .name-ru:before, .entry-23602  .name-ru:before,
-.entry-497    .name-ru:before, .entry-118763 .name-ru:before, .entry-70069  .name-ru:before,
-.entry-157519 .name-ru:before, .entry-117063 .name-ru:before, .entry-116275 .name-ru:before,
-.entry-198572 .name-ru:before, .entry-7373 .name-ru:before
+.entry-51523  .name-ru:before, /* Nero Claudius */
+.entry-82525  .name-ru:before, /* Shiro */
+.entry-23602  .name-ru:before, /* Shinobu Oshino */
+.entry-497    .name-ru:before, /* Saber */
+.entry-118763 .name-ru:before, /* Rem */
+.entry-70069  .name-ru:before, /* Kurumi Tokisaki */
+.entry-157519 .name-ru:before, /* Kokoro Tsurumaki */
+.entry-117063 .name-ru:before, /* Schwi */
+.entry-116275 .name-ru:before, /* Albedo */
+.entry-198572 .name-ru:before, /* Ganyu */
+.entry-7373   .name-ru:before, /* Holo */
+.entry-117225 .name-ru:before, /* Megumin */
+.entry-135879 .name-ru:before, /* Himiko Toga */
+.entry-19568  .name-ru:before, /* Tsumugi Kotobuki */
+.entry-131936 .name-ru:before, /* Milim Nava */
+.entry-29594  .name-ru:before, /* Tomo Kunagisa */
+.entry-173648 .name-ru:before, /* Abigail Williams */
+.entry-7156   .name-ru:before, /* Miku Hatsune Villain */
+.entry-194499 .name-ru:before, /* Klee */
+.entry-16023  .name-ru:before  /* Lord El-Melloi II */
 { content: "✔"; color: green; padding-right: 2px; }
 
 /* Цвета у категорий вайфу */
@@ -2185,7 +2378,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .chtw-gabriel > div > span { color: #7900fd; text-shadow: 3px 4px 8px #5600ff; }
 .chtw-sg > div > span { color: #ffffff; text-shadow: 3px 4px 7px #ff0000; }
 .chtw-aot > div > span { color: #7a230d; text-shadow: 3px 4px 7px #50200c; }
-.chtw-nekopara > div > span { color: #00b5fd; text-shadow: 3px 4px 8px #0997c1; }
+.chtw-nekopara > div > span, .chtw-usagi > div > span { color: #00b5fd; text-shadow: 3px 4px 8px #0997c1; }
 .chtw-clamp > div > span { color: #da00ff; text-shadow: 3px 4px 8px #cb00ff; }
 .chtw-konosuba > div > span { color: #ff0044; text-shadow: 3px 4px 8px #ff0076; }
 .chtw-rezero > div > span { color: #009eff; text-shadow: 3px 4px 8px #008aff; }
@@ -2211,7 +2404,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: КОММЕНТАРИИ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: КОММЕНТАРИИ */
@@ -2229,7 +2421,6 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
     padding: 0;
 }
 /*</editor-fold>*/
-
 
 
 /*<editor-fold desc="********** ПРОФИЛЬ: СПИСКИ ПРОСМОТРЕННОГО **********">*/
@@ -2291,7 +2482,7 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .p-user_rates-index .b-options-floated a:after,
 .p-user_rates-index .b-options-floated .link:after
 { display: none; }
-.p-user_rates-index .b-options-floated.mobile-desktop { gap: 5px; justify-content: center; }
+.p-user_rates-index .b-options-floated.mobile-desktop { gap: 4px; justify-content: center; }
 .p-user_rates-index .b-options-floated.mobile-desktop a {
     background: var(--chtw-subline);
     padding: 10px 10px;
@@ -2443,7 +2634,8 @@ tr[data-target_id="30484"] span.current-value[data-field="score"]:after
 .p-user_rates-index tr[data-target_id="3702"]  .name > a > span:before, .p-user_rates-index tr[data-target_id="29067"] .name > a > span:before,
 .p-user_rates-index tr[data-target_id="26349"] .name > a > span:before, .p-user_rates-index tr[data-target_id="2251"]  .name > a > span:before,
 .p-user_rates-index tr[data-target_id="13535"] .name > a > span:before, .p-user_rates-index tr[data-target_id="30714"] .name > a > span:before,
-.p-user_rates-index tr[data-target_id="36904"] .name > a > span:before, .p-user_rates-index tr[data-target_id="17342"] .name > a > span:before
+.p-user_rates-index tr[data-target_id="36904"] .name > a > span:before, .p-user_rates-index tr[data-target_id="17342"] .name > a > span:before,
+.p-user_rates-index tr[data-target_id="38337"] .name > a > span:before
 { content: "⬤"; padding: 0 3px; color: aqua; }
 
 /* Просмотренное в кино */
@@ -2455,11 +2647,15 @@ tr[data-target_id="30484"] span.current-value[data-field="score"]:after
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** ПРОФИЛЬ: ИСТОРИЯ **********">*/
 /*******************************************************************************************************************/
 /* ПРОФИЛЬ: ИСТОРИЯ */
 /*******************************************************************************************************************/
+
+/* Цвет строк в истории */
+.b-user_history-line a.db-entry {
+    color: #34c34dfc;
+}
 
 /* Аниме/Манга/Ранобэ рядом с пунктами истории */
 .history-page a:before {
@@ -2498,11 +2694,16 @@ tr[data-target_id="30484"] span.current-value[data-field="score"]:after
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** РЕДАКТОР КОДА **********">*/
 /*******************************************************************************************************************/
 /* РЕДАКТОР КОДА */
 /*******************************************************************************************************************/
+
+/* В редактировании профиля увеличенная ширина */
+.p-profiles.p-profiles-edit.x1200 .l-page {
+    max-width: 95%;
+    border-radius: 0;
+}
 
 /* Изменение цвета пропусков в нумерации строк кода и ползунка справа от редактора кода */
 .CodeMirror-gutter,
@@ -2544,7 +2745,6 @@ tr[data-target_id="30484"] span.current-value[data-field="score"]:after
 .b-edit_styles .edit_style .style_css .editor-collapse.active:hover
 { filter: brightness(0.6); }
 /*</editor-fold>*/
-
 
 
 /*<editor-fold desc="********** КОММЕНТАРИИ И РЕДАКТОР ТЕКСТА **********">*/
@@ -2621,7 +2821,6 @@ body .b-reviews_navigation .navigation-node.is-active
 /*</editor-fold>*/
 
 
-
 /*<editor-fold desc="********** АДАПТАЦИЯ **********">*/
 /*******************************************************************************************************************/
 /* АДАПТАЦИЯ */
@@ -2691,6 +2890,8 @@ body .b-reviews_navigation .navigation-node.is-active
 }
 
 @media screen and (max-width: 768px) {
+    /* ПРОФИЛЬ: Отступ перед гаремом */
+    .chtw-info { margin-bottom: 5px; }
 
 
     .c-lists-info .b-stats_bar .bar
@@ -2782,13 +2983,7 @@ body .b-reviews_navigation .navigation-node.is-active
 }
 
 
-
-
-
-
-
 /*</editor-fold>*/
-
 
 
 /*<editor-fold desc="********** ЛИЧНОЕ **********">*/
