@@ -8,6 +8,13 @@
 
 /* Запасные анимированные обои: https://i.imgur.com/vHxDyeO.gif */
 
+/* Настройки кастомных скриптов */
+._ShikiAirTime__MainContainer {
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 /* Пока пусть будет тут: лень скроллить в самый низ */
 .chtw-harem .entry-173968.b-catalog_entry .image-decor:after, .c-poster meta[content*="/173968"] ~ picture:after { content: 'Хозяйственная и преданная кошкожена с твердым характером' }
 .chtw-harem .entry-136175.b-catalog_entry .image-decor:after, .c-poster meta[content*="/136175"] ~ picture:after { content: 'Прекрасная и милая булочка, кажущаяся наивной, хотя на деле вполне смышленная' }
@@ -24,6 +31,17 @@
 .chtw-harem .entry-226655.b-catalog_entry .image-decor:after, .c-poster meta[content*="/226655"] ~ picture:after { content: 'Милый голос разума и адекватности.' }
 .chtw-harem .entry-164582.b-catalog_entry .image-decor:after, .c-poster meta[content*="/164582"] ~ picture:after { content: 'Животные инстинкты и привязанность не дают персонажу быть плохим. Кусается.' }
 .chtw-harem .entry-189354.b-catalog_entry .image-decor:after, .c-poster meta[content*="/189354"] ~ picture:after { content: 'Уу-руу-шии! Крутейшая подруга ГГ, кошачья улыбка, голос Каны и заразительная доброта.' }
+.chtw-harem .entry-164580.b-catalog_entry .image-decor:after, .c-poster meta[content*="/164580"] ~ picture:after { content: 'Само совершенство, которое, впрочем, этим может и отталкивать.' }
+.chtw-harem .entry-146651.b-catalog_entry .image-decor:after, .c-poster meta[content*="/146651"] ~ picture:after { content: 'Хорошая версия Хитаги.' }
+.chtw-harem .entry-206278.b-catalog_entry .image-decor:after, .c-poster meta[content*="/206278"] ~ picture:after { content: 'Саркастичная и забавная ЧСВ-одиночка.' }
+.chtw-harem .entry-220839.b-catalog_entry .image-decor:after, .c-poster meta[content*="/220839"] ~ picture:after { content: 'Талантливая милота в квадрате. К тому же преследует весьма благородную цель.' }
+.chtw-harem .entry-206280.b-catalog_entry .image-decor:after, .c-poster meta[content*="/206280"] ~ picture:after { content: 'Она здесь без особой на то причины (кроме зубок). Рисуют ее порой довольно привлекательно.' }
+.chtw-harem .entry-208567.b-catalog_entry .image-decor:after, .c-poster meta[content*="/208567"] ~ picture:after { content: 'Очень нравится чардиз, особенно бровки. Перенесли на экраны ее здорово. Характер чутка не очень, но терпимо.' }
+.chtw-harem .entry-239165.b-catalog_entry .image-decor:after, .c-poster meta[content*="/239165"] ~ picture:after { content: 'Достойный представитель семейства Шинобовых по поведенческой линии. Добрый, в каком-то виде улучшенный вариант.' }
+.chtw-harem .entry-243421.b-catalog_entry .image-decor:after, .c-poster meta[content*="/243421"] ~ picture:after { content: 'А это верховенствующий представитель легальных лоль без фэнтезийного доппинга. И умная к тому же.' }
+.chtw-harem .entry-199011.b-catalog_entry .image-decor:after, .c-poster meta[content*="/199011"] ~ picture:after { content: 'Крутая. Поставила эксперименты и преодоление рубежа выше, чем своё здоровье. В каком-то роде поехавшая.' }
+.chtw-harem .entry-100463.b-catalog_entry .image-decor:after, .c-poster meta[content*="/100463"] ~ picture:after { content: 'Красивошая! Не лишена детского обаяния.' }
+
 
 /*<editor-fold desc="********** ПЕРЕМЕСТИТЬ В НУЖНОЕ МЕСТО **********">*/
 
@@ -604,6 +622,7 @@ header.head h2 a.back:before,
     display: flex;
     padding: 3px;
     border-radius: 10px;
+    line-height: 20px;
 }
 
 /* (клубы в одну строку на странице аниме) */
@@ -2364,7 +2383,14 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .entry-173648 .name-ru:before, /* Abigail Williams */
 .entry-7156   .name-ru:before, /* Miku Hatsune Villain */
 .entry-194499 .name-ru:before, /* Klee */
-.entry-16023  .name-ru:before  /* Lord El-Melloi II */
+.entry-16023  .name-ru:before,  /* Lord El-Melloi II */
+.entry-118767 .name-ru:before,  /* Beaco */
+.entry-116319 .name-ru:before,  /* Shalltear Bloodfallen */
+.entry-198570 .name-ru:before,  /* Ху Тао */
+.entry-57499 .name-ru:before,  /* Yotsugi Ononoki */
+.entry-22050 .name-ru:before,  /* Nadeko Sengoku */
+.entry-177539 .name-ru:before,  /* Ereshkigal */
+.entry-34470  .name-ru:before  /* Makise Kurisu */
 { content: "✔"; color: green; padding-right: 2px; }
 
 /* Цвета у категорий вайфу */
@@ -2419,6 +2445,18 @@ body.p-profiles.p-profiles-show:not(.p-dialogs):before {
 .profile-content > div[class="block"] > .subheadline > a {
     text-align: center;
     padding: 0;
+}
+.profile-content .b-comment[id="10763740"] .inner .body > span, .profile-content .b-comment[id="10763740"] .inner .body > div:not(.b-replies) {
+    display: none;
+}
+.profile-content .b-comment[id="10763740"] .inner .body > .b-replies {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -20px;
+}
+.profile-content .b-comment[id="10763740"] .inner .body:after {
+    content: 'Здесь я пытался сломать стили профиля, и у меня частично получилось.';
 }
 /*</editor-fold>*/
 
